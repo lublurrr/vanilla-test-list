@@ -1,0 +1,8557 @@
+{
+  "title": "Vanilla Ultimate Archive",
+  "tagline": "Every case findable on Attorney Online.",
+  "description": "An archive of every case findable on Attorney Online, organized by year. Most of these are dated or unplayable, kept here as history — if you're looking for a case to actually play, use the Vanilla Case List instead.",
+  "sourceDocUrl": "https://docs.google.com/document/d/1qsdx5w8xxOmNuoyU0XQqZ9owFCZ5Xt2ihsLVP0tWqjw/edit?tab=t.0",
+  "sourceDocLabel": "Vanilla Ultimate Archive (Google Doc)",
+  "importNote": "Most of these will be dated/unplayable, however we keep them here as they are History. If you are looking for a case to play, look at the Case List instead.",
+  "categories": [
+    "2001",
+    "2014",
+    "2015",
+    "2016",
+    "2017",
+    "2018",
+    "2019",
+    "2020",
+    "2021",
+    "2022",
+    "2023",
+    "2024",
+    "2025",
+    "2026",
+    "Graveyard"
+  ],
+  "categoryLabels": {
+    "2001": "Year 2001",
+    "2014": "Year 2014",
+    "2015": "Year 2015",
+    "2016": "Year 2016",
+    "2017": "Year 2017",
+    "2018": "Year 2018",
+    "2019": "Year 2019",
+    "2020": "Year 2020",
+    "2021": "Year 2021",
+    "2022": "Year 2022",
+    "2023": "Year 2023",
+    "2024": "Year 2024",
+    "2025": "Year 2025",
+    "2026": "Year 2026",
+    "Graveyard": "Case Graveyard"
+  },
+  "graveyardNote": "Cases that are lost to time / deleted but are still remembered. R.I.P.",
+  "entries": [
+    {
+      "id": "ua-1",
+      "title": "The First Turnabout",
+      "category": "2001",
+      "creator": "Shu Takumi",
+      "type": "case"
+    },
+    {
+      "id": "ua-2",
+      "title": "Turnabout Sisters REDUX",
+      "category": "2001",
+      "creator": "Shu Takumi",
+      "type": "case"
+    },
+    {
+      "id": "ua-3",
+      "title": "Turnabout Sisters: Finale",
+      "category": "2001",
+      "creator": "Shu Takumi",
+      "type": "case"
+    },
+    {
+      "id": "ua-4",
+      "title": "Turnabout Roundabout",
+      "category": "2001",
+      "creator": "Penix Wrong",
+      "type": "case"
+    },
+    {
+      "id": "ua-5",
+      "title": "The Mysterious Turnabout",
+      "category": "2014",
+      "creator": "Wispfire",
+      "type": "case"
+    },
+    {
+      "id": "ua-6",
+      "title": "The Magic of a Turnabout",
+      "category": "2014",
+      "creator": "Mogs",
+      "type": "case"
+    },
+    {
+      "id": "ua-7",
+      "title": "Turnabout Survival",
+      "category": "2014",
+      "creator": "Young Ema",
+      "type": "case"
+    },
+    {
+      "id": "ua-8",
+      "title": "Turnabout Flatline",
+      "category": "2014",
+      "creator": "Brook",
+      "type": "case"
+    },
+    {
+      "id": "ua-9",
+      "title": "Turnabout Burger",
+      "category": "2014",
+      "creator": "Young Ema",
+      "type": "case"
+    },
+    {
+      "id": "ua-10",
+      "title": "Turnabout Dinner",
+      "category": "2014",
+      "creator": "[N]onsense",
+      "type": "case"
+    },
+    {
+      "id": "ua-11",
+      "title": "Turnabout Restaurant",
+      "category": "2014",
+      "creator": "Unknown",
+      "type": "case"
+    },
+    {
+      "id": "ua-12",
+      "title": "The Deleted Turnabout",
+      "category": "2014",
+      "creator": "Unknown",
+      "type": "case"
+    },
+    {
+      "id": "ua-13",
+      "title": "Turnabout Chessboard",
+      "category": "2014",
+      "creator": "CobaltAttorney67",
+      "type": "case"
+    },
+    {
+      "id": "ua-14",
+      "title": "Turnabout Miles",
+      "category": "2014",
+      "creator": "SirOblivious",
+      "type": "case"
+    },
+    {
+      "id": "ua-15",
+      "title": "Squawking for a Turnabout",
+      "category": "2014",
+      "creator": "Renegade",
+      "type": "case"
+    },
+    {
+      "id": "ua-16",
+      "title": "The Curse of AO2, The 2-Faced Virus Turnabout",
+      "category": "2014",
+      "creator": "Renegade",
+      "type": "case"
+    },
+    {
+      "id": "ua-17",
+      "title": "Lock, Key, and Turnabout",
+      "category": "2014",
+      "creator": "Renegade",
+      "type": "case"
+    },
+    {
+      "id": "ua-18",
+      "title": "Turnabout Sterility",
+      "category": "2014",
+      "creator": "Mint",
+      "type": "case"
+    },
+    {
+      "id": "ua-19",
+      "title": "Turnabout Handle",
+      "category": "2014",
+      "creator": "Unknown",
+      "type": "case"
+    },
+    {
+      "id": "ua-20",
+      "title": "Flower Petal Turnabout",
+      "category": "2015",
+      "creator": "Boogiepop",
+      "type": "case"
+    },
+    {
+      "id": "ua-21",
+      "title": "Witness's Tool Turnabout",
+      "category": "2015",
+      "creator": "HanaNoShima",
+      "type": "case"
+    },
+    {
+      "id": "ua-22",
+      "title": "A Turnabout Meeting",
+      "category": "2015",
+      "creator": "NotMiles and Miguel",
+      "type": "case"
+    },
+    {
+      "id": "ua-23",
+      "title": "A Turnabout Meeting",
+      "category": "2015",
+      "creator": "NotMiles and Miguel",
+      "type": "case"
+    },
+    {
+      "id": "ua-24",
+      "title": "Turnabout Judgement",
+      "category": "2015",
+      "creator": "lupadim",
+      "type": "case"
+    },
+    {
+      "id": "ua-25",
+      "title": "Turnabout Prestige",
+      "category": "2015",
+      "creator": "Unknown",
+      "type": "case"
+    },
+    {
+      "id": "ua-26",
+      "title": "A Dreamy Turnabout",
+      "category": "2015",
+      "creator": "Unknown",
+      "type": "case"
+    },
+    {
+      "id": "ua-27",
+      "title": "Adversity of Insanity",
+      "category": "2015",
+      "creator": "Unknown",
+      "type": "case"
+    },
+    {
+      "id": "ua-28",
+      "title": "Turnabout Railroad",
+      "category": "2015",
+      "creator": "Unknown",
+      "type": "case"
+    },
+    {
+      "id": "ua-29",
+      "title": "Turnabout Delta",
+      "category": "2015",
+      "creator": "Names",
+      "type": "case"
+    },
+    {
+      "id": "ua-30",
+      "title": "Turnabout For What?",
+      "category": "2015",
+      "creator": "Nightshift",
+      "type": "case"
+    },
+    {
+      "id": "ua-31",
+      "title": "Turnabout Vice",
+      "category": "2015",
+      "creator": "Teacup C.F.W",
+      "type": "case"
+    },
+    {
+      "id": "ua-32",
+      "title": "Turnabout Spoonfeeding",
+      "category": "2015",
+      "creator": "Ninten/Lyra Belle",
+      "type": "case"
+    },
+    {
+      "id": "ua-33",
+      "title": "Turnabout Getaway",
+      "category": "2015",
+      "creator": "Retroxide",
+      "type": "case"
+    },
+    {
+      "id": "ua-34",
+      "title": "Turnabout Payne Train",
+      "category": "2015",
+      "creator": "Unknown",
+      "type": "case"
+    },
+    {
+      "id": "ua-35",
+      "title": "The Notorious Turnabout",
+      "category": "2015",
+      "creator": "Reno",
+      "type": "case"
+    },
+    {
+      "id": "ua-36",
+      "title": "Retaliation Turnabout",
+      "category": "2015",
+      "creator": "Jetrupe",
+      "type": "case"
+    },
+    {
+      "id": "ua-37",
+      "title": "New Turnabout",
+      "category": "2015",
+      "creator": "CodeWeaver",
+      "type": "case"
+    },
+    {
+      "id": "ua-38",
+      "title": "The 100 Meter Turnabout",
+      "category": "2015",
+      "creator": "Hibiki/Samevi",
+      "type": "case"
+    },
+    {
+      "id": "ua-39",
+      "title": "Turnabout Anger",
+      "category": "2015",
+      "creator": "Sprint",
+      "type": "case"
+    },
+    {
+      "id": "ua-40",
+      "title": "Turnabout Creativity",
+      "category": "2015",
+      "creator": "xand",
+      "type": "case"
+    },
+    {
+      "id": "ua-41",
+      "title": "The Final Turnabout",
+      "category": "2015",
+      "creator": "Ace",
+      "type": "case"
+    },
+    {
+      "id": "ua-42",
+      "title": "Turnabout Triple",
+      "category": "2016",
+      "creator": "Pivot",
+      "type": "case"
+    },
+    {
+      "id": "ua-43",
+      "title": "Turnabout Twist",
+      "category": "2016",
+      "creator": "Pivot",
+      "type": "case"
+    },
+    {
+      "id": "ua-44",
+      "title": "Turnabout Backfire",
+      "category": "2016",
+      "creator": "Miguel",
+      "type": "case"
+    },
+    {
+      "id": "ua-45",
+      "title": "Turnabout Coffee",
+      "category": "2016",
+      "creator": "peepo",
+      "type": "case"
+    },
+    {
+      "id": "ua-46",
+      "title": "Turnabout Train Track",
+      "category": "2016",
+      "creator": "Pivot",
+      "type": "case"
+    },
+    {
+      "id": "ua-47",
+      "title": "Turnabout Papers (Please?)",
+      "category": "2016",
+      "creator": "Unknown",
+      "type": "case"
+    },
+    {
+      "id": "ua-48",
+      "title": "Weeb Turnabout Disnhonarabu",
+      "category": "2016",
+      "creator": "Unknown",
+      "type": "case"
+    },
+    {
+      "id": "ua-49",
+      "title": "A Jolly Turnabout",
+      "category": "2016",
+      "creator": "Unknown",
+      "type": "case"
+    },
+    {
+      "id": "ua-50",
+      "title": "/turnabout/ - Paranormal",
+      "category": "2016",
+      "creator": "Unknown",
+      "type": "case"
+    },
+    {
+      "id": "ua-51",
+      "title": "Turnabout Dickgirls",
+      "category": "2016",
+      "creator": "Unknown",
+      "type": "case"
+    },
+    {
+      "id": "ua-52",
+      "title": "A Turnabout of Coffee",
+      "category": "2016",
+      "creator": "Unknown",
+      "type": "case"
+    },
+    {
+      "id": "ua-53",
+      "title": "Turnabout Corporate",
+      "category": "2017",
+      "creator": "Dale",
+      "type": "case"
+    },
+    {
+      "id": "ua-54",
+      "title": "One Formal Turnabout",
+      "category": "2017",
+      "creator": "Rico-V-D",
+      "type": "case"
+    },
+    {
+      "id": "ua-55",
+      "title": "Turnabout Hair Salon",
+      "category": "2017",
+      "creator": "Paradox, Kalavinka, and Michelaar",
+      "type": "case"
+    },
+    {
+      "id": "ua-56",
+      "title": "Turnabout Grudge",
+      "category": "2017",
+      "creator": "Unknown",
+      "type": "case"
+    },
+    {
+      "id": "ua-57",
+      "title": "Turnabout Fishy Business",
+      "category": "2017",
+      "creator": "NkCanFly",
+      "type": "case"
+    },
+    {
+      "id": "ua-58",
+      "title": "The Puzzling Turnabout",
+      "category": "2017",
+      "creator": "Unknown",
+      "type": "case"
+    },
+    {
+      "id": "ua-59",
+      "title": "Turnabout S H E R L O C K",
+      "category": "2017",
+      "creator": "Unknown",
+      "type": "case"
+    },
+    {
+      "id": "ua-60",
+      "title": "Turnabout Motorcycle",
+      "category": "2017",
+      "creator": "Chrezm",
+      "type": "case"
+    },
+    {
+      "id": "ua-61",
+      "title": "Turnabout Starcrossed",
+      "category": "2017",
+      "creator": "Rin",
+      "type": "case"
+    },
+    {
+      "id": "ua-62",
+      "title": "Turnabout Assassin",
+      "category": "2017",
+      "creator": "OneFey",
+      "type": "case"
+    },
+    {
+      "id": "ua-63",
+      "title": "Turnabout Brothers",
+      "category": "2017",
+      "creator": "Mgnony",
+      "type": "case"
+    },
+    {
+      "id": "ua-64",
+      "title": "Full Court Turnabout",
+      "category": "2017",
+      "creator": "Unknown",
+      "type": "case"
+    },
+    {
+      "id": "ua-65",
+      "title": "Turnabout Product",
+      "category": "2017",
+      "creator": "Unknown",
+      "type": "case"
+    },
+    {
+      "id": "ua-66",
+      "title": "Turnabout Wrong Channel",
+      "category": "2017",
+      "creator": "Newbw/Loss360",
+      "type": "case"
+    },
+    {
+      "id": "ua-67",
+      "title": "The Violet Turnabout",
+      "category": "2017",
+      "creator": "Samevi",
+      "type": "case"
+    },
+    {
+      "id": "ua-68",
+      "title": "Turnabout Break Necker",
+      "category": "2017",
+      "creator": "Namedrop",
+      "type": "case"
+    },
+    {
+      "id": "ua-69",
+      "title": "Turnabout in the Sands",
+      "category": "2017",
+      "creator": "Unknown",
+      "type": "case"
+    },
+    {
+      "id": "ua-70",
+      "title": "Turnabout on the Beach",
+      "category": "2017",
+      "creator": "Unknown",
+      "type": "case"
+    },
+    {
+      "id": "ua-71",
+      "title": "Turnabout Tiger Woods",
+      "category": "2017",
+      "creator": "Unknown",
+      "type": "case"
+    },
+    {
+      "id": "ua-72",
+      "title": "The Brutal Turnabout",
+      "category": "2017",
+      "creator": "Unknown",
+      "type": "case"
+    },
+    {
+      "id": "ua-73",
+      "title": "Turnabout Misconception",
+      "category": "2017",
+      "creator": "Justice007",
+      "type": "case"
+    },
+    {
+      "id": "ua-74",
+      "title": "Turnabout in the Shadows",
+      "category": "2017",
+      "creator": "Unknown",
+      "type": "case"
+    },
+    {
+      "id": "ua-75",
+      "title": "Turnabout Shining Gold",
+      "category": "2017",
+      "creator": "Unknown",
+      "type": "case"
+    },
+    {
+      "id": "ua-76",
+      "title": "Turnabout Sushi",
+      "category": "2018",
+      "creator": "Torinfinitive",
+      "type": "case"
+    },
+    {
+      "id": "ua-77",
+      "title": "The Charity Turnabout",
+      "category": "2018",
+      "creator": "Hekkie",
+      "type": "case"
+    },
+    {
+      "id": "ua-78",
+      "title": "Turnabout Dead Revenge",
+      "category": "2018",
+      "creator": "Tainted",
+      "type": "case"
+    },
+    {
+      "id": "ua-79",
+      "title": "Turnabout Marriage",
+      "category": "2018",
+      "creator": "Hekkie & Gay Miles",
+      "type": "case"
+    },
+    {
+      "id": "ua-80",
+      "title": "Idol Turnabout",
+      "category": "2018",
+      "creator": "Ricola",
+      "type": "case"
+    },
+    {
+      "id": "ua-81",
+      "title": "Turnabout Showdown",
+      "category": "2018",
+      "creator": "Anthony",
+      "type": "case"
+    },
+    {
+      "id": "ua-82",
+      "title": "Turnabout Inferno",
+      "category": "2018",
+      "creator": "Akkanen",
+      "type": "case"
+    },
+    {
+      "id": "ua-83",
+      "title": "Turnabout Studio Set",
+      "category": "2018",
+      "creator": "Anthony",
+      "type": "case"
+    },
+    {
+      "id": "ua-84",
+      "title": "Tempestuous Turnabout",
+      "category": "2018",
+      "creator": "Unknown",
+      "type": "case"
+    },
+    {
+      "id": "ua-85",
+      "title": "Turnabout Tutorial",
+      "category": "2018",
+      "creator": "Kunai and Code 049",
+      "type": "case"
+    },
+    {
+      "id": "ua-86",
+      "title": "Turnabout who the hell cares",
+      "category": "2018",
+      "creator": "apollo",
+      "type": "case"
+    },
+    {
+      "id": "ua-87",
+      "title": "Colors of a Turnabout",
+      "category": "2018",
+      "creator": "Unknown",
+      "type": "case"
+    },
+    {
+      "id": "ua-88",
+      "title": "Turnabout at the Museum",
+      "category": "2018",
+      "creator": "Unknown",
+      "type": "case"
+    },
+    {
+      "id": "ua-89",
+      "title": "The Wet Turnabout",
+      "category": "2018",
+      "creator": "Unknown",
+      "type": "case"
+    },
+    {
+      "id": "ua-90",
+      "title": "Turnabout Smells",
+      "category": "2018",
+      "creator": "Unknown",
+      "type": "case"
+    },
+    {
+      "id": "ua-91",
+      "title": "The Diamond Turnabout",
+      "category": "2018",
+      "creator": "Unknown",
+      "type": "case"
+    },
+    {
+      "id": "ua-92",
+      "title": "Turnabout to the Forehead",
+      "category": "2018",
+      "creator": "Unknown",
+      "type": "case"
+    },
+    {
+      "id": "ua-93",
+      "title": "Turnabout Dead Director",
+      "category": "2018",
+      "creator": "Unknown",
+      "type": "case"
+    },
+    {
+      "id": "ua-94",
+      "title": "The Ten Story Turnabout",
+      "category": "2018",
+      "creator": "Unknown",
+      "type": "case"
+    },
+    {
+      "id": "ua-95",
+      "title": "Resort to a Turnabout",
+      "category": "2018",
+      "creator": "Unknown",
+      "type": "case"
+    },
+    {
+      "id": "ua-96",
+      "title": "We'll Do The Turnabout Live!",
+      "category": "2018",
+      "creator": "Unknown",
+      "type": "case"
+    },
+    {
+      "id": "ua-97",
+      "title": "Turnabout Express",
+      "category": "2018",
+      "creator": "Unknown",
+      "type": "case"
+    },
+    {
+      "id": "ua-98",
+      "title": "Haunting of a Turnabout",
+      "category": "2018",
+      "creator": "Unknown",
+      "type": "case"
+    },
+    {
+      "id": "ua-99",
+      "title": "Turnabout Heist",
+      "category": "2018",
+      "creator": "Unknown",
+      "type": "case"
+    },
+    {
+      "id": "ua-100",
+      "title": "Scandal of a Turnabout",
+      "category": "2018",
+      "creator": "Unknown",
+      "type": "case"
+    },
+    {
+      "id": "ua-101",
+      "title": "Turnabout Party Foul",
+      "category": "2018",
+      "creator": "Unknown",
+      "type": "case"
+    },
+    {
+      "id": "ua-102",
+      "title": "Turnabout Moods",
+      "category": "2018",
+      "creator": "Unknown",
+      "type": "case"
+    },
+    {
+      "id": "ua-103",
+      "title": "Turnabout Vengeance",
+      "category": "2018",
+      "creator": "Unknown",
+      "type": "case"
+    },
+    {
+      "id": "ua-104",
+      "title": "Schrödinger's Turnabout",
+      "category": "2018",
+      "creator": "Unknown",
+      "type": "case"
+    },
+    {
+      "id": "ua-105",
+      "title": "Writing a Turnabout",
+      "category": "2018",
+      "creator": "Unknown",
+      "type": "case"
+    },
+    {
+      "id": "ua-106",
+      "title": "The Fourth Door's Turnabout",
+      "category": "2018",
+      "creator": "In1tiate",
+      "type": "case"
+    },
+    {
+      "id": "ua-107",
+      "title": "Turnabout Bad Robot",
+      "category": "2018",
+      "creator": "Unknown",
+      "type": "case"
+    },
+    {
+      "id": "ua-108",
+      "title": "Turnabout Lockbox",
+      "category": "2018",
+      "creator": "Unknown",
+      "type": "case"
+    },
+    {
+      "id": "ua-109",
+      "title": "The Karmic Turnabout",
+      "category": "2018",
+      "creator": "Unknown",
+      "type": "case"
+    },
+    {
+      "id": "ua-110",
+      "title": "Turnabout Chief Forgery",
+      "category": "2018",
+      "creator": "Unknown",
+      "type": "case"
+    },
+    {
+      "id": "ua-111",
+      "title": "Turnabout Final Destination",
+      "category": "2018",
+      "creator": "Unknown",
+      "type": "case"
+    },
+    {
+      "id": "ua-112",
+      "title": "Misplaced Turnabout",
+      "category": "2018",
+      "creator": "Unknown",
+      "type": "case"
+    },
+    {
+      "id": "ua-113",
+      "title": "Turnabout Ups and Downs",
+      "category": "2018",
+      "creator": "Unknown",
+      "type": "case"
+    },
+    {
+      "id": "ua-114",
+      "title": "Turnabout Baker's Dilemma",
+      "category": "2018",
+      "creator": "Unknown",
+      "type": "case"
+    },
+    {
+      "id": "ua-115",
+      "title": "Turnabout Not Another Teen Murder",
+      "category": "2018",
+      "creator": "Unknown",
+      "type": "case"
+    },
+    {
+      "id": "ua-116",
+      "title": "Turnabout of the Bands",
+      "category": "2018",
+      "creator": "Unknown",
+      "type": "case"
+    },
+    {
+      "id": "ua-117",
+      "title": "The Sweet Turnabout",
+      "category": "2018",
+      "creator": "Unknown",
+      "type": "case"
+    },
+    {
+      "id": "ua-118",
+      "title": "The Vivacious Victorian Turnabout",
+      "category": "2018",
+      "creator": "Unknown",
+      "type": "case"
+    },
+    {
+      "id": "ua-119",
+      "title": "Turnabout Mannequins",
+      "category": "2018",
+      "creator": "Unknown",
+      "type": "case"
+    },
+    {
+      "id": "ua-120",
+      "title": "A Wild, Raging Turnabout",
+      "category": "2018",
+      "creator": "Unknown",
+      "type": "case"
+    },
+    {
+      "id": "ua-121",
+      "title": "Turnabout Party Crasher",
+      "category": "2018",
+      "creator": "Unknown",
+      "type": "case"
+    },
+    {
+      "id": "ua-122",
+      "title": "The Fishy Turnabout",
+      "category": "2018",
+      "creator": "Unknown",
+      "type": "case"
+    },
+    {
+      "id": "ua-123",
+      "title": "Turnabout in Self Defense",
+      "category": "2018",
+      "creator": "Unknown",
+      "type": "case"
+    },
+    {
+      "id": "ua-124",
+      "title": "A Fresh Spring Turnabout",
+      "category": "2018",
+      "creator": "Unknown",
+      "type": "case"
+    },
+    {
+      "id": "ua-125",
+      "title": "Turnabout Orbital Strike",
+      "category": "2018",
+      "creator": "Unknown",
+      "type": "case"
+    },
+    {
+      "id": "ua-126",
+      "title": "PET(Turnabout)A",
+      "category": "2018",
+      "creator": "Unknown",
+      "type": "case"
+    },
+    {
+      "id": "ua-127",
+      "title": "Turnabout Grief",
+      "category": "2018",
+      "creator": "Unknown",
+      "type": "case"
+    },
+    {
+      "id": "ua-128",
+      "title": "Can't Burn Out The Turnabout",
+      "category": "2018",
+      "creator": "Unknown",
+      "type": "case"
+    },
+    {
+      "id": "ua-129",
+      "title": "Batman: The Brave and the Turnabout",
+      "category": "2018",
+      "creator": "Unknown",
+      "type": "case"
+    },
+    {
+      "id": "ua-130",
+      "title": "Sweet Turnabout II",
+      "category": "2018",
+      "creator": "Unknown",
+      "type": "case"
+    },
+    {
+      "id": "ua-131",
+      "title": "Turnabout Enclave",
+      "category": "2018",
+      "creator": "Unknown",
+      "type": "case"
+    },
+    {
+      "id": "ua-132",
+      "title": "Turnabout Sumtin",
+      "category": "2018",
+      "creator": "Unknown",
+      "type": "case"
+    },
+    {
+      "id": "ua-133",
+      "title": "Alt-Turnabout Best Turnabout",
+      "category": "2018",
+      "creator": "Unknown",
+      "type": "case"
+    },
+    {
+      "id": "ua-134",
+      "title": "Turnabout Remix",
+      "category": "2018",
+      "creator": "Appadeia",
+      "type": "case"
+    },
+    {
+      "id": "ua-135",
+      "title": "Turnabout Mars Discovery",
+      "category": "2018",
+      "creator": "ColonelOdd",
+      "type": "case"
+    },
+    {
+      "id": "ua-136",
+      "title": "Turnabout Tripple Horror",
+      "category": "2018",
+      "creator": "Dick Greysens",
+      "type": "case"
+    },
+    {
+      "id": "ua-137",
+      "title": "Turnabout High",
+      "category": "2018",
+      "creator": "Rest in Pepper",
+      "type": "case"
+    },
+    {
+      "id": "ua-138",
+      "title": "The Slendy Turnabout",
+      "category": "2018",
+      "creator": "Paradox",
+      "type": "case"
+    },
+    {
+      "id": "ua-139",
+      "title": "Turnabout Alley",
+      "category": "2018",
+      "creator": "AstonWildsteel",
+      "type": "case"
+    },
+    {
+      "id": "ua-140",
+      "title": "Attorneys and Dragons",
+      "category": "2018",
+      "creator": "AwesomeAim",
+      "type": "case"
+    },
+    {
+      "id": "ua-141",
+      "title": "Deserted Turnabout",
+      "category": "2018",
+      "creator": "Omega",
+      "type": "case"
+    },
+    {
+      "id": "ua-142",
+      "title": "Turnabout At 10 Knots",
+      "category": "2018",
+      "creator": "Unknown",
+      "type": "case"
+    },
+    {
+      "id": "ua-143",
+      "title": "Turnabout Russia's Greatest Love Machine",
+      "category": "2018",
+      "creator": "Unknown",
+      "type": "case"
+    },
+    {
+      "id": "ua-144",
+      "title": "Turnabout Europa",
+      "category": "2018",
+      "creator": "Unknown",
+      "type": "case"
+    },
+    {
+      "id": "ua-145",
+      "title": "Turnabout Shitfest",
+      "category": "2018",
+      "creator": "Unknown",
+      "type": "case"
+    },
+    {
+      "id": "ua-146",
+      "title": "Turnabout Survival",
+      "category": "2018",
+      "creator": "Unknown",
+      "type": "case"
+    },
+    {
+      "id": "ua-147",
+      "title": "Turnabout Chandler",
+      "category": "2018",
+      "creator": "Unknown",
+      "type": "case"
+    },
+    {
+      "id": "ua-148",
+      "title": "Turnabout Shitshow",
+      "category": "2018",
+      "creator": "Unknown",
+      "type": "case"
+    },
+    {
+      "id": "ua-149",
+      "title": "Turnabout Spring is Broken",
+      "category": "2018",
+      "creator": "Unknown",
+      "type": "case"
+    },
+    {
+      "id": "ua-150",
+      "title": "The Good, The Bad and The Turnabout",
+      "category": "2018",
+      "creator": "Unknown",
+      "type": "case"
+    },
+    {
+      "id": "ua-151",
+      "title": "Turnabout Road to Damnation",
+      "category": "2018",
+      "creator": "Unknown",
+      "type": "case"
+    },
+    {
+      "id": "ua-152",
+      "title": "Turnabout Loyalty",
+      "category": "2018",
+      "creator": "Unknown",
+      "type": "case"
+    },
+    {
+      "id": "ua-153",
+      "title": "Turnabout Slapshot",
+      "category": "2018",
+      "creator": "Unknown",
+      "type": "case"
+    },
+    {
+      "id": "ua-154",
+      "title": "Turnabout Dead or Alive",
+      "category": "2018",
+      "creator": "Unknown",
+      "type": "case"
+    },
+    {
+      "id": "ua-155",
+      "title": "Turnabout Final Frontier",
+      "category": "2018",
+      "creator": "Unknown",
+      "type": "case"
+    },
+    {
+      "id": "ua-156",
+      "title": "For Whom the Bell Turnabouts",
+      "category": "2018",
+      "creator": "Unknown",
+      "type": "case"
+    },
+    {
+      "id": "ua-157",
+      "title": "Das Tǜrnäbõǖt",
+      "category": "2018",
+      "creator": "Unknown",
+      "type": "case"
+    },
+    {
+      "id": "ua-158",
+      "title": "Turnabout First Jacket Equation",
+      "category": "2018",
+      "creator": "Unknown",
+      "type": "case"
+    },
+    {
+      "id": "ua-159",
+      "title": "A Monopoly Built on Turnabouts",
+      "category": "2018",
+      "creator": "Unknown",
+      "type": "case"
+    },
+    {
+      "id": "ua-160",
+      "title": "Turnabout Field Trip",
+      "category": "2018",
+      "creator": "Unknown",
+      "type": "case"
+    },
+    {
+      "id": "ua-161",
+      "title": "An Aquatic Turnabout",
+      "category": "2018",
+      "creator": "Unknown",
+      "type": "case"
+    },
+    {
+      "id": "ua-162",
+      "title": "A Putt and a Turnabout",
+      "category": "2018",
+      "creator": "Unknown",
+      "type": "case"
+    },
+    {
+      "id": "ua-163",
+      "title": "Turnabout Island Slasher",
+      "category": "2018",
+      "creator": "Unknown",
+      "type": "case"
+    },
+    {
+      "id": "ua-164",
+      "title": "Better Red Than Turnabout",
+      "category": "2018",
+      "creator": "Unknown",
+      "type": "case"
+    },
+    {
+      "id": "ua-165",
+      "title": "A Deep Fried Turnabout",
+      "category": "2018",
+      "creator": "Unknown",
+      "type": "case"
+    },
+    {
+      "id": "ua-166",
+      "title": "A Stormy Turnabout",
+      "category": "2018",
+      "creator": "Unknown",
+      "type": "case"
+    },
+    {
+      "id": "ua-167",
+      "title": "Turnabout Ambush",
+      "category": "2018",
+      "creator": "Unknown",
+      "type": "case"
+    },
+    {
+      "id": "ua-168",
+      "title": "Turnabout Scary Movie 4",
+      "category": "2018",
+      "creator": "Unknown",
+      "type": "case"
+    },
+    {
+      "id": "ua-169",
+      "title": "Power Rangers: Tenacious Turnabouts",
+      "category": "2018",
+      "creator": "Unknown",
+      "type": "case"
+    },
+    {
+      "id": "ua-170",
+      "title": "Unfinished Turnabout",
+      "category": "2018",
+      "creator": "Unknown",
+      "type": "case"
+    },
+    {
+      "id": "ua-171",
+      "title": "Turnabout Depression",
+      "category": "2018",
+      "creator": "Unknown",
+      "type": "case"
+    },
+    {
+      "id": "ua-172",
+      "title": "Turnabout Cold Cut",
+      "category": "2018",
+      "creator": "Unknown",
+      "type": "case"
+    },
+    {
+      "id": "ua-173",
+      "title": "Turnabout Tutorial",
+      "category": "2018",
+      "creator": "Unknown",
+      "type": "case"
+    },
+    {
+      "id": "ua-174",
+      "title": "Turnabout Tundra",
+      "category": "2018",
+      "creator": "Kaiser",
+      "type": "case"
+    },
+    {
+      "id": "ua-175",
+      "title": "Turnabout in Pieces",
+      "category": "2018",
+      "creator": "Unknown",
+      "type": "case"
+    },
+    {
+      "id": "ua-176",
+      "title": "The Triumphant Turnabout",
+      "category": "2018",
+      "creator": "Unknown",
+      "type": "case"
+    },
+    {
+      "id": "ua-177",
+      "title": "Paul Blorp: Turnabout Cop",
+      "category": "2018",
+      "creator": "Unknown",
+      "type": "case"
+    },
+    {
+      "id": "ua-178",
+      "title": "Eat at Turnabout Joe's",
+      "category": "2018",
+      "creator": "Unknown",
+      "type": "case"
+    },
+    {
+      "id": "ua-179",
+      "title": "20,000 Turnabouts Under the Sea",
+      "category": "2018",
+      "creator": "Unknown",
+      "type": "case"
+    },
+    {
+      "id": "ua-180",
+      "title": "Turnabout Betrayal",
+      "category": "2018",
+      "creator": "Unknown",
+      "type": "case"
+    },
+    {
+      "id": "ua-181",
+      "title": "Turnabout Charlie",
+      "category": "2018",
+      "creator": "Unknown",
+      "type": "case"
+    },
+    {
+      "id": "ua-182",
+      "title": "Turnabout Moonlit Duel",
+      "category": "2018",
+      "creator": "Unknown",
+      "type": "case"
+    },
+    {
+      "id": "ua-183",
+      "title": "Turnabout JOOSTICE!",
+      "category": "2018",
+      "creator": "Unknown",
+      "type": "case"
+    },
+    {
+      "id": "ua-184",
+      "title": "Turnabout Jacket Math 202",
+      "category": "2018",
+      "creator": "Unknown",
+      "type": "case"
+    },
+    {
+      "id": "ua-185",
+      "title": "You Are the Turnabout Super Star",
+      "category": "2018",
+      "creator": "Unknown",
+      "type": "case"
+    },
+    {
+      "id": "ua-186",
+      "title": "Turnabout Treehouse",
+      "category": "2018",
+      "creator": "Unknown",
+      "type": "case"
+    },
+    {
+      "id": "ua-187",
+      "title": "Lovely Turnabout We're Having",
+      "category": "2018",
+      "creator": "Unknown",
+      "type": "case"
+    },
+    {
+      "id": "ua-188",
+      "title": "Turnabout Indict Steno",
+      "category": "2018",
+      "creator": "Unknown",
+      "type": "case"
+    },
+    {
+      "id": "ua-189",
+      "title": "A Turnabout on Mother's Day",
+      "category": "2018",
+      "creator": "Unknown",
+      "type": "case"
+    },
+    {
+      "id": "ua-190",
+      "title": "Phantom of the Turnabout",
+      "category": "2018",
+      "creator": "Unknown",
+      "type": "case"
+    },
+    {
+      "id": "ua-191",
+      "title": "Turnabout Snowclone",
+      "category": "2018",
+      "creator": "Unknown",
+      "type": "case"
+    },
+    {
+      "id": "ua-192",
+      "title": "The Motherfucking Turnabout",
+      "category": "2018",
+      "creator": "Nugget64",
+      "type": "case"
+    },
+    {
+      "id": "ua-193",
+      "title": "The Turnabout Organ Case",
+      "category": "2018",
+      "creator": "Unknown",
+      "type": "case"
+    },
+    {
+      "id": "ua-194",
+      "title": "Turnabout: Progression",
+      "category": "2018",
+      "creator": "Unknown",
+      "type": "case"
+    },
+    {
+      "id": "ua-195",
+      "title": "Turnabout Strange Fey",
+      "category": "2018",
+      "creator": "Unknown",
+      "type": "case"
+    },
+    {
+      "id": "ua-196",
+      "title": "Luncheon Turnabout",
+      "category": "2018",
+      "creator": "figas",
+      "type": "case"
+    },
+    {
+      "id": "ua-197",
+      "title": "The Assassinated Turnabout",
+      "category": "2018",
+      "creator": "Unknown",
+      "type": "case"
+    },
+    {
+      "id": "ua-198",
+      "title": "Turnabout Tricks",
+      "category": "2018",
+      "creator": "Peter/Perye/Cosplay-chan/Fawx/Fauxnix",
+      "type": "case"
+    },
+    {
+      "id": "ua-199",
+      "title": "Turnabout in the Diner",
+      "category": "2018",
+      "creator": "Unknown",
+      "type": "case"
+    },
+    {
+      "id": "ua-200",
+      "title": "Turnabout Luck",
+      "category": "2018",
+      "creator": "Jordan/Posudo",
+      "type": "case"
+    },
+    {
+      "id": "ua-201",
+      "title": "Turnabout the Country",
+      "category": "2018",
+      "creator": "Case Corp",
+      "type": "case"
+    },
+    {
+      "id": "ua-202",
+      "title": "Ultimate Turnabout Joostice",
+      "category": "2018",
+      "creator": "Unknown",
+      "type": "case"
+    },
+    {
+      "id": "ua-203",
+      "title": "Turnabout under the Big Top",
+      "category": "2018",
+      "creator": "Unknown",
+      "type": "case"
+    },
+    {
+      "id": "ua-204",
+      "title": "The Sound of a Turnabout",
+      "category": "2018",
+      "creator": "boi",
+      "type": "case"
+    },
+    {
+      "id": "ua-205",
+      "title": "Turnabout Whiplash",
+      "category": "2018",
+      "creator": "Plyasm & LoPixel",
+      "type": "case"
+    },
+    {
+      "id": "ua-206",
+      "title": "Snow-Way Turnabout",
+      "category": "2018",
+      "creator": "Koollan",
+      "type": "case"
+    },
+    {
+      "id": "ua-207",
+      "title": "Tournament Turnabout",
+      "category": "2018",
+      "creator": "Koollan",
+      "type": "case"
+    },
+    {
+      "id": "ua-208",
+      "title": "Turnabout Streets",
+      "category": "2018",
+      "creator": "Unknown",
+      "type": "case"
+    },
+    {
+      "id": "ua-209",
+      "title": "Turnabout Curtain Call",
+      "category": "2018",
+      "creator": "Unknown",
+      "type": "case"
+    },
+    {
+      "id": "ua-210",
+      "title": "The Elevated Turnabout",
+      "category": "2018",
+      "creator": "Unknown",
+      "type": "case"
+    },
+    {
+      "id": "ua-211",
+      "title": "Triple Trouble Turnabout",
+      "category": "2018",
+      "creator": "Unknown",
+      "type": "case"
+    },
+    {
+      "id": "ua-212",
+      "title": "Turnabout Train Track",
+      "category": "2018",
+      "creator": "Unknown",
+      "type": "case"
+    },
+    {
+      "id": "ua-213",
+      "title": "Turnabout Shark Bait",
+      "category": "2018",
+      "creator": "LoPixel",
+      "type": "case"
+    },
+    {
+      "id": "ua-214",
+      "title": "My First Turnabout (Original)",
+      "category": "2018",
+      "creator": "Divyan",
+      "type": "case"
+    },
+    {
+      "id": "ua-215",
+      "title": "My First Turnabout REVAMPED",
+      "category": "2018",
+      "creator": "Divyan",
+      "type": "case"
+    },
+    {
+      "id": "ua-216",
+      "title": "Killer Turnabout",
+      "category": "2018",
+      "creator": "Funky & Momo",
+      "type": "case"
+    },
+    {
+      "id": "ua-217",
+      "title": "Monika Turnabout",
+      "category": "2018",
+      "creator": "MONIKA",
+      "type": "case"
+    },
+    {
+      "id": "ua-218",
+      "title": "Turnabout Black Forest",
+      "category": "2018",
+      "creator": "Jay",
+      "type": "case"
+    },
+    {
+      "id": "ua-219",
+      "title": "Turnabout Sacrifice",
+      "category": "2018",
+      "creator": "Unknown",
+      "type": "case"
+    },
+    {
+      "id": "ua-220",
+      "title": "Welcome to Hotel Turnabout",
+      "category": "2018",
+      "creator": "Yukki & FrozenSpark",
+      "type": "case"
+    },
+    {
+      "id": "ua-221",
+      "title": "Turnabout Fantasy",
+      "category": "2018",
+      "creator": "PhantomhiveGaming & TheNonexistantQueen",
+      "type": "case"
+    },
+    {
+      "id": "ua-222",
+      "title": "Turnabout Bed of Roses",
+      "category": "2018",
+      "creator": "Unknown",
+      "type": "case"
+    },
+    {
+      "id": "ua-223",
+      "title": "Turnabout Volition",
+      "category": "2018",
+      "creator": "Unknown",
+      "type": "case"
+    },
+    {
+      "id": "ua-224",
+      "title": "Legacy Turnabout",
+      "category": "2018",
+      "creator": "Funky & Skeith",
+      "type": "case"
+    },
+    {
+      "id": "ua-225",
+      "title": "Turnabout Short Rope",
+      "category": "2018",
+      "creator": "Raven",
+      "type": "case"
+    },
+    {
+      "id": "ua-226",
+      "title": "Turnabout Logic & Trick",
+      "category": "2018",
+      "creator": "Unknown",
+      "type": "case"
+    },
+    {
+      "id": "ua-227",
+      "title": "Turnabout Tennis",
+      "category": "2018",
+      "creator": "Unknown",
+      "type": "case"
+    },
+    {
+      "id": "ua-228",
+      "title": "Turnabout Police Justice",
+      "category": "2018",
+      "creator": "Myco",
+      "type": "case"
+    },
+    {
+      "id": "ua-229",
+      "title": "Turnabout Inferno",
+      "category": "2018",
+      "creator": "Akkanen",
+      "type": "case"
+    },
+    {
+      "id": "ua-230",
+      "title": "Turnabout: Fast and Furious",
+      "category": "2018",
+      "creator": "Grossberg",
+      "type": "case"
+    },
+    {
+      "id": "ua-231",
+      "title": "Turnabout A very heavy case",
+      "category": "2018",
+      "creator": "Unknown",
+      "type": "case"
+    },
+    {
+      "id": "ua-232",
+      "title": "Turnabout Big Shot",
+      "category": "2018",
+      "creator": "Lystra",
+      "type": "case"
+    },
+    {
+      "id": "ua-233",
+      "title": "The Island Turnabout",
+      "category": "2018",
+      "creator": "Raven/Lucky",
+      "type": "case"
+    },
+    {
+      "id": "ua-234",
+      "title": "A Very Merry Turnabout",
+      "category": "2018",
+      "creator": "Unknown",
+      "type": "case"
+    },
+    {
+      "id": "ua-235",
+      "title": "Killer Turnabout Redux",
+      "category": "2018",
+      "creator": "Funky, Skarner & momo",
+      "type": "case"
+    },
+    {
+      "id": "ua-236",
+      "title": "Turnabout Dichroism",
+      "category": "2018",
+      "creator": "Lumiere",
+      "type": "case"
+    },
+    {
+      "id": "ua-237",
+      "title": "Turnabout Channeling",
+      "category": "2018",
+      "creator": "Killer.exe Unknown",
+      "type": "case"
+    },
+    {
+      "id": "ua-238",
+      "title": "Turnabout Fragance",
+      "category": "2018",
+      "creator": "Unknown",
+      "type": "case"
+    },
+    {
+      "id": "ua-239",
+      "title": "The Crucified Turnabout",
+      "category": "2018",
+      "creator": "Dyleaon & Zealous",
+      "type": "case"
+    },
+    {
+      "id": "ua-240",
+      "title": "Rocky Turnabout",
+      "category": "2018",
+      "creator": "Unknown",
+      "type": "case"
+    },
+    {
+      "id": "ua-241",
+      "title": "Turnabout Bitter Love",
+      "category": "2018",
+      "creator": "Tainted",
+      "type": "case"
+    },
+    {
+      "id": "ua-242",
+      "title": "Hot Rock Turnabout",
+      "category": "2018",
+      "creator": "Floris",
+      "type": "case"
+    },
+    {
+      "id": "ua-243",
+      "title": "HELLO, TURNABOUT",
+      "category": "2018",
+      "creator": "Unknown",
+      "type": "case"
+    },
+    {
+      "id": "ua-244",
+      "title": "Turnabout Detective Fallen",
+      "category": "2018",
+      "creator": "Raiyamo",
+      "type": "case"
+    },
+    {
+      "id": "ua-245",
+      "title": "Turnabout Envious Opulence",
+      "category": "2018",
+      "creator": "Ender",
+      "type": "case"
+    },
+    {
+      "id": "ua-246",
+      "title": "Turnabout Organ",
+      "category": "2018",
+      "creator": "Unknown",
+      "type": "case"
+    },
+    {
+      "id": "ua-247",
+      "title": "The Confused Turnabout",
+      "category": "2018",
+      "creator": "Unknown",
+      "type": "case"
+    },
+    {
+      "id": "ua-248",
+      "title": "Turnabout Gatewater",
+      "category": "2018",
+      "creator": "Elaste",
+      "type": "case"
+    },
+    {
+      "id": "ua-249",
+      "title": "Scalding Turnabout",
+      "category": "2018",
+      "creator": "Rhealistic",
+      "type": "case"
+    },
+    {
+      "id": "ua-250",
+      "title": "Turnabout Camped",
+      "category": "2018",
+      "creator": "Magicbeans",
+      "type": "case"
+    },
+    {
+      "id": "ua-251",
+      "title": "Turnabout Prosecution Perplex",
+      "category": "2018",
+      "creator": "Zakary & BriTheGamer",
+      "type": "case"
+    },
+    {
+      "id": "ua-252",
+      "title": "Turnabout Alley",
+      "category": "2018",
+      "creator": "NykolasN",
+      "type": "case"
+    },
+    {
+      "id": "ua-253",
+      "title": "The Attempted Turnabout",
+      "category": "2018",
+      "creator": "Hekkie",
+      "type": "case"
+    },
+    {
+      "id": "ua-254",
+      "title": "From Hero to Zero",
+      "category": "2018",
+      "creator": "Matorf",
+      "type": "case"
+    },
+    {
+      "id": "ua-255",
+      "title": "Falling For The Lies",
+      "category": "2018",
+      "creator": "Matorf",
+      "type": "case"
+    },
+    {
+      "id": "ua-256",
+      "title": "The Snake Hunt Turnabout",
+      "category": "2018",
+      "creator": "Matorf",
+      "type": "case"
+    },
+    {
+      "id": "ua-257",
+      "title": "Turnabout Rabbit Hole REWORKED",
+      "category": "2018",
+      "creator": "NekoSchro",
+      "type": "case"
+    },
+    {
+      "id": "ua-258",
+      "title": "Turnabout Grudge",
+      "category": "2018",
+      "creator": "Alcaztra",
+      "type": "case"
+    },
+    {
+      "id": "ua-259",
+      "title": "Turnabout Twisted Samurai Player",
+      "category": "2018",
+      "creator": "Unknown",
+      "type": "case"
+    },
+    {
+      "id": "ua-260",
+      "title": "Turnabout Hungover",
+      "category": "2018",
+      "creator": "Haruikka",
+      "type": "case"
+    },
+    {
+      "id": "ua-261",
+      "title": "Turnabout Bonds Beyond Death",
+      "category": "2018",
+      "creator": "NekoShcro",
+      "type": "case"
+    },
+    {
+      "id": "ua-262",
+      "title": "Turnabout Minuki",
+      "category": "2018",
+      "creator": "Petra",
+      "type": "case"
+    },
+    {
+      "id": "ua-263",
+      "title": "Turnabout Car-Lock",
+      "category": "2018",
+      "creator": "Eurae",
+      "type": "case"
+    },
+    {
+      "id": "ua-264",
+      "title": "Turnabout Rally",
+      "category": "2018",
+      "creator": "Unknown",
+      "type": "case"
+    },
+    {
+      "id": "ua-265",
+      "title": "Investigator Turnabout",
+      "category": "2018",
+      "creator": "Funky",
+      "type": "case"
+    },
+    {
+      "id": "ua-266",
+      "title": "Turnabout Killer Trick",
+      "category": "2018",
+      "creator": "Doombro",
+      "type": "case"
+    },
+    {
+      "id": "ua-267",
+      "title": "Turnabout Quiet-on-Set",
+      "category": "2018",
+      "creator": "Eviction",
+      "type": "case"
+    },
+    {
+      "id": "ua-268",
+      "title": "Love Story Turnabout",
+      "category": "2018",
+      "creator": "Russian and Mr.Grimm",
+      "type": "case"
+    },
+    {
+      "id": "ua-269",
+      "title": "Black Raven Turnabout",
+      "category": "2018",
+      "creator": "Athena/NC",
+      "type": "case"
+    },
+    {
+      "id": "ua-270",
+      "title": "Turnabout Blue (Original)",
+      "category": "2019",
+      "creator": "Wolfang",
+      "type": "case"
+    },
+    {
+      "id": "ua-271",
+      "title": "Turnabout Scholar",
+      "category": "2019",
+      "creator": "Sp",
+      "type": "case"
+    },
+    {
+      "id": "ua-272",
+      "title": "Turnabout Grand Prix",
+      "category": "2019",
+      "creator": "GSK Bladez",
+      "type": "case"
+    },
+    {
+      "id": "ua-273",
+      "title": "Turnabout Royal",
+      "category": "2019",
+      "creator": "Fricka U",
+      "type": "case"
+    },
+    {
+      "id": "ua-274",
+      "title": "Signed, Turnabout",
+      "category": "2019",
+      "creator": "Fricka U",
+      "type": "case"
+    },
+    {
+      "id": "ua-275",
+      "title": "Turnabout Sexual",
+      "category": "2019",
+      "creator": "HyruleOrphan",
+      "type": "case"
+    },
+    {
+      "id": "ua-276",
+      "title": "Turnabout Vigilante",
+      "category": "2019",
+      "creator": "Deadly",
+      "type": "case"
+    },
+    {
+      "id": "ua-277",
+      "title": "Turnabout Trick or Treat",
+      "category": "2019",
+      "creator": "Fricka U",
+      "type": "case"
+    },
+    {
+      "id": "ua-278",
+      "title": "Turnabout Gallery",
+      "category": "2019",
+      "creator": "Sp",
+      "type": "case"
+    },
+    {
+      "id": "ua-279",
+      "title": "Turnabout Investigation",
+      "category": "2019",
+      "creator": "Aelderian & Juggernaut",
+      "type": "case"
+    },
+    {
+      "id": "ua-280",
+      "title": "Turnabout Assessment",
+      "category": "2019",
+      "creator": "Noobie",
+      "type": "case"
+    },
+    {
+      "id": "ua-281",
+      "title": "The Stratagem of the Perfect Opening",
+      "category": "2019",
+      "creator": "Daenerys Orianna",
+      "type": "case"
+    },
+    {
+      "id": "ua-282",
+      "title": "Bottom's up my Turnabout",
+      "category": "2019",
+      "creator": "AGENT943",
+      "type": "case"
+    },
+    {
+      "id": "ua-283",
+      "title": "Turnabout Moody Jazz",
+      "category": "2019",
+      "creator": "Pina",
+      "type": "case"
+    },
+    {
+      "id": "ua-284",
+      "title": "Turnabout Ladder",
+      "category": "2019",
+      "creator": "Daenerys Orianna",
+      "type": "case"
+    },
+    {
+      "id": "ua-285",
+      "title": "Million Dollar Turnabout",
+      "category": "2019",
+      "creator": "Zugwer",
+      "type": "case"
+    },
+    {
+      "id": "ua-286",
+      "title": "Turnabout Sentou",
+      "category": "2019",
+      "creator": "Noobie",
+      "type": "case"
+    },
+    {
+      "id": "ua-287",
+      "title": "Turnabout Betrayal",
+      "category": "2019",
+      "creator": "Light",
+      "type": "case"
+    },
+    {
+      "id": "ua-288",
+      "title": "Turnabout Nightclub",
+      "category": "2019",
+      "creator": "Unknown",
+      "type": "case"
+    },
+    {
+      "id": "ua-289",
+      "title": "Turnabout Thief",
+      "category": "2019",
+      "creator": "Zugwer",
+      "type": "case"
+    },
+    {
+      "id": "ua-290",
+      "title": "Turnabout Mugging",
+      "category": "2019",
+      "creator": "Miguel",
+      "type": "case"
+    },
+    {
+      "id": "ua-291",
+      "title": "Turnabout Friendship",
+      "category": "2019",
+      "creator": "Heltong",
+      "type": "case"
+    },
+    {
+      "id": "ua-292",
+      "title": "Turnabout Candy",
+      "category": "2019",
+      "creator": "Noobie",
+      "type": "case"
+    },
+    {
+      "id": "ua-293",
+      "title": "Turnabout Alleyway",
+      "category": "2019",
+      "creator": "Noobie",
+      "type": "case"
+    },
+    {
+      "id": "ua-294",
+      "title": "Turnabout Ghosts",
+      "category": "2019",
+      "creator": "Gazawhizz",
+      "type": "case"
+    },
+    {
+      "id": "ua-295",
+      "title": "Turnabout Diamond",
+      "category": "2019",
+      "creator": "Apple",
+      "type": "case"
+    },
+    {
+      "id": "ua-296",
+      "title": "Turnabout Retail",
+      "category": "2019",
+      "creator": "Knight",
+      "type": "case"
+    },
+    {
+      "id": "ua-297",
+      "title": "Turnabout Hard Time",
+      "category": "2019",
+      "creator": "naniTV",
+      "type": "case"
+    },
+    {
+      "id": "ua-298",
+      "title": "Turnabout Secondhand",
+      "category": "2019",
+      "creator": "Jay Berryman Crawford",
+      "type": "case"
+    },
+    {
+      "id": "ua-299",
+      "title": "The Elementary Turnabout",
+      "category": "2019",
+      "creator": "SillyKevin",
+      "type": "case"
+    },
+    {
+      "id": "ua-300",
+      "title": "Turnabout Psycho",
+      "category": "2019",
+      "creator": "!",
+      "type": "case"
+    },
+    {
+      "id": "ua-301",
+      "title": "See You Turnabout",
+      "category": "2019",
+      "creator": "Peyzard",
+      "type": "case"
+    },
+    {
+      "id": "ua-302",
+      "title": "Turnabout Drunken Night (og)",
+      "category": "2019",
+      "creator": "Knight",
+      "type": "case"
+    },
+    {
+      "id": "ua-303",
+      "title": "Turnabout Green",
+      "category": "2019",
+      "creator": "Fricka U",
+      "type": "case"
+    },
+    {
+      "id": "ua-304",
+      "title": "Turnabout Mistake",
+      "category": "2019",
+      "creator": "Sp",
+      "type": "case"
+    },
+    {
+      "id": "ua-305",
+      "title": "Turnabout Medium",
+      "category": "2019",
+      "creator": "Fricka U",
+      "type": "case"
+    },
+    {
+      "id": "ua-306",
+      "title": "A Lunch to Die For",
+      "category": "2019",
+      "creator": "GrossbergInc",
+      "type": "case"
+    },
+    {
+      "id": "ua-307",
+      "title": "Plight in the Intergalactic: Wipeout",
+      "category": "2019",
+      "creator": "Knight",
+      "type": "case"
+    },
+    {
+      "id": "ua-308",
+      "title": "Plight in the Intergalactic: Betrayal",
+      "category": "2019",
+      "creator": "Knight",
+      "type": "case"
+    },
+    {
+      "id": "ua-309",
+      "title": "The Ritual Turnabout",
+      "category": "2019",
+      "creator": "Elysia",
+      "type": "case"
+    },
+    {
+      "id": "ua-310",
+      "title": "Turnabout Snapped & Relapsed",
+      "category": "2019",
+      "creator": "Jay Berryman Crawford",
+      "type": "case"
+    },
+    {
+      "id": "ua-311",
+      "title": "Turnabout Loyalty",
+      "category": "2019",
+      "creator": "Deadly",
+      "type": "case"
+    },
+    {
+      "id": "ua-312",
+      "title": "Turnabout Appointment",
+      "category": "2019",
+      "creator": "Fricka U",
+      "type": "case"
+    },
+    {
+      "id": "ua-313",
+      "title": "Turnabout Troupe",
+      "category": "2019",
+      "creator": "Fricka U",
+      "type": "case"
+    },
+    {
+      "id": "ua-314",
+      "title": "Turnabout \"Pain Train\"",
+      "category": "2019",
+      "creator": "Ekrell",
+      "type": "case"
+    },
+    {
+      "id": "ua-315",
+      "title": "Turnabout Hospital",
+      "category": "2019",
+      "creator": "naniTV/Lance, Mack, Navi, Stinker, Mars",
+      "type": "case"
+    },
+    {
+      "id": "ua-316",
+      "title": "Inhuman Turnabout",
+      "category": "2019",
+      "creator": "backburner26",
+      "type": "case"
+    },
+    {
+      "id": "ua-317",
+      "title": "Turnabout Museum",
+      "category": "2019",
+      "creator": "Unknown",
+      "type": "case"
+    },
+    {
+      "id": "ua-318",
+      "title": "Turnabout short-circuit",
+      "category": "2019",
+      "creator": "Unknown",
+      "type": "case"
+    },
+    {
+      "id": "ua-319",
+      "title": "Turnabout Superfan",
+      "category": "2019",
+      "creator": "Fricka U",
+      "type": "case"
+    },
+    {
+      "id": "ua-320",
+      "title": "Turnabout Infiltration",
+      "category": "2019",
+      "creator": "Flyingman263",
+      "type": "case"
+    },
+    {
+      "id": "ua-321",
+      "title": "Turnabout Gaming",
+      "category": "2019",
+      "creator": "Flyingman263",
+      "type": "case"
+    },
+    {
+      "id": "ua-322",
+      "title": "Turnabout Beef Wellington",
+      "category": "2019",
+      "creator": "NagiHope",
+      "type": "case"
+    },
+    {
+      "id": "ua-323",
+      "title": "Turnabout Assault",
+      "category": "2019",
+      "creator": "Mith",
+      "type": "case"
+    },
+    {
+      "id": "ua-324",
+      "title": "Turnabout Finale",
+      "category": "2019",
+      "creator": "Unknown",
+      "type": "case"
+    },
+    {
+      "id": "ua-325",
+      "title": "Turnabout Obliterator",
+      "category": "2019",
+      "creator": "Unknown",
+      "type": "case"
+    },
+    {
+      "id": "ua-326",
+      "title": "Turnabout Burger Joint",
+      "category": "2019",
+      "creator": "Sig",
+      "type": "case"
+    },
+    {
+      "id": "ua-327",
+      "title": "Turnabout University",
+      "category": "2019",
+      "creator": "Exotitonic",
+      "type": "case"
+    },
+    {
+      "id": "ua-328",
+      "title": "Pain and suffering",
+      "category": "2019",
+      "creator": "Thehovergoat100",
+      "type": "case"
+    },
+    {
+      "id": "ua-329",
+      "title": "Turnabout Secrecy",
+      "category": "2019",
+      "creator": "Thehovergoat100",
+      "type": "case"
+    },
+    {
+      "id": "ua-330",
+      "title": "Turnabout Brothel",
+      "category": "2019",
+      "creator": "Unknown",
+      "type": "case"
+    },
+    {
+      "id": "ua-331",
+      "title": "Turnabout Parade",
+      "category": "2019",
+      "creator": "Unknown",
+      "type": "case"
+    },
+    {
+      "id": "ua-332",
+      "title": "Turnabout Bar",
+      "category": "2019",
+      "creator": "Unknown",
+      "type": "case"
+    },
+    {
+      "id": "ua-333",
+      "title": "The Defense Turnabout",
+      "category": "2019",
+      "creator": "BreadMan",
+      "type": "case"
+    },
+    {
+      "id": "ua-334",
+      "title": "Turnabout Crimes",
+      "category": "2019",
+      "creator": "BreadMan",
+      "type": "case"
+    },
+    {
+      "id": "ua-335",
+      "title": "Turnabout Perfection",
+      "category": "2019",
+      "creator": "BreadMan",
+      "type": "case"
+    },
+    {
+      "id": "ua-336",
+      "title": "Turnabout Insane",
+      "category": "2019",
+      "creator": "Naxzed",
+      "type": "case"
+    },
+    {
+      "id": "ua-337",
+      "title": "Turnabout 10 Paces",
+      "category": "2019",
+      "creator": "Digas",
+      "type": "case"
+    },
+    {
+      "id": "ua-338",
+      "title": "Turnabout Highroller",
+      "category": "2019",
+      "creator": "BOBO",
+      "type": "case"
+    },
+    {
+      "id": "ua-339",
+      "title": "The Christmas Turnabout",
+      "category": "2019",
+      "creator": "BOBO",
+      "type": "case"
+    },
+    {
+      "id": "ua-340",
+      "title": "Turnabout Last Chance",
+      "category": "2019",
+      "creator": "Ban Boi",
+      "type": "case"
+    },
+    {
+      "id": "ua-341",
+      "title": "Turnabout Penalized",
+      "category": "2019",
+      "creator": "Saiian",
+      "type": "case"
+    },
+    {
+      "id": "ua-342",
+      "title": "Turnabout Mask (og)",
+      "category": "2019",
+      "creator": "Fricka U",
+      "type": "case"
+    },
+    {
+      "id": "ua-343",
+      "title": "Turnabout Closet",
+      "category": "2019",
+      "creator": "Hope",
+      "type": "case"
+    },
+    {
+      "id": "ua-344",
+      "title": "Simply, a Turnabout",
+      "category": "2019",
+      "creator": "Sp",
+      "type": "case"
+    },
+    {
+      "id": "ua-345",
+      "title": "Turnabout CEO",
+      "category": "2019",
+      "creator": "Unknown",
+      "type": "case"
+    },
+    {
+      "id": "ua-346",
+      "title": "Poison Pie for a Lie",
+      "category": "2019",
+      "creator": "Grossberginc",
+      "type": "case"
+    },
+    {
+      "id": "ua-347",
+      "title": "Turnabout Retribution",
+      "category": "2019",
+      "creator": "Znedd",
+      "type": "case"
+    },
+    {
+      "id": "ua-348",
+      "title": "A Turnabout of Wrights",
+      "category": "2019",
+      "creator": "Unknown",
+      "type": "case"
+    },
+    {
+      "id": "ua-349",
+      "title": "Plane Murder",
+      "category": "2019",
+      "creator": "Unknown",
+      "type": "case"
+    },
+    {
+      "id": "ua-350",
+      "title": "Turnabout Precinct",
+      "category": "2019",
+      "creator": "Beans",
+      "type": "case"
+    },
+    {
+      "id": "ua-351",
+      "title": "Turnabout Barber Shock",
+      "category": "2019",
+      "creator": "Fricka U",
+      "type": "case"
+    },
+    {
+      "id": "ua-352",
+      "title": "Turnabout in Heist",
+      "category": "2019",
+      "creator": "Lobo",
+      "type": "case"
+    },
+    {
+      "id": "ua-353",
+      "title": "Turnabout Shadows",
+      "category": "2019",
+      "creator": "Unknown",
+      "type": "case"
+    },
+    {
+      "id": "ua-354",
+      "title": "Turnabout Machiavellian",
+      "category": "2019",
+      "creator": "Unknown",
+      "type": "case"
+    },
+    {
+      "id": "ua-355",
+      "title": "The Insane Turnabout",
+      "category": "2019",
+      "creator": "Unknown",
+      "type": "case"
+    },
+    {
+      "id": "ua-356",
+      "title": "Sailors, Hardships, and Turnabouts",
+      "category": "2019",
+      "creator": "Unknown",
+      "type": "case"
+    },
+    {
+      "id": "ua-357",
+      "title": "Reprogrammed Turnabout",
+      "category": "2019",
+      "creator": "Unknown",
+      "type": "case"
+    },
+    {
+      "id": "ua-358",
+      "title": "Turnabout Judgement",
+      "category": "2019",
+      "creator": "Unknown",
+      "type": "case"
+    },
+    {
+      "id": "ua-359",
+      "title": "Turnabout Orient Express",
+      "category": "2019",
+      "creator": "Shade",
+      "type": "case"
+    },
+    {
+      "id": "ua-360",
+      "title": "The Justified Turnabout",
+      "category": "2019",
+      "creator": "Person",
+      "type": "case"
+    },
+    {
+      "id": "ua-361",
+      "title": "Turnabout Hubris",
+      "category": "2019",
+      "creator": "Ipadryan & NagiHope",
+      "type": "case"
+    },
+    {
+      "id": "ua-362",
+      "title": "Turnabout Diamond",
+      "category": "2019",
+      "creator": "Apple",
+      "type": "case"
+    },
+    {
+      "id": "ua-363",
+      "title": "Turnabout Disappointment",
+      "category": "2019",
+      "creator": "Sp",
+      "type": "case"
+    },
+    {
+      "id": "ua-364",
+      "title": "The Racist Turnabout",
+      "category": "2019",
+      "creator": "Unknown",
+      "type": "case"
+    },
+    {
+      "id": "ua-365",
+      "title": "Turnabout Officer",
+      "category": "2019",
+      "creator": "Hu",
+      "type": "case"
+    },
+    {
+      "id": "ua-366",
+      "title": "False Retribution: Turnabout Naissance",
+      "category": "2019",
+      "creator": "P1CKP0CK3T & Gazawhizz",
+      "type": "case"
+    },
+    {
+      "id": "ua-367",
+      "title": "Turnabout Bloodshed",
+      "category": "2019",
+      "creator": "P1CKP0CK3T",
+      "type": "case"
+    },
+    {
+      "id": "ua-368",
+      "title": "Turnabout Ringmaster (Original)",
+      "category": "2019",
+      "creator": "P1CKP0CK3T",
+      "type": "case"
+    },
+    {
+      "id": "ua-369",
+      "title": "The Medium's Turnabout",
+      "category": "2019",
+      "creator": "Unknown",
+      "type": "case"
+    },
+    {
+      "id": "ua-370",
+      "title": "The Medium of Turnabout",
+      "category": "2019",
+      "creator": "Fricka U",
+      "type": "case"
+    },
+    {
+      "id": "ua-371",
+      "title": "Turnabout Fight",
+      "category": "2019",
+      "creator": "Unknown",
+      "type": "case"
+    },
+    {
+      "id": "ua-372",
+      "title": "Turnabout Moneyman",
+      "category": "2019",
+      "creator": "Unknown",
+      "type": "case"
+    },
+    {
+      "id": "ua-373",
+      "title": "Turnabout Infiltration",
+      "category": "2019",
+      "creator": "Unknown",
+      "type": "case"
+    },
+    {
+      "id": "ua-374",
+      "title": "Turnabout Voyage",
+      "category": "2019",
+      "creator": "Unknown",
+      "type": "case"
+    },
+    {
+      "id": "ua-375",
+      "title": "The Law Turnabout",
+      "category": "2019",
+      "creator": "Unknown",
+      "type": "case"
+    },
+    {
+      "id": "ua-376",
+      "title": "Turnabout Engagement",
+      "category": "2019",
+      "creator": "BoiIAmDying",
+      "type": "case"
+    },
+    {
+      "id": "ua-377",
+      "title": "The Twisted Turnabout",
+      "category": "2019",
+      "creator": "Komaeda",
+      "type": "case"
+    },
+    {
+      "id": "ua-378",
+      "title": "Turnabout Insult",
+      "category": "2019",
+      "creator": "themixedupstuff",
+      "type": "case"
+    },
+    {
+      "id": "ua-379",
+      "title": "Turnabout SpamE",
+      "category": "2019",
+      "creator": "Unknown",
+      "type": "case"
+    },
+    {
+      "id": "ua-380",
+      "title": "Turnabout Felony",
+      "category": "2019",
+      "creator": "Fricka U",
+      "type": "case"
+    },
+    {
+      "id": "ua-381",
+      "title": "Turnabout Phantom",
+      "category": "2019",
+      "creator": "Fricka U",
+      "type": "case"
+    },
+    {
+      "id": "ua-382",
+      "title": "Turnabout Train",
+      "category": "2019",
+      "creator": "Komaeda",
+      "type": "case"
+    },
+    {
+      "id": "ua-383",
+      "title": "The Russian Turnabout",
+      "category": "2019",
+      "creator": "Komaeda",
+      "type": "case"
+    },
+    {
+      "id": "ua-384",
+      "title": "Turnabout Rivalry",
+      "category": "2019",
+      "creator": "Zugwer",
+      "type": "case"
+    },
+    {
+      "id": "ua-385",
+      "title": "Turnabout Frostbite",
+      "category": "2019",
+      "creator": "Seb",
+      "type": "case"
+    },
+    {
+      "id": "ua-386",
+      "title": "The Judge Turnabout",
+      "category": "2019",
+      "creator": "pinkpayne",
+      "type": "case"
+    },
+    {
+      "id": "ua-387",
+      "title": "Turnabout Military",
+      "category": "2019",
+      "creator": "Unknown",
+      "type": "case"
+    },
+    {
+      "id": "ua-388",
+      "title": "Turnabout Warehouse",
+      "category": "2019",
+      "creator": "Miles Edgy",
+      "type": "case"
+    },
+    {
+      "id": "ua-389",
+      "title": "Turnabout Deadtective",
+      "category": "2019",
+      "creator": "Dusk",
+      "type": "case"
+    },
+    {
+      "id": "ua-390",
+      "title": "The Ultimate Turnabout",
+      "category": "2019",
+      "creator": "Komaeda",
+      "type": "case"
+    },
+    {
+      "id": "ua-391",
+      "title": "Law and Turnabout",
+      "category": "2019",
+      "creator": "Fricka U",
+      "type": "case"
+    },
+    {
+      "id": "ua-392",
+      "title": "Turnabout Caribbean: Remastered",
+      "category": "2019",
+      "creator": "P1CKP0CK3T",
+      "type": "case"
+    },
+    {
+      "id": "ua-393",
+      "title": "Turnabout Cat & Mouse",
+      "category": "2019",
+      "creator": "Zugwer",
+      "type": "case"
+    },
+    {
+      "id": "ua-394",
+      "title": "Turnabout Spirit of the Magician",
+      "category": "2019",
+      "creator": "Weedgee",
+      "type": "case"
+    },
+    {
+      "id": "ua-395",
+      "title": "Mansion Murder Turnabout",
+      "category": "2019",
+      "creator": "Tuktuk",
+      "type": "case"
+    },
+    {
+      "id": "ua-396",
+      "title": "Visiting the Turnabout",
+      "category": "2019",
+      "creator": "P1CKP0CK3T",
+      "type": "case"
+    },
+    {
+      "id": "ua-397",
+      "title": "Turnabout Lootcrate",
+      "category": "2019",
+      "creator": "Vermiculus",
+      "type": "case"
+    },
+    {
+      "id": "ua-398",
+      "title": "Turnabout Model",
+      "category": "2019",
+      "creator": "Unknown",
+      "type": "case"
+    },
+    {
+      "id": "ua-399",
+      "title": "Turnabout Despair",
+      "category": "2019",
+      "creator": "Empress Kaina",
+      "type": "case"
+    },
+    {
+      "id": "ua-400",
+      "title": "The Lover's Turnabout",
+      "category": "2019",
+      "creator": "Empress Kaina",
+      "type": "case"
+    },
+    {
+      "id": "ua-401",
+      "title": "Turnabout Gunwale",
+      "category": "2019",
+      "creator": "Funky",
+      "type": "case"
+    },
+    {
+      "id": "ua-402",
+      "title": "Turnabout Police",
+      "category": "2019",
+      "creator": "naniTV, Wolfang, Omni & Uro",
+      "type": "case"
+    },
+    {
+      "id": "ua-403",
+      "title": "Turnabout A fuckin' Pencil",
+      "category": "2019",
+      "creator": "Unknown",
+      "type": "case"
+    },
+    {
+      "id": "ua-404",
+      "title": "There's no Place like Turnabout",
+      "category": "2019",
+      "creator": "Madotsuki & Seccom Masada",
+      "type": "case"
+    },
+    {
+      "id": "ua-405",
+      "title": "Lying for a Turnabout",
+      "category": "2019",
+      "creator": "Unknown",
+      "type": "case"
+    },
+    {
+      "id": "ua-406",
+      "title": "Lights Out Turnabout",
+      "category": "2019",
+      "creator": "Empress Kaina",
+      "type": "case"
+    },
+    {
+      "id": "ua-407",
+      "title": "Turnabout Dreams",
+      "category": "2019",
+      "creator": "Empress Kaina",
+      "type": "case"
+    },
+    {
+      "id": "ua-408",
+      "title": "Hater Turnabout",
+      "category": "2019",
+      "creator": "Banboi",
+      "type": "case"
+    },
+    {
+      "id": "ua-409",
+      "title": "Turnabout Operation",
+      "category": "2019",
+      "creator": "Unknown",
+      "type": "case"
+    },
+    {
+      "id": "ua-410",
+      "title": "The Unknown Turnabout",
+      "category": "2019",
+      "creator": "Komaeda",
+      "type": "case"
+    },
+    {
+      "id": "ua-411",
+      "title": "The Elegant Turnabout",
+      "category": "2019",
+      "creator": "Komaeda",
+      "type": "case"
+    },
+    {
+      "id": "ua-412",
+      "title": "Turnabout Fortress",
+      "category": "2019",
+      "creator": "Komaeda",
+      "type": "case"
+    },
+    {
+      "id": "ua-413",
+      "title": "Turnabout Vengeance",
+      "category": "2019",
+      "creator": "Unknown",
+      "type": "case"
+    },
+    {
+      "id": "ua-414",
+      "title": "Puppet Turnabout",
+      "category": "2019",
+      "creator": "Funky and Skarner",
+      "type": "case"
+    },
+    {
+      "id": "ua-415",
+      "title": "Escaping a Turnabout",
+      "category": "2019",
+      "creator": "Unknown",
+      "type": "case"
+    },
+    {
+      "id": "ua-416",
+      "title": "Turnabout Resort",
+      "category": "2019",
+      "creator": "JC Denton",
+      "type": "case"
+    },
+    {
+      "id": "ua-417",
+      "title": "Turnabout Waitress",
+      "category": "2019",
+      "creator": "Empress Kaina",
+      "type": "case"
+    },
+    {
+      "id": "ua-418",
+      "title": "Turnabout Shutdown",
+      "category": "2019",
+      "creator": "Empress Kaina",
+      "type": "case"
+    },
+    {
+      "id": "ua-419",
+      "title": "Turnabout Miles - Dick McSlick Server Edition",
+      "category": "2019",
+      "creator": "lupadim",
+      "type": "case"
+    },
+    {
+      "id": "ua-420",
+      "title": "Turnabout Death Wish",
+      "category": "2019",
+      "creator": "Sp",
+      "type": "case"
+    },
+    {
+      "id": "ua-421",
+      "title": "Turnabout Kaiserreich",
+      "category": "2019",
+      "creator": "Thehovergoat100",
+      "type": "case"
+    },
+    {
+      "id": "ua-422",
+      "title": "Turnabout Brothers",
+      "category": "2019",
+      "creator": "Armadyl",
+      "type": "case"
+    },
+    {
+      "id": "ua-423",
+      "title": "A Fujiwara's Turnabout",
+      "category": "2019",
+      "creator": "Unknown",
+      "type": "case"
+    },
+    {
+      "id": "ua-424",
+      "title": "Turnabout Foggy Relationships",
+      "category": "2019",
+      "creator": "Pina",
+      "type": "case"
+    },
+    {
+      "id": "ua-425",
+      "title": "Turnabout Reaper",
+      "category": "2019",
+      "creator": "Empress Kaina",
+      "type": "case"
+    },
+    {
+      "id": "ua-426",
+      "title": "Turnabout Penumbra",
+      "category": "2019",
+      "creator": "Empress Kaina/Melody Shadow",
+      "type": "case"
+    },
+    {
+      "id": "ua-427",
+      "title": "Turnabout Desperate",
+      "category": "2019",
+      "creator": "lupadim",
+      "type": "case"
+    },
+    {
+      "id": "ua-428",
+      "title": "Turnabout Standpoint",
+      "category": "2019",
+      "creator": "Noobie",
+      "type": "case"
+    },
+    {
+      "id": "ua-429",
+      "title": "Turnabout Standpoint (Notion Edition)",
+      "category": "2019",
+      "creator": "Noobie, axe",
+      "type": "case"
+    },
+    {
+      "id": "ua-430",
+      "title": "Turnabout Obliterator",
+      "category": "2019",
+      "creator": "Woolwine & Dough",
+      "type": "case"
+    },
+    {
+      "id": "ua-431",
+      "title": "Turnabout Edgeworth",
+      "category": "2019",
+      "creator": "Unknown",
+      "type": "case"
+    },
+    {
+      "id": "ua-432",
+      "title": "An Abominable Turnabout",
+      "category": "2019",
+      "creator": "Unknown",
+      "type": "case"
+    },
+    {
+      "id": "ua-433",
+      "title": "Turnabout Broken Hearts",
+      "category": "2019",
+      "creator": "Hobro",
+      "type": "case"
+    },
+    {
+      "id": "ua-434",
+      "title": "Turnabout Infamy",
+      "category": "2019",
+      "creator": "Sp",
+      "type": "case"
+    },
+    {
+      "id": "ua-435",
+      "title": "Turnabout on Death-Row",
+      "category": "2019",
+      "creator": "Daenerys Orianna",
+      "type": "case"
+    },
+    {
+      "id": "ua-436",
+      "title": "Turnabout Wildgame",
+      "category": "2019",
+      "creator": "Deadly",
+      "type": "case"
+    },
+    {
+      "id": "ua-437",
+      "title": "Turnabout of the Wild West",
+      "category": "2020",
+      "creator": "Clamet, BigPucks, GraniteGold, Skrunky, Cosmic",
+      "type": "case"
+    },
+    {
+      "id": "ua-438",
+      "title": "This is a Turnabout… Get me out of here (Original)",
+      "category": "2020",
+      "creator": "Knight",
+      "type": "case"
+    },
+    {
+      "id": "ua-439",
+      "title": "Turnabout Blue Two",
+      "category": "2020",
+      "creator": "Fricka U",
+      "type": "case"
+    },
+    {
+      "id": "ua-440",
+      "title": "Turnabout Sexual Two",
+      "category": "2020",
+      "creator": "HyruleOrphan",
+      "type": "case"
+    },
+    {
+      "id": "ua-441",
+      "title": "Turnabout Pedo Butz",
+      "category": "2020",
+      "creator": "Unknown",
+      "type": "case"
+    },
+    {
+      "id": "ua-442",
+      "title": "Turnabout Entwined Souls",
+      "category": "2020",
+      "creator": "Ordice",
+      "type": "case"
+    },
+    {
+      "id": "ua-443",
+      "title": "Turnabout Guard",
+      "category": "2020",
+      "creator": "Retro",
+      "type": "case"
+    },
+    {
+      "id": "ua-444",
+      "title": "Attempted Turnabout 2.0",
+      "category": "2020",
+      "creator": "Hatman",
+      "type": "case"
+    },
+    {
+      "id": "ua-445",
+      "title": "Turnabout Problem-Fixer",
+      "category": "2020",
+      "creator": "Emslaya",
+      "type": "case"
+    },
+    {
+      "id": "ua-446",
+      "title": "Turnabout Child's Play",
+      "category": "2020",
+      "creator": "Kelban",
+      "type": "case"
+    },
+    {
+      "id": "ua-447",
+      "title": "In Flander's Turnabout",
+      "category": "2020",
+      "creator": "Fricka U",
+      "type": "case"
+    },
+    {
+      "id": "ua-448",
+      "title": "Turnabout Last Laugh",
+      "category": "2020",
+      "creator": "Kelban",
+      "type": "case"
+    },
+    {
+      "id": "ua-449",
+      "title": "Turnabout Mc Lovin' It",
+      "category": "2020",
+      "creator": "Alice",
+      "type": "case"
+    },
+    {
+      "id": "ua-450",
+      "title": "Turnabout Creed",
+      "category": "2020",
+      "creator": "Scorpio2",
+      "type": "case"
+    },
+    {
+      "id": "ua-451",
+      "title": "Turnabout Abe: Tutorial Version",
+      "category": "2020",
+      "creator": "XYZ",
+      "type": "case"
+    },
+    {
+      "id": "ua-452",
+      "title": "The Parting Turnabout",
+      "category": "2020",
+      "creator": "Deadly",
+      "type": "case"
+    },
+    {
+      "id": "ua-453",
+      "title": "The Conceited Turnabout",
+      "category": "2020",
+      "creator": "Kelban",
+      "type": "case"
+    },
+    {
+      "id": "ua-454",
+      "title": "The Locked Turnabout of a Mastermind",
+      "category": "2020",
+      "creator": "(Mister)Adam",
+      "type": "case"
+    },
+    {
+      "id": "ua-455",
+      "title": "Turnabout Corporate Disaster",
+      "category": "2020",
+      "creator": "Sp",
+      "type": "case"
+    },
+    {
+      "id": "ua-456",
+      "title": "Turnabout McDonalds",
+      "category": "2020",
+      "creator": "Minaki",
+      "type": "case"
+    },
+    {
+      "id": "ua-457",
+      "title": "Turnabout Trip",
+      "category": "2020",
+      "creator": "Dudu",
+      "type": "case"
+    },
+    {
+      "id": "ua-458",
+      "title": "Turnabout Child's Play",
+      "category": "2020",
+      "creator": "Kelban",
+      "type": "case"
+    },
+    {
+      "id": "ua-459",
+      "title": "A Furious Turnabout",
+      "category": "2020",
+      "creator": "Captain Orange",
+      "type": "case"
+    },
+    {
+      "id": "ua-460",
+      "title": "Turnabout Legionary",
+      "category": "2020",
+      "creator": "Adam",
+      "type": "case"
+    },
+    {
+      "id": "ua-461",
+      "title": "Turnabout Mystic",
+      "category": "2020",
+      "creator": "ghastly7",
+      "type": "case"
+    },
+    {
+      "id": "ua-462",
+      "title": "Turnabout Fine Print",
+      "category": "2020",
+      "creator": "Zugwer",
+      "type": "case"
+    },
+    {
+      "id": "ua-463",
+      "title": "Turnabout High Moon",
+      "category": "2020",
+      "creator": "Pina, HolyMan, XYZ",
+      "type": "case"
+    },
+    {
+      "id": "ua-464",
+      "title": "Turnabout to be Trailed",
+      "category": "2020",
+      "creator": "Urias",
+      "type": "case"
+    },
+    {
+      "id": "ua-465",
+      "title": "Turnabout Bad Blood",
+      "category": "2020",
+      "creator": "Jack Gremory",
+      "type": "case"
+    },
+    {
+      "id": "ua-466",
+      "title": "Turnabout At 12 Knots",
+      "category": "2020",
+      "creator": "Unknown",
+      "type": "case"
+    },
+    {
+      "id": "ua-467",
+      "title": "Turnabout Insanity",
+      "category": "2020",
+      "creator": "BenBlueblade",
+      "type": "case"
+    },
+    {
+      "id": "ua-468",
+      "title": "Turnabout Justice",
+      "category": "2020",
+      "creator": "TyroPanic",
+      "type": "case"
+    },
+    {
+      "id": "ua-469",
+      "title": "Turnabout bruh moment",
+      "category": "2020",
+      "creator": "Bioro",
+      "type": "case"
+    },
+    {
+      "id": "ua-470",
+      "title": "Turnabout Cruel Circumstance",
+      "category": "2020",
+      "creator": "Ordice",
+      "type": "case"
+    },
+    {
+      "id": "ua-471",
+      "title": "Turnabout Falldown",
+      "category": "2020",
+      "creator": "Fricka U",
+      "type": "case"
+    },
+    {
+      "id": "ua-472",
+      "title": "Spiritual Turnabout",
+      "category": "2020",
+      "creator": "The Great Mr. Robo Guy",
+      "type": "case"
+    },
+    {
+      "id": "ua-473",
+      "title": "The Incarcerated Turnabout",
+      "category": "2020",
+      "creator": "Brando",
+      "type": "case"
+    },
+    {
+      "id": "ua-474",
+      "title": "Turnabout Deceit",
+      "category": "2020",
+      "creator": "Eishi",
+      "type": "case"
+    },
+    {
+      "id": "ua-475",
+      "title": "The WIRED Turnabout",
+      "category": "2020",
+      "creator": "Albert Camelus",
+      "type": "case"
+    },
+    {
+      "id": "ua-476",
+      "title": "Turnabout Corporation",
+      "category": "2020",
+      "creator": "Wiso",
+      "type": "case"
+    },
+    {
+      "id": "ua-477",
+      "title": "Turnabout Law Office",
+      "category": "2020",
+      "creator": "TarasRex",
+      "type": "case"
+    },
+    {
+      "id": "ua-478",
+      "title": "The Adventures of John Phoenix: Origins",
+      "category": "2020",
+      "creator": "Albert Camelus",
+      "type": "case"
+    },
+    {
+      "id": "ua-479",
+      "title": "Chilling Turnabout",
+      "category": "2020",
+      "creator": "Pablo",
+      "type": "case"
+    },
+    {
+      "id": "ua-480",
+      "title": "The Unholy Turnabout",
+      "category": "2020",
+      "creator": "Shade",
+      "type": "case"
+    },
+    {
+      "id": "ua-481",
+      "title": "A Turnabout, Painted in Crimson",
+      "category": "2020",
+      "creator": "The Kitsune",
+      "type": "case"
+    },
+    {
+      "id": "ua-482",
+      "title": "Turnabout Redemption",
+      "category": "2020",
+      "creator": "Tainted",
+      "type": "case"
+    },
+    {
+      "id": "ua-483",
+      "title": "Turnabout, Please",
+      "category": "2020",
+      "creator": "Lobo",
+      "type": "case"
+    },
+    {
+      "id": "ua-484",
+      "title": "Turnabout Daisy",
+      "category": "2020",
+      "creator": "Cave",
+      "type": "case"
+    },
+    {
+      "id": "ua-485",
+      "title": "The Burnt Turnabout",
+      "category": "2020",
+      "creator": "PerKorn",
+      "type": "case"
+    },
+    {
+      "id": "ua-486",
+      "title": "A Healthy Mind in a Dead Body",
+      "category": "2020",
+      "creator": "TarasRex",
+      "type": "case"
+    },
+    {
+      "id": "ua-487",
+      "title": "Turnabout Breakout",
+      "category": "2020",
+      "creator": "CaveVenom1",
+      "type": "case"
+    },
+    {
+      "id": "ua-488",
+      "title": "Turnabout Sticks and Stones",
+      "category": "2020",
+      "creator": "MobileTrooper",
+      "type": "case"
+    },
+    {
+      "id": "ua-489",
+      "title": "Untelevised Turnabout",
+      "category": "2020",
+      "creator": "Alcaztra",
+      "type": "case"
+    },
+    {
+      "id": "ua-490",
+      "title": "Class Trial: Burning Jealousy",
+      "category": "2020",
+      "creator": "Wiso",
+      "type": "case"
+    },
+    {
+      "id": "ua-491",
+      "title": "Turnabout, I'm Scared!",
+      "category": "2020",
+      "creator": "Lobo",
+      "type": "case"
+    },
+    {
+      "id": "ua-492",
+      "title": "Turnabout White Rose",
+      "category": "2020",
+      "creator": "Normal",
+      "type": "case"
+    },
+    {
+      "id": "ua-493",
+      "title": "Turnabout Restaurant Panic",
+      "category": "2020",
+      "creator": "Karma",
+      "type": "case"
+    },
+    {
+      "id": "ua-494",
+      "title": "Indebted to the Turnabout",
+      "category": "2020",
+      "creator": "Eishi",
+      "type": "case"
+    },
+    {
+      "id": "ua-495",
+      "title": "The Adventure of the Jumping Crow",
+      "category": "2020",
+      "creator": "Classy Doctor",
+      "type": "case"
+    },
+    {
+      "id": "ua-496",
+      "title": "Hell's Turnabout",
+      "category": "2020",
+      "creator": "Neo",
+      "type": "case"
+    },
+    {
+      "id": "ua-497",
+      "title": "Turnabout Haiku",
+      "category": "2020",
+      "creator": "NotButz",
+      "type": "case"
+    },
+    {
+      "id": "ua-498",
+      "title": "Bitter Nutty Turnabout",
+      "category": "2020",
+      "creator": "ChadJudge",
+      "type": "case"
+    },
+    {
+      "id": "ua-499",
+      "title": "Turnabout Disbelief: Revamped",
+      "category": "2020",
+      "creator": "PenixMusic",
+      "type": "case"
+    },
+    {
+      "id": "ua-500",
+      "title": "The Twinned Turnabout",
+      "category": "2020",
+      "creator": "Soapbar",
+      "type": "case"
+    },
+    {
+      "id": "ua-501",
+      "title": "Richard Wellington - The Lost Turnabout",
+      "category": "2020",
+      "creator": "Luke(ro)",
+      "type": "case"
+    },
+    {
+      "id": "ua-502",
+      "title": "Searching for the Turnabout",
+      "category": "2020",
+      "creator": "Eishi",
+      "type": "case"
+    },
+    {
+      "id": "ua-503",
+      "title": "The State of Illinois v. Nathan Leopold and Richard Loeb",
+      "category": "2020",
+      "creator": "Classy Doctor",
+      "type": "case"
+    },
+    {
+      "id": "ua-504",
+      "title": "The Corrupted Turnabout",
+      "category": "2020",
+      "creator": "Eishi",
+      "type": "case"
+    },
+    {
+      "id": "ua-505",
+      "title": "Phantom Turnabout",
+      "category": "2020",
+      "creator": "Alcaztra",
+      "type": "case"
+    },
+    {
+      "id": "ua-506",
+      "title": "Turnabout Alpha",
+      "category": "2020",
+      "creator": "Captain Orange",
+      "type": "case"
+    },
+    {
+      "id": "ua-507",
+      "title": "Mocking the Turnabout",
+      "category": "2020",
+      "creator": "Eishi",
+      "type": "case"
+    },
+    {
+      "id": "ua-508",
+      "title": "Turnabout of the Flies",
+      "category": "2020",
+      "creator": "Soapbar",
+      "type": "case"
+    },
+    {
+      "id": "ua-509",
+      "title": "Turnabout Bekkin",
+      "category": "2020",
+      "creator": "Wiso",
+      "type": "case"
+    },
+    {
+      "id": "ua-510",
+      "title": "The Inexplicable Turnabout",
+      "category": "2020",
+      "creator": "BenBlueblade",
+      "type": "case"
+    },
+    {
+      "id": "ua-511",
+      "title": "Turnabout Ordinance",
+      "category": "2020",
+      "creator": "Funky",
+      "type": "case"
+    },
+    {
+      "id": "ua-512",
+      "title": "Humble Beginnings",
+      "category": "2020",
+      "creator": "Pablo420",
+      "type": "case"
+    },
+    {
+      "id": "ua-513",
+      "title": "Lurking in the Shadows",
+      "category": "2020",
+      "creator": "Flip",
+      "type": "case"
+    },
+    {
+      "id": "ua-514",
+      "title": "Toppling Turnabout",
+      "category": "2020",
+      "creator": "Funky",
+      "type": "case"
+    },
+    {
+      "id": "ua-515",
+      "title": "Turnabout Kaido",
+      "category": "2020",
+      "creator": "Funky",
+      "type": "case"
+    },
+    {
+      "id": "ua-516",
+      "title": "Turnabout of the Soul",
+      "category": "2020",
+      "creator": "Legion",
+      "type": "case"
+    },
+    {
+      "id": "ua-517",
+      "title": "Turnabout Suicide",
+      "category": "2020",
+      "creator": "Unknown",
+      "type": "case"
+    },
+    {
+      "id": "ua-518",
+      "title": "Turnabout Timelines",
+      "category": "2020",
+      "creator": "Unknown",
+      "type": "case"
+    },
+    {
+      "id": "ua-519",
+      "title": "Puppet Turnabout",
+      "category": "2020",
+      "creator": "Funky",
+      "type": "case"
+    },
+    {
+      "id": "ua-520",
+      "title": "Turnabout Mordhau",
+      "category": "2020",
+      "creator": "The Cat",
+      "type": "case"
+    },
+    {
+      "id": "ua-521",
+      "title": "Turnabout Waves",
+      "category": "2020",
+      "creator": "Wiso",
+      "type": "case"
+    },
+    {
+      "id": "ua-522",
+      "title": "Time Spaced",
+      "category": "2020",
+      "creator": "Tidy",
+      "type": "case"
+    },
+    {
+      "id": "ua-523",
+      "title": "Turnabout Vision",
+      "category": "2020",
+      "creator": "Tidy",
+      "type": "case"
+    },
+    {
+      "id": "ua-524",
+      "title": "Turnabout Sweets",
+      "category": "2020",
+      "creator": "Tidy",
+      "type": "case"
+    },
+    {
+      "id": "ua-525",
+      "title": "The Hardened Turnabout",
+      "category": "2020",
+      "creator": "Tidy",
+      "type": "case"
+    },
+    {
+      "id": "ua-526",
+      "title": "Turnabout Rare Delicacy",
+      "category": "2020",
+      "creator": "Tidy",
+      "type": "case"
+    },
+    {
+      "id": "ua-527",
+      "title": "Tinpillar v. Grey",
+      "category": "2020",
+      "creator": "Tidy",
+      "type": "case"
+    },
+    {
+      "id": "ua-528",
+      "title": "Turn(about) of the Century",
+      "category": "2020",
+      "creator": "Tidy",
+      "type": "case"
+    },
+    {
+      "id": "ua-529",
+      "title": "Turnabout (science)",
+      "category": "2020",
+      "creator": "Tidy",
+      "type": "case"
+    },
+    {
+      "id": "ua-530",
+      "title": "Turnabout Killer Divorce",
+      "category": "2020",
+      "creator": "Tidy",
+      "type": "case"
+    },
+    {
+      "id": "ua-531",
+      "title": "Turnabout Alouette",
+      "category": "2020",
+      "creator": "Tidy",
+      "type": "case"
+    },
+    {
+      "id": "ua-532",
+      "title": "Pasadena Turnabout",
+      "category": "2020",
+      "creator": "Tidy",
+      "type": "case"
+    },
+    {
+      "id": "ua-533",
+      "title": "Turnabout Killer Queen",
+      "category": "2020",
+      "creator": "Tidy",
+      "type": "case"
+    },
+    {
+      "id": "ua-534",
+      "title": "Turnabout Tachikoma",
+      "category": "2020",
+      "creator": "Tidy",
+      "type": "case"
+    },
+    {
+      "id": "ua-535",
+      "title": "The Twisted Turnabout",
+      "category": "2020",
+      "creator": "Eishi",
+      "type": "case"
+    },
+    {
+      "id": "ua-536",
+      "title": "Glamour Turnaround",
+      "category": "2020",
+      "creator": "Alcaztra",
+      "type": "case"
+    },
+    {
+      "id": "ua-537",
+      "title": "Disguise for the Turnabout",
+      "category": "2020",
+      "creator": "Prologo",
+      "type": "case"
+    },
+    {
+      "id": "ua-538",
+      "title": "Untelevised Turnabout",
+      "category": "2020",
+      "creator": "Alcaztra",
+      "type": "case"
+    },
+    {
+      "id": "ua-539",
+      "title": "Witch of Many Faces",
+      "category": "2020",
+      "creator": "CE53",
+      "type": "case"
+    },
+    {
+      "id": "ua-540",
+      "title": "The \"Staged\" Turnabout",
+      "category": "2020",
+      "creator": "Yuli",
+      "type": "case"
+    },
+    {
+      "id": "ua-541",
+      "title": "Turnabout Frozen Heart",
+      "category": "2020",
+      "creator": "Atomaly",
+      "type": "case"
+    },
+    {
+      "id": "ua-542",
+      "title": "Turnabout Artificial Intelligence",
+      "category": "2020",
+      "creator": "OmarGuy",
+      "type": "case"
+    },
+    {
+      "id": "ua-543",
+      "title": "Turnabout Invitation",
+      "category": "2020",
+      "creator": "Knight",
+      "type": "case"
+    },
+    {
+      "id": "ua-544",
+      "title": "Turnabout Spieler",
+      "category": "2020",
+      "creator": "Adam",
+      "type": "case"
+    },
+    {
+      "id": "ua-545",
+      "title": "Turnabout Cow Tools",
+      "category": "2020",
+      "creator": "Ivor",
+      "type": "case"
+    },
+    {
+      "id": "ua-546",
+      "title": "Turnabout P.A.C.E.S",
+      "category": "2020",
+      "creator": "Casing Goddess",
+      "type": "case"
+    },
+    {
+      "id": "ua-547",
+      "title": "Royal Bank of a Turnabout",
+      "category": "2020",
+      "creator": "Knight",
+      "type": "case"
+    },
+    {
+      "id": "ua-548",
+      "title": "Turnabout Erased",
+      "category": "2020",
+      "creator": "Ordice & In1tiate",
+      "type": "case"
+    },
+    {
+      "id": "ua-549",
+      "title": "Turnabout Royal Fate",
+      "category": "2020",
+      "creator": "Pina",
+      "type": "case"
+    },
+    {
+      "id": "ua-550",
+      "title": "Turnabout to Watch Your Pocket",
+      "category": "2020",
+      "creator": "Pina",
+      "type": "case"
+    },
+    {
+      "id": "ua-551",
+      "title": "Turnabout Golden Spirit",
+      "category": "2020",
+      "creator": "Pina",
+      "type": "case"
+    },
+    {
+      "id": "ua-552",
+      "title": "Turnabout Biggest Top",
+      "category": "2020",
+      "creator": "Pina",
+      "type": "case"
+    },
+    {
+      "id": "ua-553",
+      "title": "Devil's Tools for a Turnabout",
+      "category": "2020",
+      "creator": "HolyMan & Pina",
+      "type": "case"
+    },
+    {
+      "id": "ua-554",
+      "title": "Turnabout Whim of Murderers",
+      "category": "2020",
+      "creator": "Pina",
+      "type": "case"
+    },
+    {
+      "id": "ua-555",
+      "title": "Turnabout Coffin",
+      "category": "2020",
+      "creator": "Unknown",
+      "type": "case"
+    },
+    {
+      "id": "ua-556",
+      "title": "If You Like Turnabout Coladas",
+      "category": "2020",
+      "creator": "Unknown",
+      "type": "case"
+    },
+    {
+      "id": "ua-557",
+      "title": "The Left Turnabout",
+      "category": "2020",
+      "creator": "Unknown",
+      "type": "case"
+    },
+    {
+      "id": "ua-558",
+      "title": "A Glass to the Turnabout",
+      "category": "2020",
+      "creator": "Unknown",
+      "type": "case"
+    },
+    {
+      "id": "ua-559",
+      "title": "Turnabout Faithless",
+      "category": "2020",
+      "creator": "Blueberry",
+      "type": "case"
+    },
+    {
+      "id": "ua-560",
+      "title": "Elementary Turnabout",
+      "category": "2020",
+      "creator": "NotButz",
+      "type": "case"
+    },
+    {
+      "id": "ua-561",
+      "title": "Turnabout Orchestra",
+      "category": "2020",
+      "creator": "Empress Kaina",
+      "type": "case"
+    },
+    {
+      "id": "ua-562",
+      "title": "Turnabout Weddin Crasher",
+      "category": "2020",
+      "creator": "Unknown",
+      "type": "case"
+    },
+    {
+      "id": "ua-563",
+      "title": "Turnabout FoodWave",
+      "category": "2020",
+      "creator": "Unknown",
+      "type": "case"
+    },
+    {
+      "id": "ua-564",
+      "title": "Turnabout Motherland",
+      "category": "2020",
+      "creator": "Unknown",
+      "type": "case"
+    },
+    {
+      "id": "ua-565",
+      "title": "The Adventure of the Ripper's Carvings",
+      "category": "2020",
+      "creator": "Classy Doctor",
+      "type": "case"
+    },
+    {
+      "id": "ua-566",
+      "title": "Turnabout Bookworm",
+      "category": "2020",
+      "creator": "Luke",
+      "type": "case"
+    },
+    {
+      "id": "ua-567",
+      "title": "Turnabout Twelve Nights",
+      "category": "2020",
+      "creator": "NekoSchro",
+      "type": "case"
+    },
+    {
+      "id": "ua-568",
+      "title": "The Darke Turnabout",
+      "category": "2020",
+      "creator": "The Beard",
+      "type": "case"
+    },
+    {
+      "id": "ua-569",
+      "title": "Turnabout New Beginnings",
+      "category": "2020",
+      "creator": "Eishi",
+      "type": "case"
+    },
+    {
+      "id": "ua-570",
+      "title": "Turnabout Double Displacement",
+      "category": "2020",
+      "creator": "Trina",
+      "type": "case"
+    },
+    {
+      "id": "ua-571",
+      "title": "erm Turnabout",
+      "category": "2020",
+      "creator": "Cromslor & NotButz",
+      "type": "case"
+    },
+    {
+      "id": "ua-572",
+      "title": "A Whipping Turnabout",
+      "category": "2020",
+      "creator": "Jojo",
+      "type": "case"
+    },
+    {
+      "id": "ua-573",
+      "title": "Turnabout Logic Battle",
+      "category": "2020",
+      "creator": "Regret",
+      "type": "case"
+    },
+    {
+      "id": "ua-574",
+      "title": "Turnabout P.S.Y.C.H.O",
+      "category": "2020",
+      "creator": "Casing Goddess",
+      "type": "case"
+    },
+    {
+      "id": "ua-575",
+      "title": "Erm Turnabout",
+      "category": "2020",
+      "creator": "Cromslor & NotButz",
+      "type": "case"
+    },
+    {
+      "id": "ua-576",
+      "title": "Turnabout Blossom",
+      "category": "2020",
+      "creator": "Elliotbambi",
+      "type": "case"
+    },
+    {
+      "id": "ua-577",
+      "title": "Turnabout Facade",
+      "category": "2020",
+      "creator": "Tobi",
+      "type": "case"
+    },
+    {
+      "id": "ua-578",
+      "title": "Turnabout RKO",
+      "category": "2020",
+      "creator": "Johnny5",
+      "type": "case"
+    },
+    {
+      "id": "ua-579",
+      "title": "Tool Turnabout",
+      "category": "2020",
+      "creator": "Kait",
+      "type": "case"
+    },
+    {
+      "id": "ua-580",
+      "title": "Turnabout TCG",
+      "category": "2020",
+      "creator": "MJ",
+      "type": "case"
+    },
+    {
+      "id": "ua-581",
+      "title": "Turnabout Ultimatum",
+      "category": "2020",
+      "creator": "Team Delta Twist",
+      "type": "case"
+    },
+    {
+      "id": "ua-582",
+      "title": "The Mysterious Turnabout",
+      "category": "2020",
+      "creator": "Kait",
+      "type": "case"
+    },
+    {
+      "id": "ua-583",
+      "title": "Turnabout on Board",
+      "category": "2020",
+      "creator": "Light",
+      "type": "case"
+    },
+    {
+      "id": "ua-584",
+      "title": "Turnabout Daughter of Evil",
+      "category": "2020",
+      "creator": "Mars",
+      "type": "case"
+    },
+    {
+      "id": "ua-585",
+      "title": "Turnabout Recollections",
+      "category": "2020",
+      "creator": "DoctorLag",
+      "type": "case"
+    },
+    {
+      "id": "ua-586",
+      "title": "Turnabout Repentance",
+      "category": "2020",
+      "creator": "Stardust",
+      "type": "case"
+    },
+    {
+      "id": "ua-587",
+      "title": "Turnabout Time Bomb",
+      "category": "2020",
+      "creator": "Zugwer",
+      "type": "case"
+    },
+    {
+      "id": "ua-588",
+      "title": "Turnabout of Mortal",
+      "category": "2020",
+      "creator": "Unknown",
+      "type": "case"
+    },
+    {
+      "id": "ua-589",
+      "title": "Turnabout A Tight Bond",
+      "category": "2020",
+      "creator": "Unknown",
+      "type": "case"
+    },
+    {
+      "id": "ua-590",
+      "title": "Pandora's Turnabout",
+      "category": "2020",
+      "creator": "TheRealAthena",
+      "type": "case"
+    },
+    {
+      "id": "ua-591",
+      "title": "The Withdrawn Turnabout",
+      "category": "2020",
+      "creator": "BOBO & G.W. Wilder",
+      "type": "case"
+    },
+    {
+      "id": "ua-592",
+      "title": "Turnabout Ring Pop",
+      "category": "2020",
+      "creator": "Kait",
+      "type": "case"
+    },
+    {
+      "id": "ua-593",
+      "title": "Turnabout Clock Tower",
+      "category": "2020",
+      "creator": "XYZ",
+      "type": "case"
+    },
+    {
+      "id": "ua-594",
+      "title": "Turnabout Elementary: Strive for the Truth",
+      "category": "2020",
+      "creator": "Weedgee",
+      "type": "case"
+    },
+    {
+      "id": "ua-595",
+      "title": "Turnabout Trustee",
+      "category": "2020",
+      "creator": "OGS",
+      "type": "case"
+    },
+    {
+      "id": "ua-596",
+      "title": "Turnabout Disaster",
+      "category": "2020",
+      "creator": "Starky & Wixly",
+      "type": "case"
+    },
+    {
+      "id": "ua-597",
+      "title": "The Art of Cooperation",
+      "category": "2020",
+      "creator": "Bread",
+      "type": "case"
+    },
+    {
+      "id": "ua-598",
+      "title": "Turnabout Deadn't or Aliven't",
+      "category": "2020",
+      "creator": "Unknown",
+      "type": "case"
+    },
+    {
+      "id": "ua-599",
+      "title": "Turnabout Church",
+      "category": "2020",
+      "creator": "Unknown",
+      "type": "case"
+    },
+    {
+      "id": "ua-600",
+      "title": "Turnabout Roses",
+      "category": "2020",
+      "creator": "PhoenixAffinity & Fastwas",
+      "type": "case"
+    },
+    {
+      "id": "ua-601",
+      "title": "Turnabout Despair",
+      "category": "2020",
+      "creator": "Fricka U",
+      "type": "case"
+    },
+    {
+      "id": "ua-602",
+      "title": "Turnabout Lawyers",
+      "category": "2020",
+      "creator": "Feathertail",
+      "type": "case"
+    },
+    {
+      "id": "ua-603",
+      "title": "Sacrificial Turnabout",
+      "category": "2020",
+      "creator": "Edgy B",
+      "type": "case"
+    },
+    {
+      "id": "ua-604",
+      "title": "Serial Turnabout",
+      "category": "2020",
+      "creator": "BigPapi",
+      "type": "case"
+    },
+    {
+      "id": "ua-605",
+      "title": "Turnabout Once, Twice, Thrice.",
+      "category": "2020",
+      "creator": "Ordice",
+      "type": "case"
+    },
+    {
+      "id": "ua-606",
+      "title": "Turnabout Floor it? Floor it",
+      "category": "2020",
+      "creator": "OGS",
+      "type": "case"
+    },
+    {
+      "id": "ua-607",
+      "title": "Turnabout Stickmin",
+      "category": "2020",
+      "creator": "Nicklaus",
+      "type": "case"
+    },
+    {
+      "id": "ua-608",
+      "title": "Turnabout Ema-Twined Souls",
+      "category": "2020",
+      "creator": "Tyro & MineSkill",
+      "type": "case"
+    },
+    {
+      "id": "ua-609",
+      "title": "Dark Hearts Turnabout",
+      "category": "2020",
+      "creator": "Empress Kaina",
+      "type": "case"
+    },
+    {
+      "id": "ua-610",
+      "title": "The Yatagarasu Turnabout",
+      "category": "2020",
+      "creator": "Unknown",
+      "type": "case"
+    },
+    {
+      "id": "ua-611",
+      "title": "2051: A Space Turnabout",
+      "category": "2020",
+      "creator": "Ordice",
+      "type": "case"
+    },
+    {
+      "id": "ua-612",
+      "title": "Turnabout Tipping Point",
+      "category": "2020",
+      "creator": "Unknown",
+      "type": "case"
+    },
+    {
+      "id": "ua-613",
+      "title": "Witch of Lust",
+      "category": "2020",
+      "creator": "CE53",
+      "type": "case"
+    },
+    {
+      "id": "ua-614",
+      "title": "Berry Big Turnabout",
+      "category": "2020",
+      "creator": "Rookie Killer",
+      "type": "case"
+    },
+    {
+      "id": "ua-615",
+      "title": "Turnabout B&E&R (Part 1)",
+      "category": "2020",
+      "creator": "Steel",
+      "type": "case"
+    },
+    {
+      "id": "ua-616",
+      "title": "Turnabout Vengeance",
+      "category": "2020",
+      "creator": "Alcon Falcon",
+      "type": "case"
+    },
+    {
+      "id": "ua-617",
+      "title": "Tool Turnabout (og)",
+      "category": "2020",
+      "creator": "Hana_no_shima",
+      "type": "case"
+    },
+    {
+      "id": "ua-618",
+      "title": "Turnabout Pawned Away",
+      "category": "2020",
+      "creator": "Unknown",
+      "type": "case"
+    },
+    {
+      "id": "ua-619",
+      "title": "Turnabout STEM",
+      "category": "2020",
+      "creator": "Kait",
+      "type": "case"
+    },
+    {
+      "id": "ua-620",
+      "title": "Turnabout of Six",
+      "category": "2020",
+      "creator": "Deadman",
+      "type": "case"
+    },
+    {
+      "id": "ua-621",
+      "title": "Turnabout Russian Winter",
+      "category": "2020",
+      "creator": "Deadly",
+      "type": "case"
+    },
+    {
+      "id": "ua-622",
+      "title": "Unlucky Heir Turnabout",
+      "category": "2020",
+      "creator": "TheRealAthena",
+      "type": "case"
+    },
+    {
+      "id": "ua-623",
+      "title": "Turnabout Dancing Spirits",
+      "category": "2020",
+      "creator": "WEEDGEE",
+      "type": "case"
+    },
+    {
+      "id": "ua-624",
+      "title": "Just Sleep, Just Dream",
+      "category": "2020",
+      "creator": "WEEDGEE",
+      "type": "case"
+    },
+    {
+      "id": "ua-625",
+      "title": "Turnabout to Praise Wine",
+      "category": "2020",
+      "creator": "Pina",
+      "type": "case"
+    },
+    {
+      "id": "ua-626",
+      "title": "Turnabout Apple Chaos (Original)",
+      "category": "2020",
+      "creator": "Payne Gaming",
+      "type": "case"
+    },
+    {
+      "id": "ua-627",
+      "title": "Turnabout Grisly",
+      "category": "2020",
+      "creator": "Ordice",
+      "type": "case"
+    },
+    {
+      "id": "ua-628",
+      "title": "Turnabout Sunshine & Fruit",
+      "category": "2020",
+      "creator": "Pina",
+      "type": "case"
+    },
+    {
+      "id": "ua-629",
+      "title": "Turnabout Shootout",
+      "category": "2020",
+      "creator": "Fricka U",
+      "type": "case"
+    },
+    {
+      "id": "ua-630",
+      "title": "Turnabout 'Til the End",
+      "category": "2020",
+      "creator": "Ordice",
+      "type": "case"
+    },
+    {
+      "id": "ua-631",
+      "title": "Turnabout Radio Check",
+      "category": "2020",
+      "creator": "Magic",
+      "type": "case"
+    },
+    {
+      "id": "ua-632",
+      "title": "Turnabout Old Sins",
+      "category": "2020",
+      "creator": "Ordice",
+      "type": "case"
+    },
+    {
+      "id": "ua-633",
+      "title": "Turnabout Drunken Night (Remake)",
+      "category": "2020",
+      "creator": "Knight",
+      "type": "case"
+    },
+    {
+      "id": "ua-634",
+      "title": "Turnabout Night Terrors",
+      "category": "2020",
+      "creator": "Gazawhizz",
+      "type": "case"
+    },
+    {
+      "id": "ua-635",
+      "title": "The Strange Case of Dr. Jekyll and Mr. Hyde",
+      "category": "2020",
+      "creator": "Knight",
+      "type": "case"
+    },
+    {
+      "id": "ua-636",
+      "title": "Turnabout Legacies",
+      "category": "2021",
+      "creator": "Deadman",
+      "type": "case"
+    },
+    {
+      "id": "ua-637",
+      "title": "Turnabout Legacies",
+      "category": "2021",
+      "creator": "Deadman",
+      "type": "case"
+    },
+    {
+      "id": "ua-638",
+      "title": "Turnabout Unfortunate Circumstances",
+      "category": "2021",
+      "creator": "Apollo lol",
+      "type": "case"
+    },
+    {
+      "id": "ua-639",
+      "title": "The Factory Turnabout",
+      "category": "2021",
+      "creator": "Retro",
+      "type": "case"
+    },
+    {
+      "id": "ua-640",
+      "title": "Turnabout Class Reunion",
+      "category": "2021",
+      "creator": "Alice",
+      "type": "case"
+    },
+    {
+      "id": "ua-641",
+      "title": "Turnabout Staircase to Heaven",
+      "category": "2021",
+      "creator": "Phoden & Bread",
+      "type": "case"
+    },
+    {
+      "id": "ua-642",
+      "title": "Russian Winter Gambit",
+      "category": "2021",
+      "creator": "Unknown",
+      "type": "case"
+    },
+    {
+      "id": "ua-643",
+      "title": "Turnabout Masquerade",
+      "category": "2021",
+      "creator": "Bread & MarkBlkWth",
+      "type": "case"
+    },
+    {
+      "id": "ua-644",
+      "title": "Turnabout Ringmaster",
+      "category": "2021",
+      "creator": "Delinard",
+      "type": "case"
+    },
+    {
+      "id": "ua-645",
+      "title": "Turnabout Inheritance (MLP)",
+      "category": "2021",
+      "creator": "Payne Gaming",
+      "type": "case"
+    },
+    {
+      "id": "ua-646",
+      "title": "Turnabout Diagnosis",
+      "category": "2021",
+      "creator": "Payne Gaming",
+      "type": "case"
+    },
+    {
+      "id": "ua-647",
+      "title": "Turnabout Toxic Meat",
+      "category": "2021",
+      "creator": "Payne Gaming",
+      "type": "case"
+    },
+    {
+      "id": "ua-648",
+      "title": "The Golden Cupcake",
+      "category": "2021",
+      "creator": "Payne Gaming",
+      "type": "case"
+    },
+    {
+      "id": "ua-649",
+      "title": "Turnabout Rare Diamond",
+      "category": "2021",
+      "creator": "Payne Gaming",
+      "type": "case"
+    },
+    {
+      "id": "ua-650",
+      "title": "Turnabout Final Flight",
+      "category": "2021",
+      "creator": "Payne Gaming",
+      "type": "case"
+    },
+    {
+      "id": "ua-651",
+      "title": "Turnabout Apple Chaos",
+      "category": "2021",
+      "creator": "Payne Gaming",
+      "type": "case"
+    },
+    {
+      "id": "ua-652",
+      "title": "Forestial Murder",
+      "category": "2021",
+      "creator": "Bread & MarkBlkWth",
+      "type": "case"
+    },
+    {
+      "id": "ua-653",
+      "title": "The Bombastic Turnabout",
+      "category": "2021",
+      "creator": "Payne Gaming",
+      "type": "case"
+    },
+    {
+      "id": "ua-654",
+      "title": "Turnabout Bee-Baw",
+      "category": "2021",
+      "creator": "Ivor",
+      "type": "case"
+    },
+    {
+      "id": "ua-655",
+      "title": "Locked Away",
+      "category": "2021",
+      "creator": "FlyingScotsman",
+      "type": "case"
+    },
+    {
+      "id": "ua-656",
+      "title": "Turnabout Killer of the Mist",
+      "category": "2021",
+      "creator": "Bread",
+      "type": "case"
+    },
+    {
+      "id": "ua-657",
+      "title": "The Whims of Fate Turnabout",
+      "category": "2021",
+      "creator": "Ruby Rose",
+      "type": "case"
+    },
+    {
+      "id": "ua-658",
+      "title": "Turnabout Baked Bads",
+      "category": "2021",
+      "creator": "Payne Gaming",
+      "type": "case"
+    },
+    {
+      "id": "ua-659",
+      "title": "Turnabout Patrol Car",
+      "category": "2021",
+      "creator": "ixKira921",
+      "type": "case"
+    },
+    {
+      "id": "ua-660",
+      "title": "Turnabout Chains from the Past",
+      "category": "2021",
+      "creator": "NekoSchro",
+      "type": "case"
+    },
+    {
+      "id": "ua-661",
+      "title": "Turnabout Salted",
+      "category": "2021",
+      "creator": "Pina",
+      "type": "case"
+    },
+    {
+      "id": "ua-662",
+      "title": "Turnabout Gambling Relationship",
+      "category": "2021",
+      "creator": "Pina",
+      "type": "case"
+    },
+    {
+      "id": "ua-663",
+      "title": "Turnabout Sleepy Tale",
+      "category": "2021",
+      "creator": "Light",
+      "type": "case"
+    },
+    {
+      "id": "ua-664",
+      "title": "Turnabout Rigid Samurai",
+      "category": "2021",
+      "creator": "Unknown",
+      "type": "case"
+    },
+    {
+      "id": "ua-665",
+      "title": "Turnabout L'art pour l'art",
+      "category": "2021",
+      "creator": "Adam",
+      "type": "case"
+    },
+    {
+      "id": "ua-666",
+      "title": "Turnabout Kitty Cat Paddy Whack Leave a Cat Alone",
+      "category": "2021",
+      "creator": "Pina",
+      "type": "case"
+    },
+    {
+      "id": "ua-667",
+      "title": "Turnabout Resurgence",
+      "category": "2021",
+      "creator": "Unknown",
+      "type": "case"
+    },
+    {
+      "id": "ua-668",
+      "title": "Turnabout Cold Revenge",
+      "category": "2021",
+      "creator": "Unknown",
+      "type": "case"
+    },
+    {
+      "id": "ua-669",
+      "title": "Turnabout Riverboat Rag",
+      "category": "2021",
+      "creator": "Pina",
+      "type": "case"
+    },
+    {
+      "id": "ua-670",
+      "title": "The Vintage Witch Trial",
+      "category": "2021",
+      "creator": "Zelkie",
+      "type": "case"
+    },
+    {
+      "id": "ua-671",
+      "title": "The Lion's Turnabout",
+      "category": "2021",
+      "creator": "Captain Orange",
+      "type": "case"
+    },
+    {
+      "id": "ua-672",
+      "title": "The Vinegar Taster's Turnabout",
+      "category": "2021",
+      "creator": "Ivor",
+      "type": "case"
+    },
+    {
+      "id": "ua-673",
+      "title": "Duke of Turnabouts",
+      "category": "2021",
+      "creator": "Pina",
+      "type": "case"
+    },
+    {
+      "id": "ua-674",
+      "title": "The Forgotten Turnabout",
+      "category": "2021",
+      "creator": "Genesis",
+      "type": "case"
+    },
+    {
+      "id": "ua-675",
+      "title": "Department of Turnabouts",
+      "category": "2021",
+      "creator": "Captain Orange",
+      "type": "case"
+    },
+    {
+      "id": "ua-676",
+      "title": "Turnabout Sharik",
+      "category": "2021",
+      "creator": "Adam",
+      "type": "case"
+    },
+    {
+      "id": "ua-677",
+      "title": "Birds of a New Feather Turnabout",
+      "category": "2021",
+      "creator": "Unknown",
+      "type": "case"
+    },
+    {
+      "id": "ua-678",
+      "title": "Turnabout From the Shadows",
+      "category": "2021",
+      "creator": "Distant",
+      "type": "case"
+    },
+    {
+      "id": "ua-679",
+      "title": "Turnabout Greased Lightning",
+      "category": "2021",
+      "creator": "Pina",
+      "type": "case"
+    },
+    {
+      "id": "ua-680",
+      "title": "Turnabout Battle Cry",
+      "category": "2021",
+      "creator": "Adam",
+      "type": "case"
+    },
+    {
+      "id": "ua-681",
+      "title": "Turnabout Blood Jewel",
+      "category": "2021",
+      "creator": "Pina",
+      "type": "case"
+    },
+    {
+      "id": "ua-682",
+      "title": "Turnabout Twist",
+      "category": "2021",
+      "creator": "Unknown",
+      "type": "case"
+    },
+    {
+      "id": "ua-683",
+      "title": "Suicidal Turnabout",
+      "category": "2021",
+      "creator": "Unknown",
+      "type": "case"
+    },
+    {
+      "id": "ua-684",
+      "title": "The Yellow Turnabout",
+      "category": "2021",
+      "creator": "Unknown",
+      "type": "case"
+    },
+    {
+      "id": "ua-685",
+      "title": "Turnabout Last Goodbyes",
+      "category": "2021",
+      "creator": "Truth Bringer & Melody Shadow",
+      "type": "case"
+    },
+    {
+      "id": "ua-686",
+      "title": "Turnabout Asylum",
+      "category": "2021",
+      "creator": "Unknown",
+      "type": "case"
+    },
+    {
+      "id": "ua-687",
+      "title": "Turnabout Guests",
+      "category": "2021",
+      "creator": "Unknown",
+      "type": "case"
+    },
+    {
+      "id": "ua-688",
+      "title": "Turnabout Revenge On The Despised",
+      "category": "2021",
+      "creator": "Unknown",
+      "type": "case"
+    },
+    {
+      "id": "ua-689",
+      "title": "Turnabout Birthday",
+      "category": "2021",
+      "creator": "Melody & Eeveeprotect",
+      "type": "case"
+    },
+    {
+      "id": "ua-690",
+      "title": "Turnabout of the Ancients",
+      "category": "2021",
+      "creator": "RadKL",
+      "type": "case"
+    },
+    {
+      "id": "ua-691",
+      "title": "Turnabout Ripper-Tied",
+      "category": "2021",
+      "creator": "Maraienna",
+      "type": "case"
+    },
+    {
+      "id": "ua-692",
+      "title": "Turnabout Trap",
+      "category": "2021",
+      "creator": "Unknown",
+      "type": "case"
+    },
+    {
+      "id": "ua-693",
+      "title": "Turnabout Detective",
+      "category": "2021",
+      "creator": "Unknown",
+      "type": "case"
+    },
+    {
+      "id": "ua-694",
+      "title": "Turnabout Ace Attorney Investigations",
+      "category": "2021",
+      "creator": "Igor & Aoko",
+      "type": "case"
+    },
+    {
+      "id": "ua-695",
+      "title": "The Conventional Turnabout",
+      "category": "2021",
+      "creator": "Racer",
+      "type": "case"
+    },
+    {
+      "id": "ua-696",
+      "title": "Turnabout Brotherhood",
+      "category": "2021",
+      "creator": "Unknown",
+      "type": "case"
+    },
+    {
+      "id": "ua-697",
+      "title": "Freddy's Funtime Turnabout",
+      "category": "2021",
+      "creator": "Truth Bringer & Melody Shadow",
+      "type": "case"
+    },
+    {
+      "id": "ua-698",
+      "title": "Turnabout Turnaround",
+      "category": "2021",
+      "creator": "Sone Miyuki",
+      "type": "case"
+    },
+    {
+      "id": "ua-699",
+      "title": "Turnabout Blue Blood",
+      "category": "2021",
+      "creator": "Unknown",
+      "type": "case"
+    },
+    {
+      "id": "ua-700",
+      "title": "Turnabout Technical",
+      "category": "2021",
+      "creator": "Ace Attorney",
+      "type": "case"
+    },
+    {
+      "id": "ua-701",
+      "title": "Turnabout Clown",
+      "category": "2021",
+      "creator": "Unknown",
+      "type": "case"
+    },
+    {
+      "id": "ua-702",
+      "title": "Turnabout Ashes of Blood",
+      "category": "2021",
+      "creator": "Eluidev & MochiBOI",
+      "type": "case"
+    },
+    {
+      "id": "ua-703",
+      "title": "The Cheating Turnabout: The Room",
+      "category": "2021",
+      "creator": "Let's Go Champ",
+      "type": "case"
+    },
+    {
+      "id": "ua-704",
+      "title": "A Payneful Sniper Turnabout",
+      "category": "2021",
+      "creator": "Anonymouse",
+      "type": "case"
+    },
+    {
+      "id": "ua-705",
+      "title": "Turnabout Stepping Stone",
+      "category": "2021",
+      "creator": "Anonymouse",
+      "type": "case"
+    },
+    {
+      "id": "ua-706",
+      "title": "Turnabout Flame",
+      "category": "2021",
+      "creator": "Unknown",
+      "type": "case"
+    },
+    {
+      "id": "ua-707",
+      "title": "Turnabout From the Past 2.0",
+      "category": "2021",
+      "creator": "Unknown",
+      "type": "case"
+    },
+    {
+      "id": "ua-708",
+      "title": "Turnabout All or Nothing",
+      "category": "2021",
+      "creator": "Anonymouse",
+      "type": "case"
+    },
+    {
+      "id": "ua-709",
+      "title": "Turnabout House",
+      "category": "2021",
+      "creator": "Unknown",
+      "type": "case"
+    },
+    {
+      "id": "ua-710",
+      "title": "The Breathtaking Turnabout",
+      "category": "2021",
+      "creator": "Unknown",
+      "type": "case"
+    },
+    {
+      "id": "ua-711",
+      "title": "OR-5 Incident",
+      "category": "2021",
+      "creator": "Unknown",
+      "type": "case"
+    },
+    {
+      "id": "ua-712",
+      "title": "The Persona Turnabout",
+      "category": "2021",
+      "creator": "Rogers & Ranger",
+      "type": "case"
+    },
+    {
+      "id": "ua-713",
+      "title": "The Sus Turnabout",
+      "category": "2021",
+      "creator": "ixKira921",
+      "type": "case"
+    },
+    {
+      "id": "ua-714",
+      "title": "Turnabout A New Chapter",
+      "category": "2021",
+      "creator": "Anonymouse",
+      "type": "case"
+    },
+    {
+      "id": "ua-715",
+      "title": "The Fiery Turnabout",
+      "category": "2021",
+      "creator": "Yoru",
+      "type": "case"
+    },
+    {
+      "id": "ua-716",
+      "title": "Guns N' Turnabout",
+      "category": "2021",
+      "creator": "JKMAN121 & UdgeyAndrews & Frost",
+      "type": "case"
+    },
+    {
+      "id": "ua-717",
+      "title": "The Poisoned Turnabout",
+      "category": "2021",
+      "creator": "Unknown",
+      "type": "case"
+    },
+    {
+      "id": "ua-718",
+      "title": "Turnabout Free-Fall",
+      "category": "2021",
+      "creator": "Unknown",
+      "type": "case"
+    },
+    {
+      "id": "ua-719",
+      "title": "Turnabout Spider's Web",
+      "category": "2021",
+      "creator": "Anonymouse",
+      "type": "case"
+    },
+    {
+      "id": "ua-720",
+      "title": "Turnabout Eureka",
+      "category": "2021",
+      "creator": "Captain Orange",
+      "type": "case"
+    },
+    {
+      "id": "ua-721",
+      "title": "Turnabout Late Night",
+      "category": "2021",
+      "creator": "Unknown",
+      "type": "case"
+    },
+    {
+      "id": "ua-722",
+      "title": "Turnabout Lovers Quarrel",
+      "category": "2021",
+      "creator": "Unknown",
+      "type": "case"
+    },
+    {
+      "id": "ua-723",
+      "title": "Turnabout Batter",
+      "category": "2021",
+      "creator": "Anonymouse",
+      "type": "case"
+    },
+    {
+      "id": "ua-724",
+      "title": "Turnabout Defense Attorney",
+      "category": "2021",
+      "creator": "Tygames",
+      "type": "case"
+    },
+    {
+      "id": "ua-725",
+      "title": "Two Worlds, One Turnabout (Original)",
+      "category": "2021",
+      "creator": "Minion",
+      "type": "case"
+    },
+    {
+      "id": "ua-726",
+      "title": "Turnabout Scott the Woz Turnabout Conundrum Team",
+      "category": "2021",
+      "creator": "Unknown",
+      "type": "case"
+    },
+    {
+      "id": "ua-727",
+      "title": "Turnabout Power Outage",
+      "category": "2021",
+      "creator": "Minion",
+      "type": "case"
+    },
+    {
+      "id": "ua-728",
+      "title": "Turnabout Complications",
+      "category": "2021",
+      "creator": "Matthew Davidson",
+      "type": "case"
+    },
+    {
+      "id": "ua-729",
+      "title": "Turnabout Intentions",
+      "category": "2021",
+      "creator": "Matthew Davidson",
+      "type": "case"
+    },
+    {
+      "id": "ua-730",
+      "title": "Turnabout Unknown",
+      "category": "2021",
+      "creator": "Matthew Davidson",
+      "type": "case"
+    },
+    {
+      "id": "ua-731",
+      "title": "Turnabout Sexual Three",
+      "category": "2021",
+      "creator": "Unknown",
+      "type": "case"
+    },
+    {
+      "id": "ua-732",
+      "title": "Turnabout Faculty",
+      "category": "2021",
+      "creator": "Jpeg & Womenarepog",
+      "type": "case"
+    },
+    {
+      "id": "ua-733",
+      "title": "Turnabout Winter-Zoo",
+      "category": "2021",
+      "creator": "Kelban",
+      "type": "case"
+    },
+    {
+      "id": "ua-734",
+      "title": "Turnabout Duplicate",
+      "category": "2021",
+      "creator": "Distant",
+      "type": "case"
+    },
+    {
+      "id": "ua-735",
+      "title": "Left Jab, Right Jab Turnabout",
+      "category": "2021",
+      "creator": "Distant",
+      "type": "case"
+    },
+    {
+      "id": "ua-736",
+      "title": "The Passionate Turnabout",
+      "category": "2021",
+      "creator": "Distant",
+      "type": "case"
+    },
+    {
+      "id": "ua-737",
+      "title": "Heist of a Turnabout",
+      "category": "2021",
+      "creator": "Distant",
+      "type": "case"
+    },
+    {
+      "id": "ua-738",
+      "title": "Turnabout Up In Flames",
+      "category": "2021",
+      "creator": "Eishi",
+      "type": "case"
+    },
+    {
+      "id": "ua-739",
+      "title": "Turnabout Abandoned Hotel",
+      "category": "2021",
+      "creator": "Bread",
+      "type": "case"
+    },
+    {
+      "id": "ua-740",
+      "title": "Royal Deceasement",
+      "category": "2021",
+      "creator": "LemON",
+      "type": "case"
+    },
+    {
+      "id": "ua-741",
+      "title": "The \"Dark Age\" Turnabout",
+      "category": "2021",
+      "creator": "Shade",
+      "type": "case"
+    },
+    {
+      "id": "ua-742",
+      "title": "Turnabout Cafeteria",
+      "category": "2021",
+      "creator": "Bread",
+      "type": "case"
+    },
+    {
+      "id": "ua-743",
+      "title": "Turnabout Karma",
+      "category": "2021",
+      "creator": "BlackHammer66",
+      "type": "case"
+    },
+    {
+      "id": "ua-744",
+      "title": "Turnabout Dark Company",
+      "category": "2021",
+      "creator": "ixKira92",
+      "type": "case"
+    },
+    {
+      "id": "ua-745",
+      "title": "Turnabout Lab Coats",
+      "category": "2021",
+      "creator": "Eishi",
+      "type": "case"
+    },
+    {
+      "id": "ua-746",
+      "title": "There's A Turnabout Among Us",
+      "category": "2021",
+      "creator": "UdgeyWudgey",
+      "type": "case"
+    },
+    {
+      "id": "ua-747",
+      "title": "Turnabout Brotherhood",
+      "category": "2021",
+      "creator": "Unknown",
+      "type": "case"
+    },
+    {
+      "id": "ua-748",
+      "title": "Memoirs of the Final Adventure",
+      "category": "2021",
+      "creator": "Racer",
+      "type": "case"
+    },
+    {
+      "id": "ua-749",
+      "title": "Turnabout Essay",
+      "category": "2021",
+      "creator": "Kelban",
+      "type": "case"
+    },
+    {
+      "id": "ua-750",
+      "title": "The Creole Turnabout",
+      "category": "2021",
+      "creator": "MochaBOI",
+      "type": "case"
+    },
+    {
+      "id": "ua-751",
+      "title": "Turnabout Reduced Killings",
+      "category": "2021",
+      "creator": "Sone",
+      "type": "case"
+    },
+    {
+      "id": "ua-752",
+      "title": "Turnabout Mafia",
+      "category": "2021",
+      "creator": "NormalGamer5000",
+      "type": "case"
+    },
+    {
+      "id": "ua-753",
+      "title": "A Shadowless Turnabout",
+      "category": "2021",
+      "creator": "Empress Kaina",
+      "type": "case"
+    },
+    {
+      "id": "ua-754",
+      "title": "The Weird Turnabout",
+      "category": "2021",
+      "creator": "Redox",
+      "type": "case"
+    },
+    {
+      "id": "ua-755",
+      "title": "Turnabout Space Oddity",
+      "category": "2021",
+      "creator": "Unknown",
+      "type": "case"
+    },
+    {
+      "id": "ua-756",
+      "title": "Turnabout Despise",
+      "category": "2021",
+      "creator": "Ace Attorney",
+      "type": "case"
+    },
+    {
+      "id": "ua-757",
+      "title": "Turnabout Plaster",
+      "category": "2021",
+      "creator": "Lobo",
+      "type": "case"
+    },
+    {
+      "id": "ua-758",
+      "title": "The Appealed Turnabout",
+      "category": "2021",
+      "creator": "James/Yuowiex Carmell",
+      "type": "case"
+    },
+    {
+      "id": "ua-759",
+      "title": "Turnabout Stalemate",
+      "category": "2021",
+      "creator": "Bluewood",
+      "type": "case"
+    },
+    {
+      "id": "ua-760",
+      "title": "A Golfer's Woes",
+      "category": "2021",
+      "creator": "Minion",
+      "type": "case"
+    },
+    {
+      "id": "ua-761",
+      "title": "The Adventure of Thirteen at Dinner",
+      "category": "2021",
+      "creator": "XYZ",
+      "type": "case"
+    },
+    {
+      "id": "ua-762",
+      "title": "The Adventure of the Blackmail King",
+      "category": "2021",
+      "creator": "XYZ",
+      "type": "case"
+    },
+    {
+      "id": "ua-763",
+      "title": "Turnabout Miles",
+      "category": "2021",
+      "creator": "Unknown",
+      "type": "case"
+    },
+    {
+      "id": "ua-764",
+      "title": "Turnabout Lactose-Free Pizza",
+      "category": "2021",
+      "creator": "Payne Gaming",
+      "type": "case"
+    },
+    {
+      "id": "ua-765",
+      "title": "Turnabout Undercover",
+      "category": "2021",
+      "creator": "Young Ema",
+      "type": "case"
+    },
+    {
+      "id": "ua-766",
+      "title": "People V. Davidson",
+      "category": "2021",
+      "creator": "Piggy",
+      "type": "case"
+    },
+    {
+      "id": "ua-767",
+      "title": "Turnabout S.H.O.P",
+      "category": "2021",
+      "creator": "Casing Goddess",
+      "type": "case"
+    },
+    {
+      "id": "ua-768",
+      "title": "Turnabout A.D.A.C.H.I",
+      "category": "2021",
+      "creator": "Casing Goddess",
+      "type": "case"
+    },
+    {
+      "id": "ua-769",
+      "title": "Turnabout Bad Memories",
+      "category": "2021",
+      "creator": "tygames",
+      "type": "case"
+    },
+    {
+      "id": "ua-770",
+      "title": "Turnabout Career Day",
+      "category": "2021",
+      "creator": "Jpeg & Womenarepog",
+      "type": "case"
+    },
+    {
+      "id": "ua-771",
+      "title": "Courtroom Murder Turnabout",
+      "category": "2021",
+      "creator": "Apollo lol",
+      "type": "case"
+    },
+    {
+      "id": "ua-772",
+      "title": "The Adventure of Her Majesty's Players",
+      "category": "2021",
+      "creator": "XYZ",
+      "type": "case"
+    },
+    {
+      "id": "ua-773",
+      "title": "Turnabout Sylvester",
+      "category": "2021",
+      "creator": "Adam",
+      "type": "case"
+    },
+    {
+      "id": "ua-774",
+      "title": "Turnabout Controversial Assassination",
+      "category": "2021",
+      "creator": "Edgewroth & Imagine",
+      "type": "case"
+    },
+    {
+      "id": "ua-775",
+      "title": "The Adventure of the Three Farmers (TA Abe DGS version)",
+      "category": "2021",
+      "creator": "XYZ",
+      "type": "case"
+    },
+    {
+      "id": "ua-776",
+      "title": "The Adventure of the Bloody Tool",
+      "category": "2021",
+      "creator": "XYZ",
+      "type": "case"
+    },
+    {
+      "id": "ua-777",
+      "title": "The Adventure of the Midnight Duel (TA High Moon DGS version)",
+      "category": "2021",
+      "creator": "XYZ",
+      "type": "case"
+    },
+    {
+      "id": "ua-778",
+      "title": "Presidential Turnabout",
+      "category": "2021",
+      "creator": "Bread & LemYTOfficial",
+      "type": "case"
+    },
+    {
+      "id": "ua-779",
+      "title": "Suicidal Turnabout",
+      "category": "2021",
+      "creator": "LemON",
+      "type": "case"
+    },
+    {
+      "id": "ua-780",
+      "title": "Mafia Turnabout",
+      "category": "2021",
+      "creator": "Bread",
+      "type": "case"
+    },
+    {
+      "id": "ua-781",
+      "title": "Turnabout Oven",
+      "category": "2021",
+      "creator": "Karma",
+      "type": "case"
+    },
+    {
+      "id": "ua-782",
+      "title": "Kiss from a Rose",
+      "category": "2021",
+      "creator": "Bread",
+      "type": "case"
+    },
+    {
+      "id": "ua-783",
+      "title": "A Turnabout of Events",
+      "category": "2021",
+      "creator": "JudgeMan",
+      "type": "case"
+    },
+    {
+      "id": "ua-784",
+      "title": "A Dreamer's Turnabout",
+      "category": "2021",
+      "creator": "JudgeMan",
+      "type": "case"
+    },
+    {
+      "id": "ua-785",
+      "title": "Turnabout School Bus",
+      "category": "2021",
+      "creator": "Jpeg & Womenarepog",
+      "type": "case"
+    },
+    {
+      "id": "ua-786",
+      "title": "Turnabout Sun & Crescent Moon",
+      "category": "2021",
+      "creator": "Adam",
+      "type": "case"
+    },
+    {
+      "id": "ua-787",
+      "title": "Turnabout Prohibition",
+      "category": "2021",
+      "creator": "Adam",
+      "type": "case"
+    },
+    {
+      "id": "ua-788",
+      "title": "The First Adventure",
+      "category": "2021",
+      "creator": "XYZ",
+      "type": "case"
+    },
+    {
+      "id": "ua-789",
+      "title": "Turnabout Snowball Assault",
+      "category": "2021",
+      "creator": "Emslaya",
+      "type": "case"
+    },
+    {
+      "id": "ua-790",
+      "title": "Turnabout Battle Cry",
+      "category": "2021",
+      "creator": "Adam",
+      "type": "case"
+    },
+    {
+      "id": "ua-791",
+      "title": "Turnabout Downhill",
+      "category": "2021",
+      "creator": "Team Delta Twist",
+      "type": "case"
+    },
+    {
+      "id": "ua-792",
+      "title": "Turnabout Firework",
+      "category": "2021",
+      "creator": "Edgewroth & OmarGuy",
+      "type": "case"
+    },
+    {
+      "id": "ua-793",
+      "title": "Dionysus' Turnabout",
+      "category": "2021",
+      "creator": "Mish",
+      "type": "case"
+    },
+    {
+      "id": "ua-794",
+      "title": "Turnabout Ashes of Blood",
+      "category": "2021",
+      "creator": "Eluidev & MochiBOI",
+      "type": "case"
+    },
+    {
+      "id": "ua-795",
+      "title": "Turnabout Guilty-Love",
+      "category": "2021",
+      "creator": "Jukebox",
+      "type": "case"
+    },
+    {
+      "id": "ua-796",
+      "title": "Turnabout Tigers",
+      "category": "2021",
+      "creator": "AndMos",
+      "type": "case"
+    },
+    {
+      "id": "ua-797",
+      "title": "The Mafia Family Turnabout",
+      "category": "2021",
+      "creator": "Lionel Hutz",
+      "type": "case"
+    },
+    {
+      "id": "ua-798",
+      "title": "Turnabout Osias",
+      "category": "2021",
+      "creator": "Bobo",
+      "type": "case"
+    },
+    {
+      "id": "ua-799",
+      "title": "The Case of Two Blades",
+      "category": "2021",
+      "creator": "OmarGuy",
+      "type": "case"
+    },
+    {
+      "id": "ua-800",
+      "title": "Kristoph vs Adrian",
+      "category": "2021",
+      "creator": "Distant",
+      "type": "case"
+    },
+    {
+      "id": "ua-801",
+      "title": "Turnabout Beyond the Art",
+      "category": "2021",
+      "creator": "Pina",
+      "type": "case"
+    },
+    {
+      "id": "ua-802",
+      "title": "Too Close to the Sun",
+      "category": "2021",
+      "creator": "Womenarepog",
+      "type": "case"
+    },
+    {
+      "id": "ua-803",
+      "title": "Turnabout Masquerade (Roblox)",
+      "category": "2021",
+      "creator": "Sebastian Campas",
+      "type": "case"
+    },
+    {
+      "id": "ua-804",
+      "title": "Aura Blackquill vs SS Burya III",
+      "category": "2021",
+      "creator": "Minion",
+      "type": "case"
+    },
+    {
+      "id": "ua-805",
+      "title": "Turnabout AURA",
+      "category": "2021",
+      "creator": "Unknown",
+      "type": "case"
+    },
+    {
+      "id": "ua-806",
+      "title": "Zuka's Turnabout Time Traveler",
+      "category": "2021",
+      "creator": "Zuka",
+      "type": "case"
+    },
+    {
+      "id": "ua-807",
+      "title": "The Stock Market's Turnabout",
+      "category": "2021",
+      "creator": "Alan Bernard",
+      "type": "case"
+    },
+    {
+      "id": "ua-808",
+      "title": "A Payne-Ful Turnabout",
+      "category": "2021",
+      "creator": "Tygames",
+      "type": "case"
+    },
+    {
+      "id": "ua-809",
+      "title": "Jack's Last Turnabout",
+      "category": "2021",
+      "creator": "Ordice",
+      "type": "case"
+    },
+    {
+      "id": "ua-810",
+      "title": "Turnabout First Light",
+      "category": "2021",
+      "creator": "Ordice",
+      "type": "case"
+    },
+    {
+      "id": "ua-811",
+      "title": "Turnabout Ahoy",
+      "category": "2021",
+      "creator": "Pina",
+      "type": "case"
+    },
+    {
+      "id": "ua-812",
+      "title": "Turnabout IDK",
+      "category": "2021",
+      "creator": "Alice",
+      "type": "case"
+    },
+    {
+      "id": "ua-813",
+      "title": "The Adventure of The Great Ace Attorney and The Great Ace Mystery",
+      "category": "2021",
+      "creator": "LETSGOCHAMP, Cameron, aP, & Basil",
+      "type": "case"
+    },
+    {
+      "id": "ua-814",
+      "title": "Foreign Flame Turnabout",
+      "category": "2021",
+      "creator": "Unknown",
+      "type": "case"
+    },
+    {
+      "id": "ua-815",
+      "title": "The Experimental Turnabout",
+      "category": "2021",
+      "creator": "Classy Doctor",
+      "type": "case"
+    },
+    {
+      "id": "ua-816",
+      "title": "Turnabout Museum",
+      "category": "2021",
+      "creator": "EeveeProtect",
+      "type": "case"
+    },
+    {
+      "id": "ua-817",
+      "title": "The Return of Corruption",
+      "category": "2021",
+      "creator": "Empress Kaina",
+      "type": "case"
+    },
+    {
+      "id": "ua-818",
+      "title": "TURNABOUT BABBIES",
+      "category": "2021",
+      "creator": "Unknown",
+      "type": "case"
+    },
+    {
+      "id": "ua-819",
+      "title": "Turnabout Festive",
+      "category": "2021",
+      "creator": "Empress Kaina",
+      "type": "case"
+    },
+    {
+      "id": "ua-820",
+      "title": "Shadowed Turnabout",
+      "category": "2021",
+      "creator": "FlipJet",
+      "type": "case"
+    },
+    {
+      "id": "ua-821",
+      "title": "Harvada Banker, Avada Cadaver",
+      "category": "2021",
+      "creator": "Tidy",
+      "type": "case"
+    },
+    {
+      "id": "ua-822",
+      "title": "Turnabout Shrink",
+      "category": "2021",
+      "creator": "XYZ",
+      "type": "case"
+    },
+    {
+      "id": "ua-823",
+      "title": "Clean my Turnabout",
+      "category": "2021",
+      "creator": "Pina",
+      "type": "case"
+    },
+    {
+      "id": "ua-824",
+      "title": "Alike a Turnabout",
+      "category": "2021",
+      "creator": "Pina",
+      "type": "case"
+    },
+    {
+      "id": "ua-825",
+      "title": "Turnabout Lawn",
+      "category": "2021",
+      "creator": "Delinard",
+      "type": "case"
+    },
+    {
+      "id": "ua-826",
+      "title": "Turnabout Field Trip",
+      "category": "2021",
+      "creator": "Jpeg & Womenarepog",
+      "type": "case"
+    },
+    {
+      "id": "ua-827",
+      "title": "Turnabout Performance",
+      "category": "2021",
+      "creator": "Jpeg & Womenarepog",
+      "type": "case"
+    },
+    {
+      "id": "ua-828",
+      "title": "Turnabout Rent Problems",
+      "category": "2021",
+      "creator": "Apollo11",
+      "type": "case"
+    },
+    {
+      "id": "ua-829",
+      "title": "Turnabout Amnesiac",
+      "category": "2021",
+      "creator": "Distant",
+      "type": "case"
+    },
+    {
+      "id": "ua-830",
+      "title": "Turnabout Desire",
+      "category": "2021",
+      "creator": "Redacted",
+      "type": "case"
+    },
+    {
+      "id": "ua-831",
+      "title": "Celebration of A Turnabout",
+      "category": "2022",
+      "creator": "小小",
+      "type": "case"
+    },
+    {
+      "id": "ua-832",
+      "title": "Celebration of A Turnabout",
+      "category": "2022",
+      "creator": "小小",
+      "type": "case"
+    },
+    {
+      "id": "ua-833",
+      "title": "Turnabout Firecracked",
+      "category": "2022",
+      "creator": "Ace Attorney",
+      "type": "case"
+    },
+    {
+      "id": "ua-834",
+      "title": "Turnabout Red",
+      "category": "2022",
+      "creator": "Wolfang",
+      "type": "case"
+    },
+    {
+      "id": "ua-835",
+      "title": "Turnabout Yellow",
+      "category": "2022",
+      "creator": "Wolfang",
+      "type": "case"
+    },
+    {
+      "id": "ua-836",
+      "title": "Turnabout Last Concert",
+      "category": "2022",
+      "creator": "Unknown",
+      "type": "case"
+    },
+    {
+      "id": "ua-837",
+      "title": "Turnabout Dead Man Walking",
+      "category": "2022",
+      "creator": "Unknown",
+      "type": "case"
+    },
+    {
+      "id": "ua-838",
+      "title": "Turnabout Up in Smoke",
+      "category": "2022",
+      "creator": "Racer",
+      "type": "case"
+    },
+    {
+      "id": "ua-839",
+      "title": "Origin of a Turnabout",
+      "category": "2022",
+      "creator": "Unknown",
+      "type": "case"
+    },
+    {
+      "id": "ua-840",
+      "title": "Turnabout Festive",
+      "category": "2022",
+      "creator": "Unknown",
+      "type": "case"
+    },
+    {
+      "id": "ua-841",
+      "title": "Turnabout Hold'em!",
+      "category": "2022",
+      "creator": "CaveVenom1",
+      "type": "case"
+    },
+    {
+      "id": "ua-842",
+      "title": "Turnabout Mystery Room",
+      "category": "2022",
+      "creator": "Unknown",
+      "type": "case"
+    },
+    {
+      "id": "ua-843",
+      "title": "Turnabout Redd Spring",
+      "category": "2022",
+      "creator": "Unknown",
+      "type": "case"
+    },
+    {
+      "id": "ua-844",
+      "title": "Turnabout Investigative Foundings",
+      "category": "2022",
+      "creator": "Unknown",
+      "type": "case"
+    },
+    {
+      "id": "ua-845",
+      "title": "Turnabout Means to an End",
+      "category": "2022",
+      "creator": "Maraienna",
+      "type": "case"
+    },
+    {
+      "id": "ua-846",
+      "title": "Turnabout On A Bullet",
+      "category": "2022",
+      "creator": "Unknown",
+      "type": "case"
+    },
+    {
+      "id": "ua-847",
+      "title": "Turnabout Zero",
+      "category": "2022",
+      "creator": "Unknown",
+      "type": "case"
+    },
+    {
+      "id": "ua-848",
+      "title": "Turnabout Corner: Alita Talia",
+      "category": "2022",
+      "creator": "Unknown",
+      "type": "case"
+    },
+    {
+      "id": "ua-849",
+      "title": "The Wild West Turnabout",
+      "category": "2022",
+      "creator": "Lobo & Axelity",
+      "type": "case"
+    },
+    {
+      "id": "ua-850",
+      "title": "Turnabout Two-Faced",
+      "category": "2022",
+      "creator": "Unknown",
+      "type": "case"
+    },
+    {
+      "id": "ua-851",
+      "title": "Lost Truth of the Turnabout",
+      "category": "2022",
+      "creator": "Unknown",
+      "type": "case"
+    },
+    {
+      "id": "ua-852",
+      "title": "Turnabout Doppelgänger",
+      "category": "2022",
+      "creator": "Papirini",
+      "type": "case"
+    },
+    {
+      "id": "ua-853",
+      "title": "Turnabout Corporation",
+      "category": "2022",
+      "creator": "小小",
+      "type": "case"
+    },
+    {
+      "id": "ua-854",
+      "title": "Turnabout Pollos Hermanos",
+      "category": "2022",
+      "creator": "Franz",
+      "type": "case"
+    },
+    {
+      "id": "ua-855",
+      "title": "Turnabout Supposed Revenge",
+      "category": "2022",
+      "creator": "小小",
+      "type": "case"
+    },
+    {
+      "id": "ua-856",
+      "title": "Turnabout Retribution",
+      "category": "2022",
+      "creator": "Zarrk0da & Fraxilism",
+      "type": "case"
+    },
+    {
+      "id": "ua-857",
+      "title": "Turnabout Vampires",
+      "category": "2022",
+      "creator": "Papirini",
+      "type": "case"
+    },
+    {
+      "id": "ua-858",
+      "title": "Would You Kindly (Turnabout)",
+      "category": "2022",
+      "creator": "Papirini",
+      "type": "case"
+    },
+    {
+      "id": "ua-859",
+      "title": "Terminal Turnabout",
+      "category": "2022",
+      "creator": "Papirini",
+      "type": "case"
+    },
+    {
+      "id": "ua-860",
+      "title": "Resident Turnabout II",
+      "category": "2022",
+      "creator": "Papirini",
+      "type": "case"
+    },
+    {
+      "id": "ua-861",
+      "title": "Dark Age Turnabout",
+      "category": "2022",
+      "creator": "Papirini",
+      "type": "case"
+    },
+    {
+      "id": "ua-862",
+      "title": "Key to the Turnabout",
+      "category": "2022",
+      "creator": "Papirini",
+      "type": "case"
+    },
+    {
+      "id": "ua-863",
+      "title": "Turnabout Yellow",
+      "category": "2022",
+      "creator": "Papirini",
+      "type": "case"
+    },
+    {
+      "id": "ua-864",
+      "title": "Turnabout Red",
+      "category": "2022",
+      "creator": "Papirini",
+      "type": "case"
+    },
+    {
+      "id": "ua-865",
+      "title": "The Ides of Turnabout",
+      "category": "2022",
+      "creator": "Papirini",
+      "type": "case"
+    },
+    {
+      "id": "ua-866",
+      "title": "SPAM, SPAM, Turnabout, SPAM",
+      "category": "2022",
+      "creator": "Papirini",
+      "type": "case"
+    },
+    {
+      "id": "ua-867",
+      "title": "Turnabout Election",
+      "category": "2022",
+      "creator": "Papirini",
+      "type": "case"
+    },
+    {
+      "id": "ua-868",
+      "title": "Turnabout Turkey",
+      "category": "2022",
+      "creator": "Papirini",
+      "type": "case"
+    },
+    {
+      "id": "ua-869",
+      "title": "A Game Filled With Turnabout",
+      "category": "2022",
+      "creator": "Ace Attorney",
+      "type": "case"
+    },
+    {
+      "id": "ua-870",
+      "title": "Turnabout Elevator",
+      "category": "2022",
+      "creator": "Ace Attorney",
+      "type": "case"
+    },
+    {
+      "id": "ua-871",
+      "title": "Turnabout Temptation",
+      "category": "2022",
+      "creator": "Pina",
+      "type": "case"
+    },
+    {
+      "id": "ua-872",
+      "title": "Turnabout: Down the Train",
+      "category": "2022",
+      "creator": "Lobo",
+      "type": "case"
+    },
+    {
+      "id": "ua-873",
+      "title": "Turnabout Family Problems",
+      "category": "2022",
+      "creator": "Kamenka",
+      "type": "case"
+    },
+    {
+      "id": "ua-874",
+      "title": "Loaned Turnabout",
+      "category": "2022",
+      "creator": "Unknown",
+      "type": "case"
+    },
+    {
+      "id": "ua-875",
+      "title": "Turnabout Screenplay",
+      "category": "2022",
+      "creator": "Unknown",
+      "type": "case"
+    },
+    {
+      "id": "ua-876",
+      "title": "Turnabout Enemy Within",
+      "category": "2022",
+      "creator": "RadKL",
+      "type": "case"
+    },
+    {
+      "id": "ua-877",
+      "title": "Delusional Turnabout",
+      "category": "2022",
+      "creator": "Unknown",
+      "type": "case"
+    },
+    {
+      "id": "ua-878",
+      "title": "Etical in Turnabout",
+      "category": "2022",
+      "creator": "Analysis",
+      "type": "case"
+    },
+    {
+      "id": "ua-879",
+      "title": "Turnabout Injustice",
+      "category": "2022",
+      "creator": "Unknown",
+      "type": "case"
+    },
+    {
+      "id": "ua-880",
+      "title": "A Fraud of a Turnabout",
+      "category": "2022",
+      "creator": "Ace Attorney",
+      "type": "case"
+    },
+    {
+      "id": "ua-881",
+      "title": "Lights, Camera, Turnabout!",
+      "category": "2022",
+      "creator": "Jpeg & Womenarepog",
+      "type": "case"
+    },
+    {
+      "id": "ua-882",
+      "title": "Turnabout SMG4",
+      "category": "2022",
+      "creator": "MisterStrike",
+      "type": "case"
+    },
+    {
+      "id": "ua-883",
+      "title": "Turnabout Gloom",
+      "category": "2022",
+      "creator": "Ace Attorney",
+      "type": "case"
+    },
+    {
+      "id": "ua-884",
+      "title": "Turnabout Revival",
+      "category": "2022",
+      "creator": "Unknown",
+      "type": "case"
+    },
+    {
+      "id": "ua-885",
+      "title": "Turnabout Lost Truth",
+      "category": "2022",
+      "creator": "Faxerda",
+      "type": "case"
+    },
+    {
+      "id": "ua-886",
+      "title": "Turnabout Blue Moon",
+      "category": "2022",
+      "creator": "g",
+      "type": "case"
+    },
+    {
+      "id": "ua-887",
+      "title": "Turnabout Butz",
+      "category": "2022",
+      "creator": "AndMos",
+      "type": "case"
+    },
+    {
+      "id": "ua-888",
+      "title": "Turnabout Incineration",
+      "category": "2022",
+      "creator": "小小",
+      "type": "case"
+    },
+    {
+      "id": "ua-889",
+      "title": "Turnabout Sushi Bar",
+      "category": "2022",
+      "creator": "Cope Man",
+      "type": "case"
+    },
+    {
+      "id": "ua-890",
+      "title": "The Reborn Turnabout",
+      "category": "2022",
+      "creator": "rod123",
+      "type": "case"
+    },
+    {
+      "id": "ua-891",
+      "title": "Turnabout Rookie",
+      "category": "2022",
+      "creator": "RingDedede",
+      "type": "case"
+    },
+    {
+      "id": "ua-892",
+      "title": "Turnabout RECITAL",
+      "category": "2022",
+      "creator": "RingDedede",
+      "type": "case"
+    },
+    {
+      "id": "ua-893",
+      "title": "The Disabled Turnabout",
+      "category": "2022",
+      "creator": "Anonymouse",
+      "type": "case"
+    },
+    {
+      "id": "ua-894",
+      "title": "Tumbleweed Turnabout",
+      "category": "2022",
+      "creator": "Unknown",
+      "type": "case"
+    },
+    {
+      "id": "ua-895",
+      "title": "Turnabout Game Master",
+      "category": "2022",
+      "creator": "Anonymouse",
+      "type": "case"
+    },
+    {
+      "id": "ua-896",
+      "title": "Turnabout Roulette",
+      "category": "2022",
+      "creator": "rod123",
+      "type": "case"
+    },
+    {
+      "id": "ua-897",
+      "title": "Turnabout Old Friends",
+      "category": "2022",
+      "creator": "小小 & CopeMan",
+      "type": "case"
+    },
+    {
+      "id": "ua-898",
+      "title": "Turnabout Pressure, Lies & Conspiracy",
+      "category": "2022",
+      "creator": "Michael Notback",
+      "type": "case"
+    },
+    {
+      "id": "ua-899",
+      "title": "Turnabout Heartbreak",
+      "category": "2022",
+      "creator": "EuroEdge",
+      "type": "case"
+    },
+    {
+      "id": "ua-900",
+      "title": "Turnabout Gold Mine",
+      "category": "2022",
+      "creator": "Unknown",
+      "type": "case"
+    },
+    {
+      "id": "ua-901",
+      "title": "Turnabout Crystal Tower",
+      "category": "2022",
+      "creator": "Adam",
+      "type": "case"
+    },
+    {
+      "id": "ua-902",
+      "title": "A Decisive Turnabout",
+      "category": "2022",
+      "creator": "Zizzy",
+      "type": "case"
+    },
+    {
+      "id": "ua-903",
+      "title": "Legendary Turnabout Defenders",
+      "category": "2022",
+      "creator": "Papirini",
+      "type": "case"
+    },
+    {
+      "id": "ua-904",
+      "title": "Turnabout Disagreement",
+      "category": "2022",
+      "creator": "ramjam",
+      "type": "case"
+    },
+    {
+      "id": "ua-905",
+      "title": "A Rose Tinted Turnabout",
+      "category": "2022",
+      "creator": "Serrt",
+      "type": "case"
+    },
+    {
+      "id": "ua-906",
+      "title": "Turnabout College",
+      "category": "2022",
+      "creator": "小小",
+      "type": "case"
+    },
+    {
+      "id": "ua-907",
+      "title": "Turnabout Vent System",
+      "category": "2022",
+      "creator": "Apollo 11",
+      "type": "case"
+    },
+    {
+      "id": "ua-908",
+      "title": "Turnabout Final Ultimatum",
+      "category": "2022",
+      "creator": "Team Delta Twist",
+      "type": "case"
+    },
+    {
+      "id": "ua-909",
+      "title": "Truth of the Turnabout",
+      "category": "2022",
+      "creator": "Team Delta Twist",
+      "type": "case"
+    },
+    {
+      "id": "ua-910",
+      "title": "You couldn't stop Pursuing the Turnabout",
+      "category": "2022",
+      "creator": "Distant",
+      "type": "case"
+    },
+    {
+      "id": "ua-911",
+      "title": "Heart of the Turnabout",
+      "category": "2022",
+      "creator": "Papirini",
+      "type": "case"
+    },
+    {
+      "id": "ua-912",
+      "title": "A Turnabout at the Orphanage (Notion Edition)",
+      "category": "2022",
+      "creator": "SillyKevin, axe, KanameDate",
+      "type": "case"
+    },
+    {
+      "id": "ua-913",
+      "title": "Turnabout Final Lap",
+      "category": "2022",
+      "creator": "RadKL",
+      "type": "case"
+    },
+    {
+      "id": "ua-914",
+      "title": "Turnabout Erased [REMASTERED]",
+      "category": "2022",
+      "creator": "Ordice, 小小 and Cope Man",
+      "type": "case"
+    },
+    {
+      "id": "ua-915",
+      "title": "Turnabout RAT",
+      "category": "2022",
+      "creator": "Pina",
+      "type": "case"
+    },
+    {
+      "id": "ua-916",
+      "title": "The Secrets of Hampstead Horror",
+      "category": "2022",
+      "creator": "Papirini",
+      "type": "case"
+    },
+    {
+      "id": "ua-917",
+      "title": "Turnabout Too Blue",
+      "category": "2022",
+      "creator": "Zizzy",
+      "type": "case"
+    },
+    {
+      "id": "ua-918",
+      "title": "From Ashes to Ashes",
+      "category": "2022",
+      "creator": "Yoru",
+      "type": "case"
+    },
+    {
+      "id": "ua-919",
+      "title": "Turnabout Prosecutors Obligation",
+      "category": "2022",
+      "creator": "(unattributed)",
+      "type": "case"
+    },
+    {
+      "id": "ua-920",
+      "title": "Turnabout Dead Presidents",
+      "category": "2022",
+      "creator": "Zizzy",
+      "type": "case"
+    },
+    {
+      "id": "ua-921",
+      "title": "The Ignited Turnabout",
+      "category": "2022",
+      "creator": "JJAO",
+      "type": "case"
+    },
+    {
+      "id": "ua-922",
+      "title": "Go Go Gadget Turnabout!",
+      "category": "2022",
+      "creator": "Payne Gaming",
+      "type": "case"
+    },
+    {
+      "id": "ua-923",
+      "title": "Turnabout Acute",
+      "category": "2022",
+      "creator": "Jack Gremory",
+      "type": "case"
+    },
+    {
+      "id": "ua-924",
+      "title": "Deadman's Challenge",
+      "category": "2022",
+      "creator": "Deadman",
+      "type": "case"
+    },
+    {
+      "id": "ua-925",
+      "title": "Destination: Turnabout",
+      "category": "2022",
+      "creator": "Pina",
+      "type": "case"
+    },
+    {
+      "id": "ua-926",
+      "title": "Turnabout Belladonna",
+      "category": "2022",
+      "creator": "Team Delta Twist",
+      "type": "case"
+    },
+    {
+      "id": "ua-927",
+      "title": "Turnabout Beef Bowl",
+      "category": "2022",
+      "creator": "Fortnite Guy",
+      "type": "case"
+    },
+    {
+      "id": "ua-928",
+      "title": "A Little Turnabout",
+      "category": "2022",
+      "creator": "Papirini",
+      "type": "case"
+    },
+    {
+      "id": "ua-929",
+      "title": "Flaming Turnabout",
+      "category": "2022",
+      "creator": "Papirini",
+      "type": "case"
+    },
+    {
+      "id": "ua-930",
+      "title": "Turnabout of the Ring",
+      "category": "2022",
+      "creator": "Zizzy",
+      "type": "case"
+    },
+    {
+      "id": "ua-931",
+      "title": "Turnabout Gold-Rush",
+      "category": "2022",
+      "creator": "Rod123",
+      "type": "case"
+    },
+    {
+      "id": "ua-932",
+      "title": "Cuckoo for Turnabout",
+      "category": "2022",
+      "creator": "JJ",
+      "type": "case"
+    },
+    {
+      "id": "ua-933",
+      "title": "A Tingly Turnabout",
+      "category": "2022",
+      "creator": "Papirini",
+      "type": "case"
+    },
+    {
+      "id": "ua-934",
+      "title": "Turnabout of Smiles",
+      "category": "2022",
+      "creator": "Papirini",
+      "type": "case"
+    },
+    {
+      "id": "ua-935",
+      "title": "A Turnabout at the Orphanage",
+      "category": "2022",
+      "creator": "SillyKevin, axe, & KanameDate",
+      "type": "case"
+    },
+    {
+      "id": "ua-936",
+      "title": "Turnabout Broken Soul",
+      "category": "2023",
+      "creator": "Fabian",
+      "type": "case"
+    },
+    {
+      "id": "ua-937",
+      "title": "Turnabout Bitter",
+      "category": "2023",
+      "creator": "Godot",
+      "type": "case"
+    },
+    {
+      "id": "ua-938",
+      "title": "Turnabout Morbius",
+      "category": "2023",
+      "creator": "Window",
+      "type": "case"
+    },
+    {
+      "id": "ua-939",
+      "title": "Turnabout Showman",
+      "category": "2023",
+      "creator": "nerdguy587",
+      "type": "case"
+    },
+    {
+      "id": "ua-940",
+      "title": "Turnabouts in Wonderland",
+      "category": "2023",
+      "creator": ".chr",
+      "type": "case"
+    },
+    {
+      "id": "ua-941",
+      "title": "Turnabout Fiery Thief",
+      "category": "2023",
+      "creator": "coffeegodot",
+      "type": "case"
+    },
+    {
+      "id": "ua-942",
+      "title": "Turnabout Five Nights",
+      "category": "2023",
+      "creator": "Theshyghost",
+      "type": "case"
+    },
+    {
+      "id": "ua-943",
+      "title": "Turnabout Deja Vu",
+      "category": "2023",
+      "creator": "Theshyghost, .chr",
+      "type": "case"
+    },
+    {
+      "id": "ua-944",
+      "title": "Turnabout One (Remake)",
+      "category": "2023",
+      "creator": ".frik, Window",
+      "type": "case"
+    },
+    {
+      "id": "ua-945",
+      "title": "Wild Adventures Class Action Lawsuit",
+      "category": "2023",
+      "creator": "BackUp",
+      "type": "case"
+    },
+    {
+      "id": "ua-946",
+      "title": "The Turbulent Turnabout",
+      "category": "2023",
+      "creator": "Pres",
+      "type": "case"
+    },
+    {
+      "id": "ua-947",
+      "title": "Turnabout Bajiquan",
+      "category": "2023",
+      "creator": "Lobo",
+      "type": "case"
+    },
+    {
+      "id": "ua-948",
+      "title": "Shadows of Turnabout",
+      "category": "2023",
+      "creator": "Kamenka",
+      "type": "case"
+    },
+    {
+      "id": "ua-949",
+      "title": "Devious Turnabout",
+      "category": "2023",
+      "creator": "Kamenka",
+      "type": "case"
+    },
+    {
+      "id": "ua-950",
+      "title": "Turnabout Fuck Von Karma Specifically",
+      "category": "2023",
+      "creator": "Tarhalindur",
+      "type": "case"
+    },
+    {
+      "id": "ua-951",
+      "title": "Until Death Do Us Part Turnabout",
+      "category": "2023",
+      "creator": "Michael Notback",
+      "type": "case"
+    },
+    {
+      "id": "ua-952",
+      "title": "Turnabout Wight",
+      "category": "2023",
+      "creator": "Sone",
+      "type": "case"
+    },
+    {
+      "id": "ua-953",
+      "title": "Turnabout of Cooking Companions",
+      "category": "2023",
+      "creator": "Psyra",
+      "type": "case"
+    },
+    {
+      "id": "ua-954",
+      "title": "Turnabout Alice",
+      "category": "2023",
+      "creator": "Jack Gremory",
+      "type": "case"
+    },
+    {
+      "id": "ua-955",
+      "title": "Turnabout Pasta",
+      "category": "2023",
+      "creator": "Kait",
+      "type": "case"
+    },
+    {
+      "id": "ua-956",
+      "title": "The Fluttering Turnabout",
+      "category": "2023",
+      "creator": "Payne Gaming",
+      "type": "case"
+    },
+    {
+      "id": "ua-957",
+      "title": "Step to my Turnabout",
+      "category": "2023",
+      "creator": "Analysis",
+      "type": "case"
+    },
+    {
+      "id": "ua-958",
+      "title": "Turnabout on Trumpet",
+      "category": "2023",
+      "creator": "Analysis",
+      "type": "case"
+    },
+    {
+      "id": "ua-959",
+      "title": "Too Late to Turnabout",
+      "category": "2023",
+      "creator": "Analysis",
+      "type": "case"
+    },
+    {
+      "id": "ua-960",
+      "title": "Turnabout from Cruelty - The Adventure of the Samaritan's Curse",
+      "category": "2023",
+      "creator": "Analysis",
+      "type": "case"
+    },
+    {
+      "id": "ua-961",
+      "title": "Turnabout Chicanery",
+      "category": "2023",
+      "creator": "Cave & Funky",
+      "type": "case"
+    },
+    {
+      "id": "ua-962",
+      "title": "Turnabout Panzer Vor!",
+      "category": "2023",
+      "creator": "DryInspection",
+      "type": "case"
+    },
+    {
+      "id": "ua-963",
+      "title": "The Adventure of the Revolutionary Blazes",
+      "category": "2023",
+      "creator": "Flying Scotsman & iEmtsuj",
+      "type": "case"
+    },
+    {
+      "id": "ua-964",
+      "title": "Royal Departure",
+      "category": "2023",
+      "creator": "Unknown",
+      "type": "case"
+    },
+    {
+      "id": "ua-965",
+      "title": "Turnabout of Broken Justice",
+      "category": "2023",
+      "creator": "Dyleaon & Zealous",
+      "type": "case"
+    },
+    {
+      "id": "ua-966",
+      "title": "Turnabout Cross Fire",
+      "category": "2023",
+      "creator": "Dyleaon & Zealous",
+      "type": "case"
+    },
+    {
+      "id": "ua-967",
+      "title": "Turnabout Filicide",
+      "category": "2023",
+      "creator": "Unknown",
+      "type": "case"
+    },
+    {
+      "id": "ua-968",
+      "title": "Turnabout Luxurious Murder",
+      "category": "2023",
+      "creator": "Naimed",
+      "type": "case"
+    },
+    {
+      "id": "ua-969",
+      "title": "Reviravolta do Estado",
+      "category": "2023",
+      "creator": "Felps",
+      "type": "case"
+    },
+    {
+      "id": "ua-970",
+      "title": "Turnabout Monster Mash",
+      "category": "2023",
+      "creator": "Unknown",
+      "type": "case"
+    },
+    {
+      "id": "ua-971",
+      "title": "Turnabout Eclipse",
+      "category": "2023",
+      "creator": "KarmaGrass",
+      "type": "case"
+    },
+    {
+      "id": "ua-972",
+      "title": "Turnabout Checkmate",
+      "category": "2023",
+      "creator": "iEmtsuj & Phoenix Edgeworth",
+      "type": "case"
+    },
+    {
+      "id": "ua-973",
+      "title": "Trespassing Turnabout",
+      "category": "2023",
+      "creator": "AndMos",
+      "type": "case"
+    },
+    {
+      "id": "ua-974",
+      "title": "Turnabout Butterfly",
+      "category": "2023",
+      "creator": "Mako",
+      "type": "case"
+    },
+    {
+      "id": "ua-975",
+      "title": "Turnabout Clothing Iron",
+      "category": "2023",
+      "creator": "AndMos",
+      "type": "case"
+    },
+    {
+      "id": "ua-976",
+      "title": "Turnabout Hikikomori",
+      "category": "2023",
+      "creator": "AniPad",
+      "type": "case"
+    },
+    {
+      "id": "ua-977",
+      "title": "To Miss a Turnabout",
+      "category": "2023",
+      "creator": "Pina",
+      "type": "case"
+    },
+    {
+      "id": "ua-978",
+      "title": "Straight to the Turnabout",
+      "category": "2023",
+      "creator": "Pina",
+      "type": "case"
+    },
+    {
+      "id": "ua-979",
+      "title": "Turnabout Roche Limit",
+      "category": "2023",
+      "creator": "Yoru",
+      "type": "case"
+    },
+    {
+      "id": "ua-980",
+      "title": "Turnabout Blue: Papirini Version",
+      "category": "2023",
+      "creator": "Papirini",
+      "type": "case"
+    },
+    {
+      "id": "ua-981",
+      "title": "Turnabout Fey Incident Part 2",
+      "category": "2023",
+      "creator": "Zarrk0da & Fraxilism",
+      "type": "case"
+    },
+    {
+      "id": "ua-982",
+      "title": "Turnabout Fey Incident: The Finale",
+      "category": "2023",
+      "creator": "Zarrk0da & Fraxilism",
+      "type": "case"
+    },
+    {
+      "id": "ua-983",
+      "title": "Expert Turnabout",
+      "category": "2023",
+      "creator": "AndMos",
+      "type": "case"
+    },
+    {
+      "id": "ua-984",
+      "title": "Murder By Turnabout",
+      "category": "2023",
+      "creator": "Papirini",
+      "type": "case"
+    },
+    {
+      "id": "ua-985",
+      "title": "Smile for the Turnabout",
+      "category": "2023",
+      "creator": "Payne Gaming",
+      "type": "case"
+    },
+    {
+      "id": "ua-986",
+      "title": "Somebody's Turnabout",
+      "category": "2023",
+      "creator": "Easinova",
+      "type": "case"
+    },
+    {
+      "id": "ua-987",
+      "title": "Turnabout Elysium",
+      "category": "2023",
+      "creator": "Unknown",
+      "type": "case"
+    },
+    {
+      "id": "ua-988",
+      "title": "Turnabout Replica",
+      "category": "2023",
+      "creator": "Unknown",
+      "type": "case"
+    },
+    {
+      "id": "ua-989",
+      "title": "Magical Girl's Turnabout",
+      "category": "2023",
+      "creator": "Jouto",
+      "type": "case"
+    },
+    {
+      "id": "ua-990",
+      "title": "Turnabout Out for Blood",
+      "category": "2023",
+      "creator": "Minion",
+      "type": "case"
+    },
+    {
+      "id": "ua-991",
+      "title": "Two Worlds, One Turnabout REMAKE",
+      "category": "2023",
+      "creator": "Minion",
+      "type": "case"
+    },
+    {
+      "id": "ua-992",
+      "title": "Turnabout with the Wind",
+      "category": "2023",
+      "creator": "TarasRex",
+      "type": "case"
+    },
+    {
+      "id": "ua-993",
+      "title": "Turnabout Creeper",
+      "category": "2023",
+      "creator": "Yuujin Mikotoba & Hell",
+      "type": "case"
+    },
+    {
+      "id": "ua-994",
+      "title": "Turnabout Tributary",
+      "category": "2023",
+      "creator": "DryInspection",
+      "type": "case"
+    },
+    {
+      "id": "ua-995",
+      "title": "Turnabout Candlelight",
+      "category": "2023",
+      "creator": "Unknown",
+      "type": "case"
+    },
+    {
+      "id": "ua-996",
+      "title": "A Calculated Turnabout",
+      "category": "2023",
+      "creator": "Jouto",
+      "type": "case"
+    },
+    {
+      "id": "ua-997",
+      "title": "Turnabout Impossible",
+      "category": "2023",
+      "creator": "Phantom",
+      "type": "case"
+    },
+    {
+      "id": "ua-998",
+      "title": "Turnabout Enor Pearl",
+      "category": "2023",
+      "creator": "Cassybara5",
+      "type": "case"
+    },
+    {
+      "id": "ua-999",
+      "title": "Turnabout Red Hospital",
+      "category": "2023",
+      "creator": "Fabian",
+      "type": "case"
+    },
+    {
+      "id": "ua-1000",
+      "title": "Turnabout Snowball Effect",
+      "category": "2023",
+      "creator": "Jouto",
+      "type": "case"
+    },
+    {
+      "id": "ua-1001",
+      "title": "Turnabout Coffeehouse",
+      "category": "2023",
+      "creator": "JamesTheDummy",
+      "type": "case"
+    },
+    {
+      "id": "ua-1002",
+      "title": "Cruise on a Turnabout",
+      "category": "2023",
+      "creator": "Jukeyles",
+      "type": "case"
+    },
+    {
+      "id": "ua-1003",
+      "title": "Turnabout Mustard",
+      "category": "2023",
+      "creator": "Nugget64",
+      "type": "case"
+    },
+    {
+      "id": "ua-1004",
+      "title": "Cream of Turnabout",
+      "category": "2023",
+      "creator": "Papirini",
+      "type": "case"
+    },
+    {
+      "id": "ua-1005",
+      "title": "The Indignant Turnabout",
+      "category": "2023",
+      "creator": "Alan Bernard",
+      "type": "case"
+    },
+    {
+      "id": "ua-1006",
+      "title": "Thinking with Turnabouts",
+      "category": "2023",
+      "creator": "Payne Gaming",
+      "type": "case"
+    },
+    {
+      "id": "ua-1007",
+      "title": "Turnabout Falling Angel",
+      "category": "2023",
+      "creator": "mastyra/axe",
+      "type": "case"
+    },
+    {
+      "id": "ua-1008",
+      "title": "Turnabout Fey Incident",
+      "category": "2023",
+      "creator": "Zarrkoda & Fraxilism",
+      "type": "case"
+    },
+    {
+      "id": "ua-1009",
+      "title": "Serenade of a Turnabout",
+      "category": "2023",
+      "creator": "Analysis",
+      "type": "case"
+    },
+    {
+      "id": "ua-1010",
+      "title": "The Squawking Turnabout",
+      "category": "2023",
+      "creator": "Gimger",
+      "type": "case"
+    },
+    {
+      "id": "ua-1011",
+      "title": "A Study in Amaranth",
+      "category": "2023",
+      "creator": "Papirini",
+      "type": "case"
+    },
+    {
+      "id": "ua-1012",
+      "title": "Threnody to a Turnabout",
+      "category": "2023",
+      "creator": "Papirini",
+      "type": "case"
+    },
+    {
+      "id": "ua-1013",
+      "title": "REsident Turnabout",
+      "category": "2023",
+      "creator": "Jouto",
+      "type": "case"
+    },
+    {
+      "id": "ua-1014",
+      "title": "Turnabout French Garden",
+      "category": "2023",
+      "creator": "Yoru",
+      "type": "case"
+    },
+    {
+      "id": "ua-1015",
+      "title": "Midnight Turnabout",
+      "category": "2023",
+      "creator": "EuroEdge",
+      "type": "case"
+    },
+    {
+      "id": "ua-1016",
+      "title": "Turnabout Golden Sun",
+      "category": "2023",
+      "creator": "Axe & Psyra",
+      "type": "case"
+    },
+    {
+      "id": "ua-1017",
+      "title": "Turnabout Baguette",
+      "category": "2023",
+      "creator": "Unknown",
+      "type": "case"
+    },
+    {
+      "id": "ua-1018",
+      "title": "Turnabout Dinner (Revised)",
+      "category": "2023",
+      "creator": "Unknown",
+      "type": "case"
+    },
+    {
+      "id": "ua-1019",
+      "title": "Turnabout Redress",
+      "category": "2023",
+      "creator": "Yuzuru & Noire",
+      "type": "case"
+    },
+    {
+      "id": "ua-1020",
+      "title": "The Broken Man's Turnabout",
+      "category": "2023",
+      "creator": "Minion",
+      "type": "case"
+    },
+    {
+      "id": "ua-1021",
+      "title": "Turnabout Heated Gaming Session",
+      "category": "2023",
+      "creator": "Edgeworthless & SylphWind",
+      "type": "case"
+    },
+    {
+      "id": "ua-1022",
+      "title": "Turnabout Trashcan",
+      "category": "2023",
+      "creator": "Sp",
+      "type": "case"
+    },
+    {
+      "id": "ua-1023",
+      "title": "Turnabout Lost Love",
+      "category": "2023",
+      "creator": "Jukeyles",
+      "type": "case"
+    },
+    {
+      "id": "ua-1024",
+      "title": "Turnabout Tumble",
+      "category": "2024",
+      "creator": "Knight",
+      "type": "case"
+    },
+    {
+      "id": "ua-1025",
+      "title": "Turnabout Blue: Remastered",
+      "category": "2024",
+      "creator": "Wolfang",
+      "type": "case"
+    },
+    {
+      "id": "ua-1026",
+      "title": "Turnabout Unleashed",
+      "category": "2024",
+      "creator": "Fricka",
+      "type": "case"
+    },
+    {
+      "id": "ua-1027",
+      "title": "Turnabout Jerkin' It",
+      "category": "2024",
+      "creator": "Miless",
+      "type": "case"
+    },
+    {
+      "id": "ua-1028",
+      "title": "Turnabout Blackout (Roblox)",
+      "category": "2024",
+      "creator": "Zero",
+      "type": "case"
+    },
+    {
+      "id": "ua-1029",
+      "title": "Turnabout Bullet",
+      "category": "2024",
+      "creator": "Burber",
+      "type": "case"
+    },
+    {
+      "id": "ua-1030",
+      "title": "Turnabout Ruby Red",
+      "category": "2024",
+      "creator": "Director",
+      "type": "case"
+    },
+    {
+      "id": "ua-1031",
+      "title": "Turnabout Extraordinary Woo",
+      "category": "2024",
+      "creator": "Director",
+      "type": "case"
+    },
+    {
+      "id": "ua-1032",
+      "title": "Turnabout HedgeMaze",
+      "category": "2024",
+      "creator": "Director",
+      "type": "case"
+    },
+    {
+      "id": "ua-1033",
+      "title": "Turnabout Agents",
+      "category": "2024",
+      "creator": "Director",
+      "type": "case"
+    },
+    {
+      "id": "ua-1034",
+      "title": "Turnabout Breach",
+      "category": "2024",
+      "creator": "Director",
+      "type": "case"
+    },
+    {
+      "id": "ua-1035",
+      "title": "Turnabout Security",
+      "category": "2024",
+      "creator": "Director",
+      "type": "case"
+    },
+    {
+      "id": "ua-1036",
+      "title": "Turnabout A New Trial",
+      "category": "2024",
+      "creator": "Director",
+      "type": "case"
+    },
+    {
+      "id": "ua-1037",
+      "title": "Turnabout Broken Shield",
+      "category": "2024",
+      "creator": "Director",
+      "type": "case"
+    },
+    {
+      "id": "ua-1038",
+      "title": "Turnabout Tenfold",
+      "category": "2024",
+      "creator": "Cassybara",
+      "type": "case"
+    },
+    {
+      "id": "ua-1039",
+      "title": "A Turnabout Abroad",
+      "category": "2024",
+      "creator": "Cassybara",
+      "type": "case"
+    },
+    {
+      "id": "ua-1040",
+      "title": "Traces of Turnabout: Trust Nobody",
+      "category": "2024",
+      "creator": "Michael Notback",
+      "type": "case"
+    },
+    {
+      "id": "ua-1041",
+      "title": "A Turnabout to Restore Justice",
+      "category": "2024",
+      "creator": "Somebody",
+      "type": "case"
+    },
+    {
+      "id": "ua-1042",
+      "title": "Funfair and Turnabout (Original)",
+      "category": "2024",
+      "creator": "NewLawGuy",
+      "type": "case"
+    },
+    {
+      "id": "ua-1043",
+      "title": "Trial for the Turnabout",
+      "category": "2024",
+      "creator": "Renegade",
+      "type": "case"
+    },
+    {
+      "id": "ua-1044",
+      "title": "The Stolen Turnabout",
+      "category": "2024",
+      "creator": "Unknown",
+      "type": "case"
+    },
+    {
+      "id": "ua-1045",
+      "title": "Cast-Iron Turnabout",
+      "category": "2024",
+      "creator": "EaTStu",
+      "type": "case"
+    },
+    {
+      "id": "ua-1046",
+      "title": "The Whitechapel Mystery",
+      "category": "2024",
+      "creator": "Ron Whiskey",
+      "type": "case"
+    },
+    {
+      "id": "ua-1047",
+      "title": "Turnabout Over Lunch",
+      "category": "2024",
+      "creator": "Payne Gaming",
+      "type": "case"
+    },
+    {
+      "id": "ua-1048",
+      "title": "Turnabout of Spades",
+      "category": "2024",
+      "creator": "Ranger",
+      "type": "case"
+    },
+    {
+      "id": "ua-1049",
+      "title": "Turnabout Case",
+      "category": "2024",
+      "creator": "Candyman",
+      "type": "case"
+    },
+    {
+      "id": "ua-1050",
+      "title": "The Case of the Justice Murder",
+      "category": "2024",
+      "creator": "SunsetWinter",
+      "type": "case"
+    },
+    {
+      "id": "ua-1051",
+      "title": "The Adventure of Killarney's Idol",
+      "category": "2024",
+      "creator": "Pina",
+      "type": "case"
+    },
+    {
+      "id": "ua-1052",
+      "title": "Turnabout Flaming Cards",
+      "category": "2024",
+      "creator": "Yoru",
+      "type": "case"
+    },
+    {
+      "id": "ua-1053",
+      "title": "Turnabout Failed Rescue",
+      "category": "2024",
+      "creator": "Yoru",
+      "type": "case"
+    },
+    {
+      "id": "ua-1054",
+      "title": "The Secure Turnabout",
+      "category": "2024",
+      "creator": "FlyingScotsman & sting0",
+      "type": "case"
+    },
+    {
+      "id": "ua-1055",
+      "title": "Turnabout Orchestra",
+      "category": "2024",
+      "creator": "DryInspection",
+      "type": "case"
+    },
+    {
+      "id": "ua-1056",
+      "title": "Turnabout Paradox",
+      "category": "2024",
+      "creator": "Phantom",
+      "type": "case"
+    },
+    {
+      "id": "ua-1057",
+      "title": "Digging into the Underworld",
+      "category": "2024",
+      "creator": "Unknown",
+      "type": "case"
+    },
+    {
+      "id": "ua-1058",
+      "title": "Turnabout Evil Pizza",
+      "category": "2024",
+      "creator": "FlyingPhoenixCat",
+      "type": "case"
+    },
+    {
+      "id": "ua-1059",
+      "title": "Turnabout Future",
+      "category": "2024",
+      "creator": "BackUp",
+      "type": "case"
+    },
+    {
+      "id": "ua-1060",
+      "title": "The Hidden Turnabout",
+      "category": "2024",
+      "creator": "NC",
+      "type": "case"
+    },
+    {
+      "id": "ua-1061",
+      "title": "Turnabout Cursed Painting",
+      "category": "2024",
+      "creator": "Yoru",
+      "type": "case"
+    },
+    {
+      "id": "ua-1062",
+      "title": "Turnabout Dinner",
+      "category": "2024",
+      "creator": "Yoru",
+      "type": "case"
+    },
+    {
+      "id": "ua-1063",
+      "title": "Turnabout Party Crasher",
+      "category": "2024",
+      "creator": "Sunset Winter",
+      "type": "case"
+    },
+    {
+      "id": "ua-1064",
+      "title": "Turnabout Asylum",
+      "category": "2024",
+      "creator": "Michael Notback",
+      "type": "case"
+    },
+    {
+      "id": "ua-1065",
+      "title": "Turnabout Concerto",
+      "category": "2024",
+      "creator": "Kait",
+      "type": "case"
+    },
+    {
+      "id": "ua-1066",
+      "title": "Ra! Curse this Turnabout!!",
+      "category": "2024",
+      "creator": "Pina",
+      "type": "case"
+    },
+    {
+      "id": "ua-1067",
+      "title": "Attorney Fighter",
+      "category": "2024",
+      "creator": "Ron Whiskey",
+      "type": "case"
+    },
+    {
+      "id": "ua-1068",
+      "title": "Turnabout Overworked",
+      "category": "2024",
+      "creator": "Fella",
+      "type": "case"
+    },
+    {
+      "id": "ua-1069",
+      "title": "To Turnabout From Your Doubt",
+      "category": "2024",
+      "creator": "Analysis",
+      "type": "case"
+    },
+    {
+      "id": "ua-1070",
+      "title": "Turnabout Journey",
+      "category": "2024",
+      "creator": "SunsetWinter",
+      "type": "case"
+    },
+    {
+      "id": "ua-1071",
+      "title": "Fried Turnabout",
+      "category": "2024",
+      "creator": "Alcaztra",
+      "type": "case"
+    },
+    {
+      "id": "ua-1072",
+      "title": "Willy Wonka's Chocolate Turnabout",
+      "category": "2024",
+      "creator": "Minion",
+      "type": "case"
+    },
+    {
+      "id": "ua-1073",
+      "title": "The Reignited Turnabout",
+      "category": "2024",
+      "creator": "SunsetWinter",
+      "type": "case"
+    },
+    {
+      "id": "ua-1074",
+      "title": "Bet on Turnabout",
+      "category": "2024",
+      "creator": "Lom",
+      "type": "case"
+    },
+    {
+      "id": "ua-1075",
+      "title": "Turnabout Feast",
+      "category": "2024",
+      "creator": "Delinard",
+      "type": "case"
+    },
+    {
+      "id": "ua-1076",
+      "title": "The Cryo Witch Trial",
+      "category": "2024",
+      "creator": "Knight",
+      "type": "case"
+    },
+    {
+      "id": "ua-1077",
+      "title": "The Shine of a Turnabout",
+      "category": "2024",
+      "creator": "Sheepish",
+      "type": "case"
+    },
+    {
+      "id": "ua-1078",
+      "title": "Check and Turnabout",
+      "category": "2024",
+      "creator": "Krabbenfischer",
+      "type": "case"
+    },
+    {
+      "id": "ua-1079",
+      "title": "Chime, Turnabout, Chime",
+      "category": "2024",
+      "creator": "Fricka",
+      "type": "case"
+    },
+    {
+      "id": "ua-1080",
+      "title": "Turnabout Like You're Livin' La Vida Loca",
+      "category": "2024",
+      "creator": "Knight",
+      "type": "case"
+    },
+    {
+      "id": "ua-1081",
+      "title": "To Forget a Turnabout",
+      "category": "2024",
+      "creator": "Fricka",
+      "type": "case"
+    },
+    {
+      "id": "ua-1082",
+      "title": "Turnabout Menace to Society",
+      "category": "2024",
+      "creator": "Mephisto",
+      "type": "case"
+    },
+    {
+      "id": "ua-1083",
+      "title": "Turnabout Malware",
+      "category": "2024",
+      "creator": "Krabbenfischer",
+      "type": "case"
+    },
+    {
+      "id": "ua-1084",
+      "title": "Turnabout Tens",
+      "category": "2024",
+      "creator": "Sheepish",
+      "type": "case"
+    },
+    {
+      "id": "ua-1085",
+      "title": "Turnabout on Tape",
+      "category": "2024",
+      "creator": "Fricka",
+      "type": "case"
+    },
+    {
+      "id": "ua-1086",
+      "title": "Funfair and Turnabout (v2)",
+      "category": "2024",
+      "creator": "LegalGina",
+      "type": "case"
+    },
+    {
+      "id": "ua-1087",
+      "title": "An Odyssey to a Greater Turnabout",
+      "category": "2024",
+      "creator": "Fricka",
+      "type": "case"
+    },
+    {
+      "id": "ua-1088",
+      "title": "Love Thy Turnabout",
+      "category": "2024",
+      "creator": "Fricka, Pina",
+      "type": "case"
+    },
+    {
+      "id": "ua-1089",
+      "title": "The Elixir of Turnabout",
+      "category": "2024",
+      "creator": "Fricka",
+      "type": "case"
+    },
+    {
+      "id": "ua-1090",
+      "title": "Stereotypical Russian Turnabout 🪆",
+      "category": "2024",
+      "creator": "Clamet",
+      "type": "case"
+    },
+    {
+      "id": "ua-1091",
+      "title": "The Colors of Turnabout",
+      "category": "2024",
+      "creator": "Sheepish",
+      "type": "case"
+    },
+    {
+      "id": "ua-1092",
+      "title": "Broadcast my Turnabout",
+      "category": "2024",
+      "creator": "Pina",
+      "type": "case"
+    },
+    {
+      "id": "ua-1093",
+      "title": "What's in the Turnabout",
+      "category": "2024",
+      "creator": "Pina",
+      "type": "case"
+    },
+    {
+      "id": "ua-1094",
+      "title": "Krabby Patty and Turnabout",
+      "category": "2024",
+      "creator": "Sheepish",
+      "type": "case"
+    },
+    {
+      "id": "ua-1095",
+      "title": "A Shortage of Turnabout",
+      "category": "2024",
+      "creator": "Fricka",
+      "type": "case"
+    },
+    {
+      "id": "ua-1096",
+      "title": "Turnabout Revenge",
+      "category": "2024",
+      "creator": "Burber",
+      "type": "case"
+    },
+    {
+      "id": "ua-1097",
+      "title": "Turnabout Tempest",
+      "category": "2024",
+      "creator": "Fricka",
+      "type": "case"
+    },
+    {
+      "id": "ua-1098",
+      "title": "The Disappeared Turnabout",
+      "category": "2024",
+      "creator": "Fricka",
+      "type": "case"
+    },
+    {
+      "id": "ua-1099",
+      "title": "This is a Turnabout. . . Get me out of here! (Remake)",
+      "category": "2024",
+      "creator": "Knight",
+      "type": "case"
+    },
+    {
+      "id": "ua-1100",
+      "title": "Turnabout Takeover",
+      "category": "2024",
+      "creator": "Miless",
+      "type": "case"
+    },
+    {
+      "id": "ua-1101",
+      "title": "Turnabout in the Shadows",
+      "category": "2024",
+      "creator": "Fricka",
+      "type": "case"
+    },
+    {
+      "id": "ua-1102",
+      "title": "Roll the Turnabout",
+      "category": "2024",
+      "creator": "Fricka",
+      "type": "case"
+    },
+    {
+      "id": "ua-1103",
+      "title": "Turnabout Y2K",
+      "category": "2024",
+      "creator": "Pina",
+      "type": "case"
+    },
+    {
+      "id": "ua-1104",
+      "title": "Turnabout's Duty",
+      "category": "2024",
+      "creator": "Dunkleheart",
+      "type": "case"
+    },
+    {
+      "id": "ua-1105",
+      "title": "Olé! Turnabout",
+      "category": "2024",
+      "creator": "Pina",
+      "type": "case"
+    },
+    {
+      "id": "ua-1106",
+      "title": "Paying Out To Turnabout",
+      "category": "2024",
+      "creator": "Yoru, LegalGina, cass, KanameDate, NintenGunner, Alias_Crouton2, MLink, somebody",
+      "type": "case"
+    },
+    {
+      "id": "ua-1107",
+      "title": "Turnabout Trinity",
+      "category": "2024",
+      "creator": "Fricka",
+      "type": "case"
+    },
+    {
+      "id": "ua-1108",
+      "title": "Turnabout Dealings",
+      "category": "2024",
+      "creator": "Ice",
+      "type": "case"
+    },
+    {
+      "id": "ua-1109",
+      "title": "The Turnabout is Sweet?",
+      "category": "2024",
+      "creator": "Sheepish",
+      "type": "case"
+    },
+    {
+      "id": "ua-1110",
+      "title": "Reservations For My Turnabout",
+      "category": "2024",
+      "creator": "Dunkleheart",
+      "type": "case"
+    },
+    {
+      "id": "ua-1111",
+      "title": "Turnabout of Souls",
+      "category": "2024",
+      "creator": "Papirini",
+      "type": "case"
+    },
+    {
+      "id": "ua-1112",
+      "title": "The Good, The Bad, and The Turnabout",
+      "category": "2025",
+      "creator": "Cave",
+      "type": "case"
+    },
+    {
+      "id": "ua-1113",
+      "title": "The Fable of the Midnight Meeting",
+      "category": "2025",
+      "creator": "DMercury",
+      "type": "case"
+    },
+    {
+      "id": "ua-1114",
+      "title": "Turnabout Chicanery",
+      "category": "2025",
+      "creator": "Funky",
+      "type": "case"
+    },
+    {
+      "id": "ua-1115",
+      "title": "Turnabout Chains from the Past",
+      "category": "2025",
+      "creator": "NekoSchro",
+      "type": "case"
+    },
+    {
+      "id": "ua-1116",
+      "title": "Fat Tony's Turnabout",
+      "category": "2025",
+      "creator": "Bladetastic",
+      "type": "case"
+    },
+    {
+      "id": "ua-1117",
+      "title": "Turnabout Bonds Beyond Death",
+      "category": "2025",
+      "creator": "NekoSchro",
+      "type": "case"
+    },
+    {
+      "id": "ua-1118",
+      "title": "Pharma Trauma",
+      "category": "2025",
+      "creator": "DoomBro_Max",
+      "type": "case"
+    },
+    {
+      "id": "ua-1119",
+      "title": "Turnabout Creeper",
+      "category": "2025",
+      "creator": "Yuujin Mikotoba and Hell",
+      "type": "case"
+    },
+    {
+      "id": "ua-1120",
+      "title": "The New Era of Turnabout",
+      "category": "2025",
+      "creator": "SunsetWinter",
+      "type": "case"
+    },
+    {
+      "id": "ua-1121",
+      "title": "Night at the Turnabout",
+      "category": "2025",
+      "creator": "Bladetastic",
+      "type": "case"
+    },
+    {
+      "id": "ua-1122",
+      "title": "Indiana Jones and His Fatal Turnabout",
+      "category": "2025",
+      "creator": "Papirini",
+      "type": "case"
+    },
+    {
+      "id": "ua-1123",
+      "title": "The Fable of the Midnight Meeting",
+      "category": "2025",
+      "creator": "DMercury",
+      "type": "case"
+    },
+    {
+      "id": "ua-1124",
+      "title": "ULTA Trial of The Dance Floor",
+      "category": "2025",
+      "creator": "Sryroxy",
+      "type": "case"
+    },
+    {
+      "id": "ua-1125",
+      "title": "Turnabout Challenge",
+      "category": "2025",
+      "creator": "Yoru",
+      "type": "case"
+    },
+    {
+      "id": "ua-1126",
+      "title": "Turnabout Burned",
+      "category": "2025",
+      "creator": "Gilnaml",
+      "type": "case"
+    },
+    {
+      "id": "ua-1127",
+      "title": "Turnabout In The Paper",
+      "category": "2025",
+      "creator": "herrmit5",
+      "type": "case"
+    },
+    {
+      "id": "ua-1128",
+      "title": "Turnabout Voyage To The West",
+      "category": "2025",
+      "creator": "Dereos and Orel",
+      "type": "case"
+    },
+    {
+      "id": "ua-1129",
+      "title": "Railing on the Turnabout",
+      "category": "2025",
+      "creator": "Sheepish",
+      "type": "case"
+    },
+    {
+      "id": "ua-1130",
+      "title": "Knock Out! Turnabout!",
+      "category": "2025",
+      "creator": "Sheepish",
+      "type": "case"
+    },
+    {
+      "id": "ua-1131",
+      "title": "Grand Turnabout",
+      "category": "2025",
+      "creator": "Rguy",
+      "type": "case"
+    },
+    {
+      "id": "ua-1132",
+      "title": "Mining Towards A Turnabout",
+      "category": "2025",
+      "creator": "Sheepish",
+      "type": "case"
+    },
+    {
+      "id": "ua-1133",
+      "title": "Turnabout WizzoRee",
+      "category": "2025",
+      "creator": "Team Orakiza",
+      "type": "case"
+    },
+    {
+      "id": "ua-1134",
+      "title": "The Jewels of the Sea Turnabout",
+      "category": "2025",
+      "creator": "Wolfang",
+      "type": "case"
+    },
+    {
+      "id": "ua-1135",
+      "title": "Turnabout Chance Time",
+      "category": "2025",
+      "creator": "Knight",
+      "type": "case"
+    },
+    {
+      "id": "ua-1136",
+      "title": "Crackalacking Turnabout",
+      "category": "2025",
+      "creator": "Sheepish",
+      "type": "case"
+    },
+    {
+      "id": "ua-1137",
+      "title": "Crosswords and a Turnabout",
+      "category": "2025",
+      "creator": "Pina",
+      "type": "case"
+    },
+    {
+      "id": "ua-1138",
+      "title": "The Undead Witch Trial",
+      "category": "2025",
+      "creator": "Knight",
+      "type": "case"
+    },
+    {
+      "id": "ua-1139",
+      "title": "Royal Bank of a Turnabout (Remake)",
+      "category": "2025",
+      "creator": "Knight",
+      "type": "case"
+    },
+    {
+      "id": "ua-1140",
+      "title": "Turnabout High Roller",
+      "category": "2025",
+      "creator": "Dereos",
+      "type": "case"
+    },
+    {
+      "id": "ua-1141",
+      "title": "Drive! It's for a Turnabout!",
+      "category": "2025",
+      "creator": "Sheepish",
+      "type": "case"
+    },
+    {
+      "id": "ua-1142",
+      "title": "Turnabout Keyboard",
+      "category": "2025",
+      "creator": "Window",
+      "type": "case"
+    },
+    {
+      "id": "ua-1143",
+      "title": "On the Lighthouse: A Turnabout",
+      "category": "2025",
+      "creator": "Pina",
+      "type": "case"
+    },
+    {
+      "id": "ua-1144",
+      "title": "A Turnabout That's Disturbing The Peace",
+      "category": "2025",
+      "creator": "Knight",
+      "type": "case"
+    },
+    {
+      "id": "ua-1145",
+      "title": "Kasbah With a Turnabout",
+      "category": "2025",
+      "creator": "Pina",
+      "type": "case"
+    },
+    {
+      "id": "ua-1146",
+      "title": "Turnabout Oh Turnabout... I've Been Waiting For This",
+      "category": "2025",
+      "creator": "Knight",
+      "type": "case"
+    },
+    {
+      "id": "ua-1147",
+      "title": "Attorney of the Arcane: The Coldhearted Aristocrat",
+      "category": "2025",
+      "creator": "Lom",
+      "type": "case"
+    },
+    {
+      "id": "ua-1148",
+      "title": "The Story of the White Hamlet",
+      "category": "2025",
+      "creator": "Lom",
+      "type": "case"
+    },
+    {
+      "id": "ua-1149",
+      "title": "Journey's Turnabout (Doc Version)",
+      "category": "2025",
+      "creator": "SunsetWinter",
+      "type": "case"
+    },
+    {
+      "id": "ua-1150",
+      "title": "Voice of the Turnabout",
+      "category": "2025",
+      "creator": "Notback",
+      "type": "case"
+    },
+    {
+      "id": "ua-1151",
+      "title": "Super Turnabout World",
+      "category": "2026",
+      "creator": "Yoru",
+      "type": "case"
+    },
+    {
+      "id": "ua-1152",
+      "title": "Turnabout Vendetta",
+      "category": "2026",
+      "creator": "Yoru",
+      "type": "case"
+    },
+    {
+      "id": "ua-1153",
+      "title": "Night At The Turnabout",
+      "category": "2026",
+      "creator": "Bladestatic",
+      "type": "case"
+    },
+    {
+      "id": "ua-1154",
+      "title": "Pool Hall Turnabout",
+      "category": "2026",
+      "creator": "Retroliser",
+      "type": "case"
+    },
+    {
+      "id": "ua-1155",
+      "title": "Turnabout Lacrosse",
+      "category": "2026",
+      "creator": ".dereos",
+      "type": "case"
+    },
+    {
+      "id": "ua-1156",
+      "title": "Turnabout SPAMMER",
+      "category": "2026",
+      "creator": "Mephisto",
+      "type": "case"
+    },
+    {
+      "id": "ua-1157",
+      "title": "A Revolting Turnabout",
+      "category": "2026",
+      "creator": "Bladetastic",
+      "type": "case"
+    },
+    {
+      "id": "ua-1158",
+      "title": "The Fable of the Midnight Meeting",
+      "category": "2026",
+      "creator": "DMercury",
+      "type": "case"
+    },
+    {
+      "id": "ua-1159",
+      "title": "The Interrogation",
+      "category": "2026",
+      "creator": "Alan Bernard",
+      "type": "case"
+    },
+    {
+      "id": "ua-1160",
+      "title": "Secure - The Alternate Turnabout",
+      "category": "2026",
+      "creator": "Ruby Rose",
+      "type": "case"
+    },
+    {
+      "id": "ua-1161",
+      "title": "Fable of the Schizo Plamatory Randomer",
+      "category": "2026",
+      "creator": "Spectato",
+      "type": "case"
+    },
+    {
+      "id": "ua-1162",
+      "title": "Turnabout Necromancy",
+      "category": "2026",
+      "creator": "Trixity",
+      "type": "case"
+    },
+    {
+      "id": "ua-1163",
+      "title": "Fat Tony's Turnabout",
+      "category": "2026",
+      "creator": "Bladetastic",
+      "type": "case"
+    },
+    {
+      "id": "ua-1164",
+      "title": "Night At The Turnabout",
+      "category": "2026",
+      "creator": "Bladetastic",
+      "type": "case"
+    },
+    {
+      "id": "ua-1165",
+      "title": "TB-Court NEW",
+      "category": "2026",
+      "creator": "ZOLTAN",
+      "type": "case"
+    },
+    {
+      "id": "ua-1166",
+      "title": "Turnabout 13",
+      "category": "2026",
+      "creator": "React Designer",
+      "type": "case"
+    },
+    {
+      "id": "ua-1167",
+      "title": "Turnabout Rabbit Hole",
+      "category": "2026",
+      "creator": "NekoSchro",
+      "type": "case"
+    },
+    {
+      "id": "ua-1168",
+      "title": "Fable of the Red Crystal",
+      "category": "2026",
+      "creator": "Shadow",
+      "type": "case"
+    },
+    {
+      "id": "ua-1169",
+      "title": "Public High Rise Turnabout",
+      "category": "2026",
+      "creator": "EmeraldCandy",
+      "type": "case"
+    },
+    {
+      "id": "ua-1170",
+      "title": "Turnabout Chairs",
+      "category": "2026",
+      "creator": "Yoru",
+      "type": "case"
+    },
+    {
+      "id": "ua-1171",
+      "title": "The Great Turnabout",
+      "category": "2026",
+      "creator": "Lemonade",
+      "type": "case"
+    },
+    {
+      "id": "ua-1172",
+      "title": "The Campaign Turnabout",
+      "category": "2026",
+      "creator": "NagiHope",
+      "type": "case"
+    },
+    {
+      "id": "ua-1173",
+      "title": "A Turnabout to Love",
+      "category": "2026",
+      "creator": "Cave",
+      "type": "case"
+    },
+    {
+      "id": "ua-1174",
+      "title": "Turnabout Godfather",
+      "category": "2026",
+      "creator": "Yoru",
+      "type": "case"
+    },
+    {
+      "id": "ua-1175",
+      "title": "Turnabout Defective",
+      "category": "2026",
+      "creator": "Najimi",
+      "type": "case"
+    },
+    {
+      "id": "ua-1176",
+      "title": "Turnabout Merrily Gone",
+      "category": "Graveyard",
+      "creator": "Unknown",
+      "type": "case"
+    },
+    {
+      "id": "ua-1177",
+      "title": "Turnabout Sexy Camera",
+      "category": "Graveyard",
+      "creator": "Unknown",
+      "type": "case"
+    },
+    {
+      "id": "ua-1178",
+      "title": "Turnabout Sampler",
+      "category": "Graveyard",
+      "creator": "Unknown",
+      "type": "case"
+    },
+    {
+      "id": "ua-1179",
+      "title": "Turnabout Tide",
+      "category": "Graveyard",
+      "creator": "Unknown",
+      "type": "case"
+    },
+    {
+      "id": "ua-1180",
+      "title": "Turnabout Shallow Justice",
+      "category": "Graveyard",
+      "creator": "Unknown",
+      "type": "case"
+    },
+    {
+      "id": "ua-1181",
+      "title": "Turnabout Distasteful End",
+      "category": "Graveyard",
+      "creator": "Unknown",
+      "type": "case"
+    },
+    {
+      "id": "ua-1182",
+      "title": "Turnabout Cat",
+      "category": "Graveyard",
+      "creator": "Unknown",
+      "type": "case"
+    },
+    {
+      "id": "ua-1183",
+      "title": "Turnabout Chief",
+      "category": "Graveyard",
+      "creator": "Unknown",
+      "type": "case"
+    },
+    {
+      "id": "ua-1184",
+      "title": "Turnabout Cargo",
+      "category": "Graveyard",
+      "creator": "Unknown",
+      "type": "case"
+    },
+    {
+      "id": "ua-1185",
+      "title": "Turnabout Psychopathy",
+      "category": "Graveyard",
+      "creator": "Unknown",
+      "type": "case"
+    },
+    {
+      "id": "ua-1186",
+      "title": "Turnabout Blood Red Snow",
+      "category": "Graveyard",
+      "creator": "Unknown",
+      "type": "case"
+    },
+    {
+      "id": "ua-1187",
+      "title": "Turnabout Bullet Rain",
+      "category": "Graveyard",
+      "creator": "Unknown",
+      "type": "case"
+    },
+    {
+      "id": "ua-1188",
+      "title": "The Sister's Turnabout",
+      "category": "Graveyard",
+      "creator": "Unknown",
+      "type": "case"
+    },
+    {
+      "id": "ua-1189",
+      "title": "Turnabout Blood Pillow",
+      "category": "Graveyard",
+      "creator": "Unknown",
+      "type": "case"
+    },
+    {
+      "id": "ua-1190",
+      "title": "Economic Turnabout",
+      "category": "Graveyard",
+      "creator": "Unknown",
+      "type": "case"
+    },
+    {
+      "id": "ua-1191",
+      "title": "Turnabout Heck",
+      "category": "Graveyard",
+      "creator": "Unknown",
+      "type": "case"
+    },
+    {
+      "id": "ua-1192",
+      "title": "Turnabout Retribution",
+      "category": "Graveyard",
+      "creator": "Unknown",
+      "type": "case"
+    },
+    {
+      "id": "ua-1193",
+      "title": "Turnabout Beginners",
+      "category": "Graveyard",
+      "creator": "Unknown",
+      "type": "case"
+    },
+    {
+      "id": "ua-1194",
+      "title": "The Turnabout That's Flat Out Broke",
+      "category": "Graveyard",
+      "creator": "Unknown",
+      "type": "case"
+    },
+    {
+      "id": "ua-1195",
+      "title": "The Canned Turnabout",
+      "category": "Graveyard",
+      "creator": "Unknown",
+      "type": "case"
+    },
+    {
+      "id": "ua-1196",
+      "title": "The Loose Foot Turnabout",
+      "category": "Graveyard",
+      "creator": "Unknown",
+      "type": "case"
+    },
+    {
+      "id": "ua-1197",
+      "title": "Turnabout Birthday Bash",
+      "category": "Graveyard",
+      "creator": "Unknown",
+      "type": "case"
+    },
+    {
+      "id": "ua-1198",
+      "title": "Resident Turnabout",
+      "category": "Graveyard",
+      "creator": "Unknown",
+      "type": "case"
+    },
+    {
+      "id": "ua-1199",
+      "title": "Turnabout Prisoner",
+      "category": "Graveyard",
+      "creator": "Unknown",
+      "type": "case"
+    },
+    {
+      "id": "ua-1200",
+      "title": "Turnabout Deathwish",
+      "category": "Graveyard",
+      "creator": "Unknown",
+      "type": "case"
+    },
+    {
+      "id": "ua-1201",
+      "title": "The Dreamville Turnabout",
+      "category": "Graveyard",
+      "creator": "Unknown",
+      "type": "case"
+    },
+    {
+      "id": "ua-1202",
+      "title": "Turnabout Stars",
+      "category": "Graveyard",
+      "creator": "Unknown",
+      "type": "case"
+    },
+    {
+      "id": "ua-1203",
+      "title": "Turnabout Darkness",
+      "category": "Graveyard",
+      "creator": "Unknown",
+      "type": "case"
+    },
+    {
+      "id": "ua-1204",
+      "title": "Turnabout Fallout",
+      "category": "Graveyard",
+      "creator": "Unknown",
+      "type": "case"
+    },
+    {
+      "id": "ua-1205",
+      "title": "Turnabout English",
+      "category": "Graveyard",
+      "creator": "Unknown",
+      "type": "case"
+    },
+    {
+      "id": "ua-1206",
+      "title": "Turnabout Blossom",
+      "category": "Graveyard",
+      "creator": "Unknown",
+      "type": "case"
+    },
+    {
+      "id": "ua-1207",
+      "title": "Turnabout Vengeful Spirit",
+      "category": "Graveyard",
+      "creator": "Unknown",
+      "type": "case"
+    },
+    {
+      "id": "ua-1208",
+      "title": "Turnabout Heiku",
+      "category": "Graveyard",
+      "creator": "Unknown",
+      "type": "case"
+    },
+    {
+      "id": "ua-1209",
+      "title": "Together Forever Turnabout",
+      "category": "Graveyard",
+      "creator": "Unknown",
+      "type": "case"
+    },
+    {
+      "id": "ua-1210",
+      "title": "All Aboard the Turnabout",
+      "category": "Graveyard",
+      "creator": "Unknown",
+      "type": "case"
+    },
+    {
+      "id": "ua-1211",
+      "title": "Relationship Murder",
+      "category": "Graveyard",
+      "creator": "Unknown",
+      "type": "case"
+    },
+    {
+      "id": "ua-1212",
+      "title": "Turnabout At Will!",
+      "category": "Graveyard",
+      "creator": "Unknown",
+      "type": "case"
+    },
+    {
+      "id": "ua-1213",
+      "title": "Turnabout Massacre",
+      "category": "Graveyard",
+      "creator": "Unknown",
+      "type": "case"
+    },
+    {
+      "id": "ua-1214",
+      "title": "Turnabout Crimson Reunion 2.0",
+      "category": "Graveyard",
+      "creator": "Unknown",
+      "type": "case"
+    },
+    {
+      "id": "ua-1215",
+      "title": "A Brotherly Turnabout",
+      "category": "Graveyard",
+      "creator": "Unknown",
+      "type": "case"
+    },
+    {
+      "id": "ua-1216",
+      "title": "Turnabout Punks",
+      "category": "Graveyard",
+      "creator": "Unknown",
+      "type": "case"
+    }
+  ]
+}
