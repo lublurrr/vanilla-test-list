@@ -143,6 +143,40 @@ body {
   line-height: 1.5;
 }
 
+/* ==========================================================================
+   Independent page hero (archive.html / resources.html)
+   Each of these pages has its own logo slot, separate from the
+   shared Vanilla Case List logo. Drop a file at the src path below
+   and it replaces the styled text fallback automatically.
+   ========================================================================== */
+
+.page-hero-logo-fallback {
+  display: block;
+  font-family: var(--font-display);
+  font-style: italic;
+  font-weight: bold;
+  font-size: clamp(1.9rem, 5.5vw, 3.1rem);
+  line-height: 1.15;
+  margin: 0 auto;
+  max-width: 700px;
+  color: var(--blue-deep);
+  text-shadow: 2px 2px 0 var(--ink);
+}
+
+.page-hero-resources .page-hero-logo-fallback {
+  color: var(--gold);
+  text-shadow: 2px 2px 0 var(--ink);
+}
+
+.page-hero-resources.site-header {
+  background: linear-gradient(180deg, #2a1c10 0%, #1c130b 100%);
+  border-bottom: var(--border-thick);
+}
+
+.page-hero-resources .site-credits {
+  color: var(--cream-deep);
+}
+
 .site-credits small {
   color: var(--ink-light);
 }
@@ -2725,6 +2759,16 @@ body.lib-overlay-open {
 .lib-entry-link:hover {
   color: var(--blue-deep);
   text-decoration: underline;
+}
+
+.lib-entry-link-disabled {
+  color: var(--ink-light);
+  cursor: default;
+}
+
+.lib-entry-link-disabled:hover {
+  color: var(--ink-light);
+  text-decoration: none;
 }
 
 .lib-panel-footer {

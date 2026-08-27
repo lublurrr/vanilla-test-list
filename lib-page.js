@@ -80,6 +80,12 @@
       const meta = [];
       if (e.creator) meta.push(`<span class="lib-entry-creator">by ${escapeHtml(e.creator)}</span>`);
       if (e.language) meta.push(`<span class="lib-entry-creator">${escapeHtml(e.language)}</span>`);
+
+      const linkLabel = cfg.linkLabel || 'Open Link';
+      const footerHtml = e.url
+        ? `<a class="lib-entry-link" href="${escapeAttr(e.url)}" target="_blank" rel="noopener noreferrer">${escapeHtml(linkLabel)} ${externalLinkIcon}</a>`
+        : `<span class="lib-entry-link lib-entry-link-disabled" aria-disabled="true">No link available yet</span>`;
+
       return `
         <article class="lib-entry-card">
           <div class="lib-entry-head">
@@ -89,6 +95,7 @@
           <h3 class="lib-entry-title">${escapeHtml(e.title)}</h3>
           ${meta.length ? `<p class="lib-entry-desc lib-entry-meta">${meta.join(' &middot; ')}</p>` : ''}
           ${e.description ? `<p class="lib-entry-desc">${escapeHtml(e.description)}</p>` : ''}
+          <div class="lib-entry-footer">${footerHtml}</div>
         </article>`;
     }
 
@@ -107,7 +114,6 @@
           <div class="lib-error-state">
             <p class="lib-error-title">Couldn't load ${escapeHtml(cfg.title)}.</p>
             <p class="lib-error-sub"><code>${escapeHtml(state.error.message)}</code></p>
-            ${cfg.sourceDocUrlFallback ? `<a class="card-open-btn" href="${escapeAttr(cfg.sourceDocUrlFallback)}" target="_blank" rel="noopener noreferrer">View Source Document ${externalLinkIcon}</a>` : ''}
           </div>`;
         return;
       }
@@ -129,17 +135,11 @@
           ? `<div class="lib-note-banner">${escapeHtml(state.data.graveyardNote)}</div>`
           : '';
 
-      const sourceHtml = state.data.sourceDocUrl
-        ? `<a class="lib-source-link" href="${escapeAttr(state.data.sourceDocUrl)}" target="_blank" rel="noopener noreferrer">
-             View Source Document ${externalLinkIcon}
-           </a>`
-        : '';
-
       const resultsHtml = list.length
         ? `<div class="lib-entries-grid">${list.map(renderEntryCard).join('')}</div>`
         : `<div class="lib-empty-state">
              <p class="lib-empty-title">No entries match your search.</p>
-             <p class="lib-empty-sub">Try a different term, clear the category filter, or check the source document.</p>
+             <p class="lib-empty-sub">Try a different term or clear the category filter.</p>
            </div>`;
 
       body.innerHTML = `
@@ -157,7 +157,6 @@
         ${catDescHtml}
         <div class="lib-results-count">Showing <strong>${list.length}</strong> of <strong>${count}</strong> entries.</div>
         ${resultsHtml}
-        <div class="lib-panel-footer">${sourceHtml}</div>
       `;
 
       const searchInput = body.querySelector('.lib-search-input');
@@ -191,7 +190,7 @@
         ? `<div class="lib-entries-grid">${list.map(renderEntryCard).join('')}</div>`
         : `<div class="lib-empty-state">
              <p class="lib-empty-title">No entries match your search.</p>
-             <p class="lib-empty-sub">Try a different term, clear the category filter, or check the source document.</p>
+             <p class="lib-empty-sub">Try a different term or clear the category filter.</p>
            </div>`;
       if (grid) grid.outerHTML = resultsHtml;
       else if (emptyState) emptyState.outerHTML = resultsHtml;

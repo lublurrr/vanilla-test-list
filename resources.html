@@ -40,18 +40,18 @@
 </head>
 
 <body>
-  <header class="site-header">
+  <header class="site-header page-hero page-hero-resources">
     <div class="header-inner">
       <h1 class="site-title">
         <a href="index.html" style="display:inline-block;">
-          <img class="site-logo" src="images/vcl-logo.png"
-            alt="Vanilla Case List — A compilation of the best Vanilla cases!" />
+          <!-- Drop a file at images/resource-logo.png to use your own Resource Library logo.
+               Until then this falls back to a plain styled title automatically. -->
+          <img class="site-logo page-hero-logo" src="images/resource-logo.png"
+            alt="Vanilla Resource Library"
+            onerror="this.replaceWith(Object.assign(document.createElement('span'),{className:'page-hero-logo-fallback',textContent:'Vanilla Resource Library'}))" />
         </a>
       </h1>
-      <p class="site-credits">
-        Maintained by <strong>Fricka U, PinaDaPina, Knight, Wolfang, and Sheepish</strong><br>
-        <small>Started by Sp, Ordice, and Deadly</small>
-      </p>
+      <p class="site-credits">Guides, casemaking tools, other case lists, videos, translations, and more.</p>
     </div>
   </header>
 
@@ -124,7 +124,7 @@
     initLibPage({
       title: 'Vanilla Resource Library',
       dataUrl: 'data/resource-library.json',
-      sourceDocUrlFallback: 'https://docs.google.com/document/d/1XS_D2jgcGp_61gl2dnAozOop3shUC06HEPOT3iuaU-s/edit?tab=t.0',
+      linkLabel: 'Open Resource',
       bodyId: 'library-body',
       taglineId: 'library-tagline',
     });
