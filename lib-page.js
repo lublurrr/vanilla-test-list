@@ -148,7 +148,7 @@
             <input type="search" class="lib-search-input" placeholder="Search ${escapeAttr(cfg.title)}…" autocomplete="off" value="${escapeAttr(state.search)}" aria-label="Search ${escapeAttr(cfg.title)}" />
           </label>
           ${renderCategoryNav()}
-          <button type="button" class="btn-random lib-roulette-btn">🎲 Roulette</button>
+          ${cfg.roulette === false ? '' : '<button type="button" class="btn-random lib-roulette-btn">🎲 Roulette</button>'}
         </div>
         ${catDescHtml}
         <div class="lib-results-count">Showing <strong>${list.length}</strong> of <strong>${count}</strong> entries.</div>
