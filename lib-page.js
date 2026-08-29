@@ -106,6 +106,55 @@
       return `<div class="lib-chips" role="group" aria-label="Filter by category">${chips}</div>`;
     }
 
+    /* ------------------------------------------------------------
+     * Table of Contents — built entirely from the loaded JSON, so it
+     * always reflects the real categories, category blurbs, entry
+     * types, and initialism legend, with no hard-coded copy.
+     * ------------------------------------------------------------ */
+    function renderToc() {
+      if (!cfg.showToc || !state.data) return '';
+      const cats = Array.isArray(state.data.categories) ? state.data.categories : [];
+      if (!cats.length) return '';
+
+      const typesByCat = {};
+      (state.data.entries || []).forEach(e => {
+        if (!e || !e.category) return;
+        if (!typesByCat[e.category]) typesByCat[e.category] = new Set();
+        if (e.type) typesByCat[e.category].add(String(e.type).trim());
+      });
+
+      const items = cats.map(cat => {
+        const desc = (state.data.categoryDescriptions && state.data.categoryDescriptions[cat]) || '';
+        const types = typesByCat[cat] ? Array.from(typesByCat[cat]).sort((a, b) => a.localeCompare(b)) : [];
+        const typesHtml = types.length
+          ? `<ul class="lib-toc-types">${types.map(t => `<li>${escapeHtml(t)}</li>`).join('')}</ul>`
+          : '';
+        return `
+          <li class="lib-toc-item">
+            <button type="button" class="lib-toc-cat" data-lib-cat="${escapeAttr(cat)}">${escapeHtml(categoryLabel(cat))}</button>${desc ? `<span class="lib-toc-desc">: ${escapeHtml(desc)}</span>` : ''}
+            ${typesHtml}
+          </li>`;
+      }).join('');
+
+      const legend = state.data.legend;
+      const legendEntries = legend ? Object.entries(legend) : [];
+      const legendHtml = legendEntries.length
+        ? `<div class="lib-toc-legend">
+             <span class="lib-toc-legend-title">Legend of Initials</span>
+             <div class="lib-toc-legend-items">
+               ${legendEntries.map(([k, v]) => `<span class="lib-toc-legend-item"><strong>${escapeHtml(k)}</strong> = ${escapeHtml(v)}</span>`).join('')}
+             </div>
+           </div>`
+        : '';
+
+      return `
+        <div class="lib-toc">
+          <div class="lib-toc-header">Table of Contents</div>
+          <ol class="lib-toc-list">${items}</ol>
+          ${legendHtml}
+        </div>`;
+    }
+
     function render() {
       if (state.error) {
         body.innerHTML = `
@@ -137,16 +186,22 @@
            </div>`;
 
       body.innerHTML = `
-        <p class="lib-panel-desc">${escapeHtml(state.data.description || '')}</p>
+        ${cfg.showToc ? '' : `<p class="lib-panel-desc">${escapeHtml(state.data.description || '')}</p>`}
+        ${renderToc()}
         <div class="lib-toolbar">
-          <label class="lib-search-wrap">
-            <svg class="search-icon" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true">
-              <path fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" d="M11 19a8 8 0 1 1 0-16 8 8 0 0 1 0 16zm5.5-2.5L21 21" />
-            </svg>
-            <input type="search" class="lib-search-input" placeholder="${escapeAttr(cfg.searchPlaceholder || ('Search ' + cfg.title + '…'))}" autocomplete="off" value="${escapeAttr(state.search)}" aria-label="Search ${escapeAttr(cfg.title)}" />
-          </label>
-          ${renderCategoryNav()}
-          ${cfg.roulette === false ? '' : '<div class="lib-roulette-wrap"><button type="button" class="btn-random lib-roulette-btn">🎲 Roulette</button></div>'}
+          <div class="lib-toolbar-row lib-toolbar-search-row">
+            <label class="lib-search-wrap">
+              <svg class="search-icon" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true">
+                <path fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" d="M11 19a8 8 0 1 1 0-16 8 8 0 0 1 0 16zm5.5-2.5L21 21" />
+              </svg>
+              <input type="search" class="lib-search-input" placeholder="${escapeAttr(cfg.searchPlaceholder || ('Search ' + cfg.title + '…'))}" autocomplete="off" value="${escapeAttr(state.search)}" aria-label="Search ${escapeAttr(cfg.title)}" />
+              <button type="button" class="lib-search-clear" aria-label="Clear search"${state.search ? '' : ' hidden'}>×</button>
+            </label>
+          </div>
+          <div class="lib-toolbar-row lib-toolbar-filters-row">
+            ${renderCategoryNav()}
+            ${cfg.roulette === false ? '' : '<div class="lib-roulette-wrap"><button type="button" class="btn-random lib-roulette-btn">🎲 Roulette</button></div>'}
+          </div>
         </div>
         ${catDescHtml}
         <div class="lib-results-count">Showing <strong>${list.length}</strong> of <strong>${count}</strong> entries.</div>
@@ -154,18 +209,37 @@
       `;
 
       const searchInput = body.querySelector('.lib-search-input');
+      const searchClear = body.querySelector('.lib-search-clear');
       if (searchInput) {
         searchInput.addEventListener('input', () => {
           state.search = searchInput.value;
+          if (searchClear) searchClear.hidden = !searchInput.value;
+          syncUrl();
+          renderResultsOnly();
+        });
+      }
+      if (searchClear) {
+        searchClear.addEventListener('click', () => {
+          state.search = '';
+          if (searchInput) {
+            searchInput.value = '';
+            searchInput.focus();
+          }
+          searchClear.hidden = true;
           syncUrl();
           renderResultsOnly();
         });
       }
       body.querySelectorAll('[data-lib-cat]').forEach(btn => {
         btn.addEventListener('click', () => {
+          const fromToc = btn.classList.contains('lib-toc-cat');
           state.category = btn.dataset.libCat;
           syncUrl();
           render();
+          if (fromToc) {
+            const toolbar = body.querySelector('.lib-toolbar');
+            if (toolbar) toolbar.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          }
         });
       });
       const rouletteBtn = body.querySelector('.lib-roulette-btn');

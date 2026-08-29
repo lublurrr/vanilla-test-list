@@ -338,9 +338,58 @@ body.page-resources .lib-chip:hover {
 }
 
 body.page-resources .lib-chip.is-active {
+  background-color: #150d05;
+  color: var(--gold-light);
+  border-color: var(--gold);
+}
+
+body.page-resources .lib-search-clear {
   background-color: var(--gold);
   color: var(--ink);
-  border-color: var(--gold);
+}
+
+body.page-resources .lib-search-clear:hover {
+  background-color: var(--red);
+  color: #fff;
+}
+
+body.page-resources .lib-toc {
+  background-color: #33240f;
+  border-color: var(--ink);
+}
+
+body.page-resources .lib-toc-header {
+  background-color: #1c130b;
+  color: var(--gold-light);
+  border-bottom-color: var(--ink);
+}
+
+body.page-resources .lib-toc-item {
+  border-bottom-color: rgba(255, 255, 255, 0.12);
+  color: var(--cream-deep);
+}
+
+body.page-resources .lib-toc-item::before {
+  color: var(--gold);
+}
+
+body.page-resources .lib-toc-cat {
+  color: var(--celeste-deep);
+}
+
+body.page-resources .lib-toc-cat:hover {
+  color: var(--gold-light);
+}
+
+body.page-resources .lib-toc-desc,
+body.page-resources .lib-toc-types {
+  color: var(--cream-deep);
+}
+
+body.page-resources .lib-toc-legend {
+  background-color: #1c130b;
+  border-top-color: var(--ink);
+  color: var(--cream-deep);
 }
 
 body.page-resources .lib-entry-card {
@@ -2744,16 +2793,125 @@ body.lib-overlay-open {
   line-height: 1.5;
 }
 
-.lib-toolbar {
+/* ==========================================================================
+   Table of Contents — dynamically built from the loaded JSON (categories,
+   category blurbs, entry types, and the initialism legend).
+   ========================================================================== */
+
+.lib-toc {
+  border: var(--border-medium);
+  border-radius: 4px;
+  overflow: hidden;
+  margin: 0 0 1rem;
+  background-color: var(--cream-light);
+}
+
+.lib-toc-header {
+  font-family: var(--font-display);
+  font-weight: bold;
+  font-size: 1.05rem;
+  text-align: center;
+  padding: 0.6rem 1rem;
+  background-color: var(--cream-deep);
+  border-bottom: var(--border-medium);
+}
+
+.lib-toc-list {
+  list-style: none;
+  counter-reset: toc-counter;
+  margin: 0;
+  padding: 0;
+}
+
+.lib-toc-item {
+  counter-increment: toc-counter;
+  padding: 0.65rem 1rem;
+  border-bottom: 1px dashed var(--ink-light);
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.lib-toc-item:last-child {
+  border-bottom: none;
+}
+
+.lib-toc-item::before {
+  content: counter(toc-counter) ". ";
+  font-weight: bold;
+  color: var(--ink-soft);
+}
+
+.lib-toc-cat {
+  font: inherit;
+  font-weight: bold;
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  color: var(--blue-deep);
+  cursor: pointer;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.lib-toc-cat:hover {
+  color: var(--gold);
+}
+
+.lib-toc-desc {
+  color: var(--ink-soft);
+}
+
+.lib-toc-types {
+  list-style: disc;
+  margin: 0.35rem 0 0 1.6rem;
+  padding: 0;
+  color: var(--ink-soft);
+  font-size: 0.85rem;
+}
+
+.lib-toc-types li {
+  margin: 0.15rem 0;
+}
+
+.lib-toc-legend {
+  border-top: var(--border-medium);
+  background-color: var(--cream-deep);
+  padding: 0.65rem 1rem;
+}
+
+.lib-toc-legend-title {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-weight: bold;
+  display: block;
+  margin-bottom: 0.4rem;
+}
+
+.lib-toc-legend-items {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.75rem 1.5rem;
-  align-items: center;
+  gap: 0.4rem 1.5rem;
+  font-size: 0.85rem;
+  font-style: italic;
+}
+
+.lib-toolbar {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
   background-color: var(--cream-light);
   border: 2px solid var(--ink);
   border-radius: 4px;
   padding: 0.85rem 1rem;
   margin-bottom: 1rem;
+}
+
+.lib-toolbar-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem 1.5rem;
+  align-items: center;
 }
 
 .lib-search-wrap {
@@ -2785,9 +2943,41 @@ body.lib-overlay-open {
   min-width: 0;
 }
 
+.lib-search-input::-webkit-search-decoration,
+.lib-search-input::-webkit-search-cancel-button,
+.lib-search-input::-webkit-search-results-button,
+.lib-search-input::-webkit-search-results-decoration {
+  -webkit-appearance: none;
+  appearance: none;
+}
+
 .lib-search-input::placeholder {
   color: var(--ink-light);
   font-style: italic;
+}
+
+.lib-search-clear {
+  flex-shrink: 0;
+  background: var(--ink-light);
+  color: var(--paper);
+  border: none;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  font-size: 1rem;
+  line-height: 1;
+  cursor: pointer;
+  padding: 0;
+  display: grid;
+  place-items: center;
+}
+
+.lib-search-clear:hover {
+  background-color: var(--red);
+}
+
+.lib-search-clear[hidden] {
+  display: none;
 }
 
 .lib-roulette-btn {
