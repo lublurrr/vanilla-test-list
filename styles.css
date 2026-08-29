@@ -386,6 +386,54 @@ body.page-resources .lib-note-banner {
   color: var(--cream-deep);
 }
 
+/* Type badges ("tags") keep the same hue-coding used across the
+   site (blue/green/gold) but in darkened, translucent tones that
+   sit naturally on the dark brown cards. */
+body.page-resources .lib-type-badge {
+  background-color: rgba(255, 255, 255, 0.08);
+  color: var(--cream-deep);
+  border-color: var(--ink-light);
+}
+
+body.page-resources .lib-type-guide {
+  background-color: rgba(29, 67, 145, 0.35);
+  color: var(--blue-light);
+  border-color: var(--blue);
+}
+
+body.page-resources .lib-type-tool,
+body.page-resources .lib-type-download {
+  background-color: rgba(79, 138, 61, 0.35);
+  color: var(--green-light);
+  border-color: var(--green);
+}
+
+body.page-resources .lib-type-link {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: var(--cream-deep);
+  border-color: var(--ink-light);
+}
+
+body.page-resources .lib-type-reference {
+  background-color: rgba(201, 150, 43, 0.35);
+  color: var(--gold-light);
+  border-color: var(--gold);
+}
+
+/* Icons need a lighter tone to stay visible against the dark theme. */
+body.page-resources .search-icon {
+  color: var(--cream-deep);
+}
+
+body.page-resources .lib-search-input::placeholder {
+  color: var(--cream-deep);
+  opacity: 0.65;
+}
+
+body.page-resources .resource-icon {
+  color: var(--gold-light);
+}
+
 /* ==========================================================================
    Resources nav strip
    ========================================================================== */
@@ -2746,6 +2794,12 @@ body.lib-overlay-open {
   flex-shrink: 0;
   white-space: nowrap;
   padding: 0.55rem 0.9rem;
+}
+
+.lib-roulette-wrap {
+  flex: 1 0 100%;
+  display: flex;
+  justify-content: center;
 }
 
 .lib-chips {

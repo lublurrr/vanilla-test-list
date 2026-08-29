@@ -65,13 +65,11 @@
       if (!state.data) return [];
       const q = state.search.trim().toLowerCase();
       const cat = state.category;
+      const fields = cfg.searchFields || ['title', 'creator', 'category', 'description', 'language'];
       return state.data.entries.filter(e => {
         if (cat !== 'all' && e.category !== cat) return false;
         if (!q) return true;
-        const haystack = [
-          e.title, e.category, e.creator, e.description, e.language,
-          ...(Array.isArray(e.tags) ? e.tags : []),
-        ].filter(Boolean).join(' ').toLowerCase();
+        const haystack = fields.map(f => e[f]).filter(Boolean).join(' ').toLowerCase();
         return haystack.includes(q);
       });
     }
@@ -145,10 +143,10 @@
             <svg class="search-icon" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true">
               <path fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" d="M11 19a8 8 0 1 1 0-16 8 8 0 0 1 0 16zm5.5-2.5L21 21" />
             </svg>
-            <input type="search" class="lib-search-input" placeholder="Search ${escapeAttr(cfg.title)}…" autocomplete="off" value="${escapeAttr(state.search)}" aria-label="Search ${escapeAttr(cfg.title)}" />
+            <input type="search" class="lib-search-input" placeholder="${escapeAttr(cfg.searchPlaceholder || ('Search ' + cfg.title + '…'))}" autocomplete="off" value="${escapeAttr(state.search)}" aria-label="Search ${escapeAttr(cfg.title)}" />
           </label>
           ${renderCategoryNav()}
-          ${cfg.roulette === false ? '' : '<button type="button" class="btn-random lib-roulette-btn">🎲 Roulette</button>'}
+          ${cfg.roulette === false ? '' : '<div class="lib-roulette-wrap"><button type="button" class="btn-random lib-roulette-btn">🎲 Roulette</button></div>'}
         </div>
         ${catDescHtml}
         <div class="lib-results-count">Showing <strong>${list.length}</strong> of <strong>${count}</strong> entries.</div>
