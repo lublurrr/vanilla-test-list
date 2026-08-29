@@ -20,6 +20,11 @@
 
   --gold: #c9962b;
   --gold-light: #f0c14b;
+
+  --celeste-light: #e9fbfa;
+  --celeste: #cdf1ee;
+  --celeste-deep: #9fdedb;
+  --celeste-text: #0f5a57;
   --red: #b13438;
   --red-deep: #7d1a1f;
   --green: #4f8a3d;
@@ -179,6 +184,86 @@ body {
 
 .site-credits small {
   color: var(--ink-light);
+}
+
+.page-hero-archive.site-header {
+  background: linear-gradient(180deg, var(--celeste-light) 0%, var(--celeste) 100%);
+  border-bottom: var(--border-thick);
+}
+
+.page-hero-archive .site-credits {
+  color: var(--celeste-text);
+}
+
+/* ==========================================================================
+   Whole-page theming for the standalone library pages.
+   Resource Library carries its header's dark brown down through the rest
+   of the page; Ultimate Archive uses a soft cyan "celeste" throughout.
+   ========================================================================== */
+
+body.page-resources {
+  background: linear-gradient(180deg, #2a1c10 0%, #1c130b 100%);
+}
+
+body.page-resources .resources-nav {
+  background-color: #1c130b;
+  border-bottom: var(--border-thick);
+}
+
+body.page-resources .resource-link {
+  background-color: #33240f;
+  border-color: var(--ink);
+  box-shadow: 0 2px 0 rgba(0, 0, 0, 0.5);
+}
+
+body.page-resources .resource-link:hover {
+  background-color: #3f2c14;
+}
+
+body.page-resources .resource-text strong {
+  color: var(--gold-light);
+}
+
+body.page-resources .resource-text span:not(strong) {
+  color: var(--cream-deep);
+}
+
+body.page-resources .site-footer {
+  background-color: transparent;
+  border-top-color: var(--gold);
+  color: var(--cream-deep);
+}
+
+body.page-resources .site-footer .footer-small {
+  color: var(--cream-deep);
+  opacity: 0.8;
+}
+
+body.page-archive {
+  background: linear-gradient(180deg, var(--celeste-light) 0%, var(--celeste) 100%);
+}
+
+body.page-archive .resources-nav {
+  background-color: var(--celeste);
+  border-bottom: var(--border-thick);
+}
+
+body.page-archive .resource-link {
+  background-color: var(--celeste-light);
+  border-color: var(--ink);
+}
+
+body.page-archive .resource-link:hover {
+  background-color: #fff;
+}
+
+body.page-archive .resource-text strong {
+  color: var(--celeste-text);
+}
+
+body.page-archive .site-footer {
+  background-color: transparent;
+  border-top-color: var(--celeste-deep);
 }
 
 /* ==========================================================================
@@ -2340,71 +2425,6 @@ main {
    Primary section nav — Case List / Resource Library / Ultimate Archive
    ========================================================================== */
 
-.primary-nav {
-  background-color: var(--blue-deep);
-  border-bottom: var(--border-thick);
-}
-
-.primary-nav-inner {
-  max-width: 1200px;
-  margin: 0 auto;
-  display: flex;
-  gap: 0.4rem;
-  padding: 0.5rem 1rem;
-  flex-wrap: wrap;
-}
-
-.primary-nav-btn {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  font-family: var(--font-display);
-  font-style: italic;
-  font-weight: bold;
-  font-size: 0.98rem;
-  padding: 0.55rem 1rem;
-  border: 2px solid transparent;
-  background: transparent;
-  color: var(--cream-deep);
-  border-radius: 4px;
-  cursor: pointer;
-  transition: background-color 0.12s, color 0.12s, border-color 0.12s;
-}
-
-.primary-nav-btn .primary-nav-icon {
-  display: inline-flex;
-  flex-shrink: 0;
-}
-
-.primary-nav-btn:hover {
-  background-color: rgba(255, 255, 255, 0.08);
-  color: var(--cream-light);
-}
-
-.primary-nav-btn.is-active {
-  background-color: var(--gold-light);
-  color: var(--blue-deep);
-  border-color: var(--ink);
-  box-shadow: 0 2px 0 rgba(0, 0, 0, 0.35);
-}
-
-.primary-nav-btn.is-active:hover {
-  background-color: var(--gold-light);
-}
-
-@media (max-width: 640px) {
-  .primary-nav-inner {
-    justify-content: center;
-  }
-
-  .primary-nav-btn {
-    flex: 1 1 auto;
-    justify-content: center;
-    font-size: 0.85rem;
-    padding: 0.5rem 0.6rem;
-  }
-}
-
 /* ==========================================================================
    Resource Library / Ultimate Archive — overlay windows
    Two structurally-identical, independently-stateful overlays. Styling is
@@ -2874,7 +2894,6 @@ body.lib-overlay-open {
 .lib-chip:focus-visible,
 .lib-entry-link:focus-visible,
 .lib-source-link:focus-visible,
-.primary-nav-btn:focus-visible,
 .resource-link:focus-visible {
   outline: 3px solid var(--gold-light);
   outline-offset: 2px;
