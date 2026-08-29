@@ -125,10 +125,6 @@
       const list = filteredEntries();
       const count = state.data.entries.length;
 
-      const noteHtml = state.data.importNote
-        ? `<div class="lib-note-banner">${escapeHtml(state.data.importNote)}</div>`
-        : '';
-
       const catDescHtml = (state.category !== 'all' && state.data.categoryDescriptions && state.data.categoryDescriptions[state.category])
         ? `<div class="lib-note-banner">${escapeHtml(state.data.categoryDescriptions[state.category])}</div>`
         : (state.category === 'Graveyard' && state.data.graveyardNote)
@@ -144,7 +140,6 @@
 
       body.innerHTML = `
         <p class="lib-panel-desc">${escapeHtml(state.data.description || '')}</p>
-        ${noteHtml}
         <div class="lib-toolbar">
           <label class="lib-search-wrap">
             <svg class="search-icon" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true">
@@ -153,6 +148,7 @@
             <input type="search" class="lib-search-input" placeholder="Search ${escapeAttr(cfg.title)}…" autocomplete="off" value="${escapeAttr(state.search)}" aria-label="Search ${escapeAttr(cfg.title)}" />
           </label>
           ${renderCategoryNav()}
+          <button type="button" class="btn-random lib-roulette-btn">🎲 Roulette</button>
         </div>
         ${catDescHtml}
         <div class="lib-results-count">Showing <strong>${list.length}</strong> of <strong>${count}</strong> entries.</div>
@@ -172,10 +168,12 @@
           state.category = btn.dataset.libCat;
           syncUrl();
           render();
-          const si = body.querySelector('.lib-search-input');
-          if (si) si.focus();
         });
       });
+      const rouletteBtn = body.querySelector('.lib-roulette-btn');
+      if (rouletteBtn) {
+        rouletteBtn.addEventListener('click', rollRoulette);
+      }
     }
 
     function renderResultsOnly() {
@@ -194,6 +192,60 @@
            </div>`;
       if (grid) grid.outerHTML = resultsHtml;
       else if (emptyState) emptyState.outerHTML = resultsHtml;
+    }
+
+    /* ------------------------------------------------------------
+     * Roulette — picks a random entry, shown in a modal, similar to
+     * the "Roll" random case picker on the main Case List.
+     * ------------------------------------------------------------ */
+    let rouletteModal = null;
+
+    function ensureRouletteModal() {
+      if (rouletteModal) return rouletteModal;
+      const modal = document.createElement('div');
+      modal.className = 'modal';
+      modal.id = 'lib-roulette-modal';
+      modal.hidden = true;
+      modal.setAttribute('role', 'dialog');
+      modal.setAttribute('aria-modal', 'true');
+      modal.innerHTML = `
+        <div class="modal-backdrop" data-close></div>
+        <div class="modal-body">
+          <button class="modal-close" data-close aria-label="Close">×</button>
+          <h2 class="modal-title">Your Random ${escapeHtml(cfg.rouletteNoun || 'Entry')}</h2>
+          <div id="lib-roulette-result"></div>
+          <div class="modal-actions">
+            <button type="button" class="btn-random" id="lib-roulette-again">Roll Again</button>
+            <button type="button" class="btn-secondary" data-close>Close</button>
+          </div>
+        </div>
+      `;
+      document.body.appendChild(modal);
+      modal.addEventListener('click', e => {
+        if (e.target.matches('[data-close]')) closeRouletteModal();
+      });
+      document.getElementById('lib-roulette-again').addEventListener('click', rollRoulette);
+      document.addEventListener('keydown', e => {
+        if (e.key === 'Escape' && !modal.hidden) closeRouletteModal();
+      });
+      rouletteModal = modal;
+      return modal;
+    }
+
+    function closeRouletteModal() {
+      if (rouletteModal) rouletteModal.hidden = true;
+      document.body.style.overflow = '';
+    }
+
+    function rollRoulette() {
+      if (!state.data || !Array.isArray(state.data.entries) || !state.data.entries.length) return;
+      const modal = ensureRouletteModal();
+      const pool = state.data.entries;
+      const pick = pool[Math.floor(Math.random() * pool.length)];
+      const result = document.getElementById('lib-roulette-result');
+      result.innerHTML = renderEntryCard(pick);
+      modal.hidden = false;
+      document.body.style.overflow = 'hidden';
     }
 
     fetch(cfg.dataUrl, { cache: 'no-store' })

@@ -266,6 +266,126 @@ body.page-archive .site-footer {
   border-top-color: var(--celeste-deep);
 }
 
+/* Big boxes (panel + entry cards) pick up the celeste theme that
+   surrounds them on the Ultimate Archive page. */
+body.page-archive .lib-page-panel {
+  background-color: var(--celeste-light);
+  background-image: none;
+  border-color: var(--ink);
+}
+
+body.page-archive .lib-toolbar {
+  background-color: var(--celeste);
+  border-color: var(--ink);
+}
+
+body.page-archive .lib-search-wrap {
+  background-color: var(--celeste-light);
+}
+
+body.page-archive .lib-entry-card {
+  background-color: #fff;
+  border-color: var(--ink);
+}
+
+body.page-archive .lib-chip {
+  background-color: var(--celeste-light);
+}
+
+body.page-archive .lib-chip.is-active {
+  background-color: var(--celeste-text);
+  border-color: var(--celeste-text);
+}
+
+/* Resource Library: the panel + entry cards pick up the same warm
+   brown/gold theme used by the header and nav strip. */
+body.page-resources .lib-page-panel {
+  background-color: #2a1c10;
+  background-image: none;
+  border-color: var(--ink);
+}
+
+body.page-resources .lib-panel-desc,
+body.page-resources .lib-results-count,
+body.page-resources .lib-loading-state,
+body.page-resources .lib-error-sub,
+body.page-resources .lib-empty-sub {
+  color: var(--cream-deep);
+}
+
+body.page-resources .lib-toolbar {
+  background-color: #33240f;
+  border-color: var(--ink);
+}
+
+body.page-resources .lib-search-wrap {
+  background-color: #1c130b;
+}
+
+body.page-resources .lib-search-input {
+  color: var(--cream-light);
+}
+
+body.page-resources .lib-chip {
+  background-color: #1c130b;
+  color: var(--cream-deep);
+  border-color: var(--ink);
+}
+
+body.page-resources .lib-chip:hover {
+  background-color: #3f2c14;
+  color: var(--cream-light);
+}
+
+body.page-resources .lib-chip.is-active {
+  background-color: var(--gold);
+  color: var(--ink);
+  border-color: var(--gold);
+}
+
+body.page-resources .lib-entry-card {
+  background-color: #33240f;
+  border-color: var(--ink);
+  box-shadow: 0 3px 0 #000;
+}
+
+body.page-resources .lib-entry-card:hover {
+  background-color: #3f2c14;
+  box-shadow: 0 5px 0 #000;
+}
+
+body.page-resources .lib-entry-title {
+  color: var(--gold-light);
+}
+
+body.page-resources .lib-entry-desc,
+body.page-resources .lib-entry-meta {
+  color: var(--cream-deep);
+}
+
+body.page-resources .lib-entry-category {
+  color: var(--gold-light);
+}
+
+body.page-resources .lib-entry-link {
+  color: var(--gold-light);
+}
+
+body.page-resources .lib-entry-link:hover {
+  color: var(--gold);
+}
+
+body.page-resources .lib-entry-footer {
+  border-top-color: var(--ink-light);
+}
+
+body.page-resources .lib-note-banner {
+  background-color: #3f2c14;
+  border-color: var(--gold);
+  border-left-color: var(--gold);
+  color: var(--cream-deep);
+}
+
 /* ==========================================================================
    Resources nav strip
    ========================================================================== */
@@ -2557,10 +2677,11 @@ body.lib-overlay-open {
 }
 
 .lib-panel-desc {
-  margin: 0 0 1rem;
+  margin: 0 auto 1rem;
   color: var(--ink-soft);
   font-size: 0.95rem;
   max-width: 70ch;
+  text-align: center;
 }
 
 .lib-note-banner {
@@ -2619,6 +2740,12 @@ body.lib-overlay-open {
 .lib-search-input::placeholder {
   color: var(--ink-light);
   font-style: italic;
+}
+
+.lib-roulette-btn {
+  flex-shrink: 0;
+  white-space: nowrap;
+  padding: 0.55rem 0.9rem;
 }
 
 .lib-chips {
