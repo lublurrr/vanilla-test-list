@@ -288,6 +288,14 @@
         </section>`;
     }
 
+    // "Showing 12 of 340 cases." — the noun follows the page.
+    function countText(list) {
+      const noun = cfg.countNoun || 'entry';
+      const plural = cfg.countNounPlural || (noun + 's');
+      const total = state.data.entries.length;
+      return `Showing <strong>${list.length}</strong> of <strong>${total}</strong> ${total === 1 ? noun : plural}.`;
+    }
+
     function renderFiltersBox(list) {
       return `
         <section class="lib-box lib-box-filters" data-tab-label="Filters">
@@ -297,7 +305,7 @@
                 <path fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" d="M11 19a8 8 0 1 1 0-16 8 8 0 0 1 0 16zm5.5-2.5L21 21" />
               </svg>
               <input type="search" class="lib-search-input" placeholder="${escapeAttr(cfg.searchPlaceholder || ('Search ' + cfg.title + '…'))}" autocomplete="off" value="${escapeAttr(state.search)}" aria-label="Search ${escapeAttr(cfg.title)}" />
-              <button type="button" class="lib-search-clear" aria-label="Clear search"${state.search ? '' : ' hidden'}>&times;</button>
+              <button type="button" class="lib-search-clear" aria-label="Clear search">&times;</button>
             </label>
           </div>
           <div class="toolbar-row toolbar-filters">
@@ -306,7 +314,7 @@
             ${cfg.roulette === false ? '' : '<button type="button" class="btn-random lib-roulette-btn">🎲 Roulette</button>'}
             <button type="button" class="reset-btn lib-reset-btn">Reset</button>
           </div>
-          <div class="results-count lib-results-count">Showing <strong>${list.length}</strong> of <strong>${state.data.entries.length}</strong> entries.</div>
+          <div class="results-count lib-results-count">${countText(list)}</div>
         </section>`;
     }
 
@@ -397,9 +405,7 @@
       const list = filteredEntries();
 
       const countEl = body.querySelector('.lib-results-count');
-      if (countEl) {
-        countEl.innerHTML = `Showing <strong>${list.length}</strong> of <strong>${state.data.entries.length}</strong> entries.`;
-      }
+      if (countEl) countEl.innerHTML = countText(list);
       const panelBody = body.querySelector('.lib-panel-body');
       if (panelBody) panelBody.innerHTML = noteBannerHtml() + resultsHtml(list);
     }
@@ -428,7 +434,6 @@
       if (searchInput) {
         searchInput.addEventListener('input', () => {
           state.search = searchInput.value;
-          if (searchClear) searchClear.hidden = !searchInput.value;
           syncUrl();
           renderResultsOnly();
         });
@@ -440,7 +445,6 @@
             searchInput.value = '';
             searchInput.focus();
           }
-          searchClear.hidden = true;
           syncUrl();
           renderResultsOnly();
         });
