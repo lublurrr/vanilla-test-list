@@ -24,9 +24,28 @@
   }
   function escapeAttr(s) { return escapeHtml(s); }
 
-  // Open book — the ornament on the section blurb.
-  const bookIcon =
-    '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 6.5C10.6 5.2 8.7 4.5 6.5 4.5H3v13h3.5c2.2 0 4.1.7 5.5 2 1.4-1.3 3.3-2 5.5-2H21v-13h-3.5c-2.2 0-4.1.7-5.5 2z"/><path d="M12 6.5v12"/></svg>';
+  /* ------------------------------------------------------------
+     Ornaments for the section blurb — one per section, so each
+     section is recognisable at a glance. Sections with no icon of
+     their own fall back to the open book.
+     ------------------------------------------------------------ */
+  const SECTION_ICON_PATHS = {
+    // Resource Library
+    'guides': '<path d="M12 6.5C10.6 5.2 8.7 4.5 6.5 4.5H3v13h3.5c2.2 0 4.1.7 5.5 2 1.4-1.3 3.3-2 5.5-2H21v-13h-3.5c-2.2 0-4.1.7-5.5 2z"/><path d="M12 6.5v12"/>',
+    'casemaking': '<path d="M16.5 3.2a2.4 2.4 0 0 1 3.4 3.4L7.4 19.1 3 20.5l1.4-4.4z"/><path d="m14.8 4.9 4.3 4.3"/>',
+    'other case lists': '<path d="M8.5 6.5h12"/><path d="M8.5 12h12"/><path d="M8.5 17.5h12"/><path d="M3.5 6.5h.01"/><path d="M3.5 12h.01"/><path d="M3.5 17.5h.01"/>',
+    'videos': '<rect x="2.5" y="4.5" width="19" height="15" rx="2.5"/><path d="m10 8.8 5.5 3.2-5.5 3.2z"/>',
+    'translations': '<circle cx="12" cy="12" r="9"/><path d="M3.4 9.2h17.2"/><path d="M3.4 14.8h17.2"/><path d="M12 3a15 15 0 0 1 0 18"/><path d="M12 3a15 15 0 0 0 0 18"/>',
+    'miscellaneous': '<rect x="2.5" y="4" width="19" height="4.6" rx="1.2"/><path d="M4.6 8.6v10a1.6 1.6 0 0 0 1.6 1.6h11.6a1.6 1.6 0 0 0 1.6-1.6v-10"/><path d="M9.8 12.6h4.4"/>',
+    // Ultimate Archive
+    'graveyard': '<path d="M6 2.5h12"/><path d="M6 21.5h12"/><path d="M8 2.5V7l4 5 4-5V2.5"/><path d="M8 21.5V17l4-5 4 5v4.5"/>',
+  };
+
+  function sectionIcon(category) {
+    const paths = SECTION_ICON_PATHS[String(category || '').trim().toLowerCase()]
+      || SECTION_ICON_PATHS.guides;
+    return '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">' + paths + '</svg>';
+  }
 
   const externalLinkIcon =
     '<svg width="0.85em" height="0.85em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="vertical-align:-0.05em"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg>';
@@ -382,7 +401,7 @@
       if (!note) return '';
       return `
         <aside class="lib-note-banner">
-          <span class="lib-note-mark" aria-hidden="true">${bookIcon}</span>
+          <span class="lib-note-mark" aria-hidden="true">${sectionIcon(state.category)}</span>
           <span class="lib-note-body">
             <span class="lib-note-label">${escapeHtml(categoryLabel(state.category))}</span>
             <span class="lib-note-text">${keepNamesWhole(escapeHtml(note))}</span>
