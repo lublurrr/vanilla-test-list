@@ -2968,9 +2968,6 @@ body.lib-overlay-open {
   background-color: var(--red);
 }
 
-.lib-search-clear[hidden] {
-  display: none;
-}
 
 .lib-roulette-btn {
   flex-shrink: 0;
@@ -3038,11 +3035,12 @@ body.lib-overlay-open {
 }
 
 .lib-about-text {
-  margin: 0;
+  margin: 0 auto;
   font-size: 0.95rem;
   line-height: 1.6;
   color: var(--ink-soft);
   max-width: 78ch;
+  text-align: center;
 }
 
 /* --- Contents box: one compact card per section ------------------------- */
@@ -3173,7 +3171,8 @@ body.lib-overlay-open {
 
 /* --- Filters box ------------------------------------------------------- */
 .lib-box-filters .lib-results-count {
-  margin-bottom: 0;
+  margin: 1.1rem 0 0;
+  padding-top: 0.9rem;
 }
 
 .lib-box-filters .lib-roulette-btn {
