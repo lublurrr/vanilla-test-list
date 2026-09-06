@@ -50,17 +50,14 @@ each one tinted to its own page's palette (celeste on the Archive, brown/gold on
 - **About** (Archive) — the page's `description` from its JSON, in its own box.
 - **Contents** (Library) — one compact card per section with its live entry count and blurb.
   Click one to filter the results below.
-- **Resource Types** (Library) — a box per kind of resource in the data (Case List, Guide,
-  Template, VOD…), each one a filter. The boxes are derived from the entries themselves, and
-  spellings that differ only by case or a plural ("guide"/"Guide", "Template"/"Templates") are
-  folded into one box.
 - **Filters** — the same panel as the Case List's: search, section/year chips, a Sort dropdown
   (Listed order, A–Z, Z–A — no difficulty, length or NSFW controls, which are case-list-only)
   and Reset, with the live count along the bottom.
 - The results grid itself, in its own panel.
 
-Every control rides along in the URL (`?cat=`, `?q=`, `?type=`, `?sort=`) so a filtered view can
-be linked or bookmarked.
+Picking a section drops its blurb in above the results, as a shelf label with an ornament of its
+own per section. Every control rides along in the URL (`?cat=`, `?q=`, `?sort=`) so a filtered
+view can be linked or bookmarked.
 
 Each window is completely independent: its own search box, its own category filter, its own
 scroll position, and its own `#resources` / `#archive` URL hash. Opening one never shows the

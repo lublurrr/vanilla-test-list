@@ -6,8 +6,8 @@
    overlay/backdrop). Each page calls initLibPage(config) once.
 
    The page is built as a stack of folder-tab boxes, the same
-   ones the Case List uses: Contents, Resource Types, Filters,
-   and the results panel.
+   ones the Case List uses: About/Contents, Filters, and the
+   results panel.
    ============================================================ */
 
 (function () {
@@ -67,72 +67,12 @@
     return String(a.id || '').localeCompare(String(b.id || ''), 'en');
   }
 
-  /* ------------------------------------------------------------
-     Entry types. The source docs were written by hand, so the same
-     type shows up as "guide"/"Guide" and "Template"/"Templates".
-     Fold those together — case first, then a trailing "s" when the
-     singular is also in use — so one real type is one box.
-     ------------------------------------------------------------ */
-  function typeKey(type) {
-    return String(type || '').trim().toLowerCase();
-  }
-
-  function buildTypeIndex(entries) {
-    // Count each spelling so the label can keep the one the data uses most
-    // ("VOD" rather than a title-cased "Vod").
-    const spellings = new Map(); // key -> Map(originalSpelling -> count)
-    entries.forEach(e => {
-      const k = typeKey(e.type);
-      if (!k) return;
-      const seen = spellings.get(k) || new Map();
-      const original = String(e.type).trim();
-      seen.set(original, (seen.get(original) || 0) + 1);
-      spellings.set(k, seen);
-    });
-
-    // Fold plurals onto the singular that already exists ("templates" →
-    // "template"), but leave "files"/"themes" alone — they have no singular.
-    const merged = new Map();
-    spellings.forEach((seen, k) => {
-      const singular = k.endsWith('s') ? k.slice(0, -1) : null;
-      const target = singular && spellings.has(singular) ? singular : k;
-      const into = merged.get(target) || new Map();
-      seen.forEach((n, original) => into.set(original, (into.get(original) || 0) + n));
-      merged.set(target, into);
-    });
-
-    return Array.from(merged, ([key, seen]) => {
-      let count = 0;
-      let label = key;
-      let best = 0;
-      seen.forEach((n, original) => {
-        count += n;
-        if (n > best) { best = n; label = original; }
-      });
-      // The docs are inconsistent about capitalising types, so an all-lowercase
-      // winner gets title-cased ("case list" → "Case List") while a spelling
-      // that already carries capitals is left as written ("VOD").
-      if (label === label.toLowerCase()) label = label.replace(/\b[a-z]/g, ch => ch.toUpperCase());
-      return { key, label, count };
-    }).sort((a, b) => b.count - a.count || a.label.localeCompare(b.label, 'en'));
-  }
-
-  function entryTypeKey(e, index) {
-    const k = typeKey(e.type);
-    if (!k) return '';
-    if (index.some(t => t.key === k)) return k;
-    const singular = k.endsWith('s') ? k.slice(0, -1) : '';
-    return index.some(t => t.key === singular) ? singular : k;
-  }
-
   window.initLibPage = function initLibPage(cfg) {
     const state = {
       search: '',
       category: cfg.defaultCategory || 'all',
-      type: 'all',
       sort: 'default',
       data: null,
-      types: [],
       error: null,
     };
 
@@ -143,14 +83,12 @@
     const params = new URLSearchParams(location.search);
     if (params.get('cat')) state.category = params.get('cat');
     if (params.get('q')) state.search = params.get('q');
-    if (params.get('type')) state.type = typeKey(params.get('type'));
     if (params.get('sort')) state.sort = params.get('sort');
 
     function syncUrl() {
       const p = new URLSearchParams();
       if (state.category && state.category !== 'all') p.set('cat', state.category);
       if (state.search) p.set('q', state.search);
-      if (state.type && state.type !== 'all') p.set('type', state.type);
       if (state.sort && state.sort !== 'default') p.set('sort', state.sort);
       const qs = p.toString();
       history.replaceState(null, '', location.pathname + (qs ? '?' + qs : ''));
@@ -182,11 +120,9 @@
       if (!state.data) return [];
       const q = state.search.trim().toLowerCase();
       const cat = state.category;
-      const type = state.type;
       const fields = cfg.searchFields || ['title', 'creator', 'category', 'description', 'language'];
       return state.data.entries.filter(e => {
         if (cat !== 'all' && e.category !== cat) return false;
-        if (type !== 'all' && entryTypeKey(e, state.types) !== type) return false;
         if (!q) return true;
         const haystack = fields.map(f => e[f]).filter(Boolean).join(' ').toLowerCase();
         return haystack.includes(q);
@@ -247,35 +183,6 @@
         <section class="lib-box lib-box-toc" data-tab-label="Contents">
           <div class="lib-toc-cards">${cards}</div>
           ${legendHtml}
-        </section>`;
-    }
-
-    /* ------------------------------------------------------------
-     * Box 2 — Resource Types. One box per kind of resource in the
-     * data, each a filter for that type. Skipped when the page only
-     * holds one kind of thing (the Archive is all cases).
-     * ------------------------------------------------------------ */
-    function renderTypesBox() {
-      if (!cfg.showTypes || state.types.length < 2) return '';
-      const cards = state.types.map(t => {
-        const active = state.type === t.key ? ' is-active' : '';
-        return `
-          <button type="button" class="lib-type-card${active}" data-lib-type="${escapeAttr(t.key)}" aria-pressed="${state.type === t.key}">
-            <span class="lib-type-card-name">${escapeHtml(t.label)}</span>
-            <span class="lib-type-card-count">${t.count}</span>
-          </button>`;
-      }).join('');
-      const allActive = state.type === 'all' ? ' is-active' : '';
-      return `
-        <section class="lib-box lib-box-types" data-tab-label="Resource Types">
-          <p class="lib-box-lead">Every kind of resource in the library. Pick one to see only those.</p>
-          <div class="lib-type-cards">
-            <button type="button" class="lib-type-card lib-type-card-all${allActive}" data-lib-type="all" aria-pressed="${state.type === 'all'}">
-              <span class="lib-type-card-name">All Types</span>
-              <span class="lib-type-card-count">${state.data.entries.length}</span>
-            </button>
-            ${cards}
-          </div>
         </section>`;
     }
 
@@ -378,10 +285,10 @@
     }
 
     function emptyStateHtml() {
-      const narrowed = state.type !== 'all' || state.category !== 'all';
+      const narrowed = state.category !== 'all';
       return `<div class="lib-empty-state">
              <p class="lib-empty-title">No entries match your ${narrowed ? 'filters' : 'search'}.</p>
-             <p class="lib-empty-sub">${narrowed ? 'Try a different section or type, or hit Reset to see everything.' : 'Try a different search term.'}</p>
+             <p class="lib-empty-sub">${narrowed ? 'Try a different section, or hit Reset to see everything.' : 'Try a different search term.'}</p>
            </div>`;
     }
 
@@ -428,7 +335,6 @@
       body.innerHTML = `
         ${renderAboutBox()}
         ${renderContentsBox()}
-        ${renderTypesBox()}
         ${renderFiltersBox(list)}
         <div class="lib-page-panel">
           <div class="lib-panel-body">
@@ -455,11 +361,6 @@
     function syncChips() {
       body.querySelectorAll('[data-lib-cat]').forEach(btn => {
         const on = state.category === btn.dataset.libCat;
-        btn.classList.toggle('is-active', on);
-        btn.setAttribute('aria-pressed', String(on));
-      });
-      body.querySelectorAll('[data-lib-type]').forEach(btn => {
-        const on = state.type === btn.dataset.libType;
         btn.classList.toggle('is-active', on);
         btn.setAttribute('aria-pressed', String(on));
       });
@@ -503,16 +404,6 @@
         });
       });
 
-      body.querySelectorAll('[data-lib-type]').forEach(btn => {
-        btn.addEventListener('click', () => {
-          state.type = btn.dataset.libType;
-          syncUrl();
-          syncChips();
-          renderResultsOnly();
-          scrollToResults();
-        });
-      });
-
       const sortSelect = body.querySelector('.lib-sort-select');
       if (sortSelect) {
         sortSelect.addEventListener('change', () => {
@@ -527,7 +418,6 @@
         resetBtn.addEventListener('click', () => {
           state.search = '';
           state.category = 'all';
-          state.type = 'all';
           state.sort = 'default';
           syncUrl();
           render();
@@ -599,7 +489,6 @@
       })
       .then(json => {
         state.data = json;
-        state.types = buildTypeIndex(json.entries || []);
         if (tagline) tagline.textContent = json.tagline || '';
         render();
       })
