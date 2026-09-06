@@ -24,8 +24,23 @@
   }
   function escapeAttr(s) { return escapeHtml(s); }
 
+  // Open book — the ornament on the section blurb.
+  const bookIcon =
+    '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 6.5C10.6 5.2 8.7 4.5 6.5 4.5H3v13h3.5c2.2 0 4.1.7 5.5 2 1.4-1.3 3.3-2 5.5-2H21v-13h-3.5c-2.2 0-4.1.7-5.5 2z"/><path d="M12 6.5v12"/></svg>';
+
   const externalLinkIcon =
     '<svg width="0.85em" height="0.85em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="vertical-align:-0.05em"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg>';
+
+  // The site's own names read badly split over two lines, so keep each one
+  // whole. Applied after escaping, so the input is already safe.
+  const SITE_NAMES = ['Vanilla Case List', 'Vanilla Ultimate Archive', 'Vanilla Resource Library'];
+
+  function keepNamesWhole(escaped) {
+    return SITE_NAMES.reduce(
+      (out, name) => out.split(name).join(`<span class="lib-nowrap">${name}</span>`),
+      escaped
+    );
+  }
 
   function byTitle(a, b) {
     const cmp = String(a.title || '').localeCompare(String(b.title || ''), 'en', { sensitivity: 'base' });
@@ -185,12 +200,11 @@
       if (!cats.length) return '';
       const counts = countsByCategory();
 
-      const cards = cats.map((cat, i) => {
+      const cards = cats.map(cat => {
         const desc = categoryDescription(cat);
         const active = state.category === cat ? ' is-active' : '';
         return `
           <button type="button" class="lib-toc-card${active}" data-lib-cat="${escapeAttr(cat)}" aria-pressed="${state.category === cat}">
-            <span class="lib-toc-card-num">${i + 1}</span>
             <span class="lib-toc-card-main">
               <span class="lib-toc-card-name">${escapeHtml(categoryLabel(cat))}</span>
               ${desc ? `<span class="lib-toc-card-desc">${escapeHtml(desc)}</span>` : ''}
@@ -284,7 +298,7 @@
       if (!text || !cfg.aboutLabel) return '';
       return `
         <section class="lib-box lib-box-about" data-tab-label="${escapeAttr(cfg.aboutLabel)}">
-          <p class="lib-about-text">${escapeHtml(text)}</p>
+          <p class="lib-about-text">${keepNamesWhole(escapeHtml(text))}</p>
         </section>`;
     }
 
@@ -358,13 +372,22 @@
         : emptyStateHtml();
     }
 
+    // The blurb that drops in when a section is picked from Contents. Styled
+    // as a shelf label — ornament, section name, then the blurb itself.
     function noteBannerHtml() {
       const desc = categoryDescription(state.category);
-      if (state.category !== 'all' && desc) return `<div class="lib-note-banner">${escapeHtml(desc)}</div>`;
-      if (state.category === 'Graveyard' && state.data.graveyardNote) {
-        return `<div class="lib-note-banner">${escapeHtml(state.data.graveyardNote)}</div>`;
-      }
-      return '';
+      const note = (state.category !== 'all' && desc)
+        || (state.category === 'Graveyard' && state.data.graveyardNote)
+        || '';
+      if (!note) return '';
+      return `
+        <aside class="lib-note-banner">
+          <span class="lib-note-mark" aria-hidden="true">${bookIcon}</span>
+          <span class="lib-note-body">
+            <span class="lib-note-label">${escapeHtml(categoryLabel(state.category))}</span>
+            <span class="lib-note-text">${keepNamesWhole(escapeHtml(note))}</span>
+          </span>
+        </aside>`;
     }
 
     function render() {

@@ -301,7 +301,15 @@ body.page-archive .lib-note-banner {
   background-color: var(--celeste-light);
   border-color: var(--celeste-deep);
   border-left-color: var(--celeste-text);
+}
+
+body.page-archive .lib-note-mark,
+body.page-archive .lib-note-label {
   color: var(--celeste-text);
+}
+
+body.page-archive .lib-note-text {
+  color: var(--ink-soft);
 }
 
 body.page-archive .lib-box .search-wrap:focus-within {
@@ -401,11 +409,28 @@ body.page-resources .lib-about-text {
   color: var(--cream-deep);
 }
 
+/* On the Library the blurb reads like a plate on a bookshelf: a gold-ruled
+   panel over dark leather, with the ornament and section name in gold. */
 body.page-resources .lib-note-banner {
   background-color: #1c130b;
-  border-color: var(--gold);
-  border-left-color: var(--gold-light);
-  color: var(--cream-deep);
+  background-image: linear-gradient(160deg, rgba(240, 193, 75, 0.08), transparent 55%);
+  border: 1px solid var(--gold);
+  border-left: 4px solid var(--gold-light);
+  box-shadow: inset 0 0 0 1px rgba(240, 193, 75, 0.18), 0 3px 0 #000;
+}
+
+body.page-resources .lib-note-mark {
+  color: var(--gold-light);
+  background-color: #150d05;
+  box-shadow: 0 0 0 3px rgba(240, 193, 75, 0.12);
+}
+
+body.page-resources .lib-note-label {
+  color: var(--gold-light);
+}
+
+body.page-resources .lib-note-text {
+  color: var(--cream-light);
 }
 
 body.page-resources .lib-box .search-wrap:focus-within {
@@ -521,12 +546,6 @@ body.page-resources .lib-entry-footer {
   border-top-color: var(--ink-light);
 }
 
-body.page-resources .lib-note-banner {
-  background-color: #3f2c14;
-  border-color: var(--gold);
-  border-left-color: var(--gold);
-  color: var(--cream-deep);
-}
 
 /* Type badges ("tags") keep the same hue-coding used across the
    site (blue/green/gold) but in darkened, translucent tones that
@@ -2883,16 +2902,54 @@ body.lib-overlay-open {
   text-align: center;
 }
 
+/* Section blurb — a shelf label: ornament, section name, then the blurb. */
 .lib-note-banner {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.85rem;
   background-color: var(--blue-pale);
   border: 1px solid var(--blue);
   border-left: 4px solid var(--blue-deep);
   border-radius: 4px;
-  padding: 0.75rem 1rem;
-  font-size: 0.85rem;
-  color: var(--ink-soft);
+  padding: 0.85rem 1.1rem;
   margin: 0 0 1.25rem;
-  line-height: 1.5;
+}
+
+.lib-note-mark {
+  flex-shrink: 0;
+  display: grid;
+  place-items: center;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  border: 1px solid currentColor;
+  color: var(--blue-deep);
+  opacity: 0.85;
+}
+
+.lib-note-body {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  min-width: 0;
+}
+
+.lib-note-label {
+  font-family: var(--font-display);
+  font-style: normal;
+  font-weight: bold;
+  font-size: 0.72rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--blue-deep);
+}
+
+.lib-note-text {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 0.95rem;
+  line-height: 1.55;
+  color: var(--ink-soft);
 }
 
 /* ==========================================================================
@@ -2995,7 +3052,10 @@ body.lib-overlay-open {
   border: 2px solid var(--ink);
   border-radius: 0 8px 8px 8px;
   padding: 1rem 1.25rem;
-  margin-top: 22px;
+  /* 22px for the folder tab that hangs above the box, plus the same 1.5rem
+     of clear space every box leaves below itself. Adjacent margins collapse,
+     so this is the whole gap between two stacked boxes. */
+  margin-top: calc(22px + 1.5rem);
   margin-bottom: 1.5rem;
   box-shadow: var(--shadow-card);
   position: relative;
@@ -3032,6 +3092,10 @@ body.lib-overlay-open {
   font-size: 0.85rem;
   font-style: italic;
   color: var(--ink-soft);
+}
+
+.lib-nowrap {
+  white-space: nowrap;
 }
 
 .lib-about-text {
@@ -3074,14 +3138,6 @@ body.lib-overlay-open {
   background-color: var(--blue-pale);
 }
 
-.lib-toc-card-num {
-  flex-shrink: 0;
-  font-family: var(--font-display);
-  font-weight: bold;
-  font-size: 0.8rem;
-  color: var(--gold);
-  line-height: 1.5;
-}
 
 .lib-toc-card-main {
   flex: 1;
