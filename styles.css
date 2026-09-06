@@ -274,36 +274,49 @@ body.page-archive .lib-page-panel {
   border-color: var(--ink);
 }
 
-body.page-archive .lib-toolbar {
-  background-color: var(--celeste);
-  border-color: var(--ink);
-}
-
-body.page-archive .lib-search-wrap {
-  background-color: var(--celeste-light);
-}
-
 body.page-archive .lib-entry-card {
   background-color: #fff;
   border-color: var(--ink);
 }
 
-body.page-archive .lib-chip {
+body.page-archive .lib-box {
+  background-color: var(--celeste);
+  border-color: var(--ink);
+}
+
+body.page-archive .lib-box .search-wrap,
+body.page-archive .lib-box .chip,
+body.page-archive .lib-box .lib-toc-card,
+body.page-archive .lib-box .lib-type-card,
+body.page-archive .lib-box .lib-sort-select,
+body.page-archive .lib-box .reset-btn {
   background-color: var(--celeste-light);
 }
 
-body.page-archive .lib-chip.is-active {
-  background-color: var(--celeste-text);
-  border-color: var(--celeste-text);
+body.page-archive .lib-box .chip:hover,
+body.page-archive .lib-box .reset-btn:hover {
+  background-color: var(--celeste);
+  color: var(--ink);
 }
 
-body.page-archive .lib-alpha-label {
+body.page-archive .lib-box .chip.is-active {
+  background-color: var(--celeste-text);
+  border-color: var(--celeste-text);
+  color: var(--cream-light);
+}
+
+body.page-archive .lib-box .chip:disabled:hover {
+  background-color: var(--celeste-light);
+  color: var(--ink-soft);
+}
+
+body.page-archive .lib-box .filter-label,
+body.page-archive .lib-toc-card-name {
   color: var(--celeste-text);
 }
 
-body.page-archive .lib-chip:disabled:hover {
-  background-color: var(--celeste-light);
-  color: var(--ink-soft);
+body.page-archive .lib-results-count strong {
+  color: var(--celeste-text);
 }
 
 /* Resource Library: the panel + entry cards pick up the same warm
@@ -322,34 +335,8 @@ body.page-resources .lib-empty-sub {
   color: var(--cream-deep);
 }
 
-body.page-resources .lib-toolbar {
-  background-color: #33240f;
-  border-color: var(--ink);
-}
-
-body.page-resources .lib-search-wrap {
-  background-color: #1c130b;
-}
-
 body.page-resources .lib-search-input {
   color: var(--cream-light);
-}
-
-body.page-resources .lib-chip {
-  background-color: #1c130b;
-  color: var(--cream-deep);
-  border-color: var(--ink);
-}
-
-body.page-resources .lib-chip:hover {
-  background-color: #3f2c14;
-  color: var(--cream-light);
-}
-
-body.page-resources .lib-chip.is-active {
-  background-color: #150d05;
-  color: var(--gold-light);
-  border-color: var(--gold);
 }
 
 body.page-resources .lib-search-clear {
@@ -362,52 +349,93 @@ body.page-resources .lib-search-clear:hover {
   color: #fff;
 }
 
-body.page-resources .lib-alpha-label {
-  color: var(--gold-light);
-}
-
-body.page-resources .lib-chip:disabled:hover {
-  background-color: #1c130b;
-  color: var(--cream-deep);
-}
-
-body.page-resources .lib-toc {
-  background-color: #33240f;
-  border-color: var(--ink);
-}
-
-body.page-resources .lib-toc-header {
-  background-color: #1c130b;
-  color: var(--gold-light);
-  border-bottom-color: var(--ink);
-}
-
-body.page-resources .lib-toc-item {
-  border-bottom-color: rgba(255, 255, 255, 0.12);
-  color: var(--cream-deep);
-}
-
-body.page-resources .lib-toc-item::before {
-  color: var(--gold);
-}
-
-body.page-resources .lib-toc-cat {
-  color: var(--celeste-deep);
-}
-
-body.page-resources .lib-toc-cat:hover {
-  color: var(--gold-light);
-}
-
-body.page-resources .lib-toc-desc,
-body.page-resources .lib-toc-types {
-  color: var(--cream-deep);
-}
-
 body.page-resources .lib-toc-legend {
   background-color: #1c130b;
   border-top-color: var(--ink);
   color: var(--cream-deep);
+}
+
+body.page-resources .lib-box {
+  background-color: #33240f;
+  border-color: var(--ink);
+  color: var(--cream-deep);
+}
+
+body.page-resources .lib-box-lead {
+  color: var(--cream-deep);
+}
+
+body.page-resources .lib-box .search-wrap,
+body.page-resources .lib-box .chip,
+body.page-resources .lib-box .lib-toc-card,
+body.page-resources .lib-box .lib-type-card,
+body.page-resources .lib-box .lib-sort-select,
+body.page-resources .lib-box .reset-btn {
+  background-color: #1c130b;
+  color: var(--cream-deep);
+  border-color: var(--ink);
+}
+
+/* Native select chrome ignores the dark palette on some browsers, so on the
+   dark Library page draw the control (and its arrow) ourselves. */
+body.page-resources .lib-box .lib-sort-select {
+  color-scheme: dark;
+  appearance: none;
+  -webkit-appearance: none;
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 8' fill='none' stroke='%23e9d29a' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M1 1.5 6 6.5 11 1.5'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 0.6rem center;
+  background-size: 0.7rem;
+  padding-right: 1.9rem;
+}
+
+body.page-resources .lib-results-count strong {
+  color: var(--gold-light);
+}
+
+body.page-resources .lib-box .chip:hover,
+body.page-resources .lib-box .lib-toc-card:hover,
+body.page-resources .lib-box .lib-type-card:hover,
+body.page-resources .lib-box .reset-btn:hover {
+  background-color: #3f2c14;
+  color: var(--cream-light);
+}
+
+body.page-resources .lib-box .chip.is-active,
+body.page-resources .lib-box .lib-toc-card.is-active,
+body.page-resources .lib-box .lib-type-card.is-active {
+  background-color: #150d05;
+  color: var(--gold-light);
+  border-color: var(--gold);
+}
+
+body.page-resources .lib-box .chip:disabled:hover {
+  background-color: #1c130b;
+  color: var(--cream-deep);
+}
+
+body.page-resources .lib-box .filter-label,
+body.page-resources .lib-toc-card-name,
+body.page-resources .lib-toc-card.is-active .lib-toc-card-name {
+  color: var(--gold-light);
+}
+
+body.page-resources .lib-toc-card-desc,
+body.page-resources .lib-type-card-name {
+  color: var(--cream-deep);
+}
+
+body.page-resources .lib-toc-card-count,
+body.page-resources .lib-type-card-count {
+  background-color: #2a1c10;
+  color: var(--gold);
+  border-color: var(--gold);
+}
+
+body.page-resources .lib-toc-legend {
+  margin-top: 1rem;
+  border: var(--border-thin);
+  border-radius: 4px;
 }
 
 body.page-resources .lib-entry-card {
@@ -577,8 +605,6 @@ body.page-resources .resource-icon {
   font-size: 0.78rem;
   color: var(--ink-soft);
 }
-
-
 
 .resource-faq-toggle[aria-expanded="true"] {
   background-color: var(--ink);
@@ -2218,7 +2244,6 @@ main {
   overflow: hidden;
 }
 
-
 .case-modal-tab {
   position: absolute;
   top: 0;
@@ -2469,13 +2494,14 @@ main {
 }
 
 /* "Download PDFs (.zip)" — same button as the others, in the file-download
-   gold so it reads as a download rather than a link out. */
-.case-modal-pdf-btn {
+   gold so it reads as a download rather than a link out. The greyed-out
+   state (no ZIP for this case yet) keeps the shared disabled look. */
+a.case-modal-pdf-btn {
   background-color: var(--gold);
   color: var(--ink);
 }
 
-.case-modal-pdf-btn:hover {
+a.case-modal-pdf-btn:hover {
   background-color: var(--gold-light);
 }
 
@@ -2827,84 +2853,10 @@ body.lib-overlay-open {
    category blurbs, entry types, and the initialism legend).
    ========================================================================== */
 
-.lib-toc {
-  border: var(--border-medium);
-  border-radius: 4px;
-  overflow: hidden;
-  margin: 0 0 1rem;
-  background-color: var(--cream-light);
-}
-
-.lib-toc-header {
-  font-family: var(--font-display);
-  font-weight: bold;
-  font-size: 1.05rem;
-  text-align: center;
-  padding: 0.6rem 1rem;
-  background-color: var(--cream-deep);
-  border-bottom: var(--border-medium);
-}
-
-.lib-toc-list {
-  list-style: none;
-  counter-reset: toc-counter;
-  margin: 0;
-  padding: 0;
-}
-
-.lib-toc-item {
-  counter-increment: toc-counter;
-  padding: 0.65rem 1rem;
-  border-bottom: 1px dashed var(--ink-light);
-  font-size: 0.9rem;
-  line-height: 1.5;
-}
-
-.lib-toc-item:last-child {
-  border-bottom: none;
-}
-
-.lib-toc-item::before {
-  content: counter(toc-counter) ". ";
-  font-weight: bold;
-  color: var(--ink-soft);
-}
-
-.lib-toc-cat {
-  font: inherit;
-  font-weight: bold;
-  background: none;
-  border: none;
-  padding: 0;
-  margin: 0;
-  color: var(--blue-deep);
-  cursor: pointer;
-  text-decoration: underline;
-  text-underline-offset: 2px;
-}
-
-.lib-toc-cat:hover {
-  color: var(--gold);
-}
-
-.lib-toc-desc {
-  color: var(--ink-soft);
-}
-
-.lib-toc-types {
-  list-style: disc;
-  margin: 0.35rem 0 0 1.6rem;
-  padding: 0;
-  color: var(--ink-soft);
-  font-size: 0.85rem;
-}
-
-.lib-toc-types li {
-  margin: 0.15rem 0;
-}
-
 .lib-toc-legend {
-  border-top: var(--border-medium);
+  margin-top: 1rem;
+  border: var(--border-thin);
+  border-radius: 4px;
   background-color: var(--cream-deep);
   padding: 0.65rem 1rem;
 }
@@ -2923,42 +2875,6 @@ body.lib-overlay-open {
   gap: 0.4rem 1.5rem;
   font-size: 0.85rem;
   font-style: italic;
-}
-
-.lib-toolbar {
-  display: flex;
-  flex-direction: column;
-  gap: 0.75rem;
-  background-color: var(--cream-light);
-  border: 2px solid var(--ink);
-  border-radius: 4px;
-  padding: 0.85rem 1rem;
-  margin-bottom: 1rem;
-}
-
-.lib-toolbar-row {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.75rem 1.5rem;
-  align-items: center;
-}
-
-.lib-search-wrap {
-  flex: 1;
-  min-width: 220px;
-  display: flex;
-  align-items: center;
-  gap: 0.6rem;
-  background-color: var(--cream);
-  border: var(--border-medium);
-  border-radius: 3px;
-  padding: 0.5rem 0.8rem;
-  transition: box-shadow 0.15s, background-color 0.15s;
-}
-
-.lib-search-wrap:focus-within {
-  background-color: var(--paper);
-  box-shadow: 0 0 0 3px var(--gold-light);
 }
 
 .lib-search-input {
@@ -3015,60 +2931,208 @@ body.lib-overlay-open {
   padding: 0.55rem 0.9rem;
 }
 
-.lib-roulette-wrap {
-  flex: 1 0 100%;
-  display: flex;
-  justify-content: center;
+/* ==========================================================================
+   Standalone library pages — folder-tab boxes
+   --------------------------------------------------------------------------
+   The Resource Library and Ultimate Archive are stacks of the same
+   folder-tab panels the Case List uses: Contents, Resource Types,
+   Filters, then the results panel.
+   ========================================================================== */
+
+.lib-main {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1.5rem 1rem 3rem;
 }
 
-.lib-chips {
-  display: flex;
-  gap: 0.3rem;
-  flex-wrap: wrap;
+.lib-box {
+  background-color: var(--cream-light);
+  border: 2px solid var(--ink);
+  border-radius: 0 8px 8px 8px;
+  padding: 1rem 1.25rem;
+  margin-top: 22px;
+  margin-bottom: 1.5rem;
+  box-shadow: var(--shadow-card);
+  position: relative;
 }
 
-.lib-chip {
-  font-family: var(--font-ui);
-  font-size: 0.82rem;
-  font-weight: 600;
-  padding: 0.3rem 0.7rem;
-  border: var(--border-thin);
-  background-color: var(--cream);
-  color: var(--ink-soft);
-  border-radius: 999px;
-  cursor: pointer;
-  transition: all 0.12s ease;
-  white-space: nowrap;
-}
-
-.lib-chip:hover {
-  background-color: var(--cream-deep);
-  color: var(--ink);
-}
-
-.lib-chip.is-active {
-  background-color: var(--ink);
-  color: var(--cream-light);
-  border-color: var(--ink);
-}
-
-/* Alphabetical index — a row of the same chips used everywhere else on
-   these pages, plus the same round "×" the search box uses to clear. */
-.lib-alpha {
-  flex: 1 0 100%;
+.lib-box::before {
+  content: attr(data-tab-label);
+  position: absolute;
+  top: -22px;
+  left: -2px;
+  min-width: 130px;
+  height: 24px;
+  background-color: var(--blue-deep);
+  border: 2px solid var(--ink);
+  border-bottom: none;
+  border-radius: 8px 8px 0 0;
+  clip-path: polygon(0 0, calc(100% - 14px) 0, 100% 100%, 0 100%);
   display: flex;
   align-items: center;
+  justify-content: center;
+  font-family: var(--font-display);
+  font-style: normal;
+  font-weight: bold;
+  font-size: 0.78rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--gold-light);
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.4);
+  padding: 0 1.1rem 0 0.55rem;
+}
+
+.lib-box-lead {
+  margin: 0 0 0.85rem;
+  font-size: 0.85rem;
+  font-style: italic;
+  color: var(--ink-soft);
+}
+
+/* --- Contents box: one compact card per section ------------------------- */
+.lib-toc-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 0.6rem;
+}
+
+.lib-toc-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.6rem;
+  text-align: left;
+  font-family: var(--font-ui);
+  background-color: var(--cream);
+  border: var(--border-thin);
+  border-radius: 4px;
+  padding: 0.6rem 0.7rem;
+  cursor: pointer;
+  transition: background-color 0.12s, border-color 0.12s, transform 0.08s;
+}
+
+.lib-toc-card:hover {
+  background-color: var(--cream-deep);
+  transform: translateY(-1px);
+}
+
+.lib-toc-card.is-active {
+  border-color: var(--blue-deep);
+  background-color: var(--blue-pale);
+}
+
+.lib-toc-card-num {
+  flex-shrink: 0;
+  font-family: var(--font-display);
+  font-weight: bold;
+  font-size: 0.8rem;
+  color: var(--gold);
+  line-height: 1.5;
+}
+
+.lib-toc-card-main {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+}
+
+.lib-toc-card-name {
+  font-family: var(--font-display);
+  font-weight: bold;
+  font-size: 0.95rem;
+  color: var(--blue-deep);
+}
+
+.lib-toc-card-desc {
+  font-size: 0.78rem;
+  line-height: 1.35;
+  color: var(--ink-soft);
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.lib-toc-card-count {
+  flex-shrink: 0;
+  align-self: center;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--ink-soft);
+  background-color: var(--paper);
+  border: var(--border-thin);
+  border-radius: 999px;
+  padding: 0.1rem 0.5rem;
+}
+
+/* --- Resource Types box: one small box per kind of resource ------------- */
+.lib-type-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
   gap: 0.5rem;
 }
 
-.lib-alpha-label {
-  flex-shrink: 0;
+.lib-type-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
   font-family: var(--font-ui);
-  font-size: 0.72rem;
+  background-color: var(--cream);
+  border: var(--border-thin);
+  border-radius: 4px;
+  padding: 0.5rem 0.65rem;
+  cursor: pointer;
+  transition: background-color 0.12s, border-color 0.12s, transform 0.08s;
+}
+
+.lib-type-card:hover {
+  background-color: var(--cream-deep);
+  transform: translateY(-1px);
+}
+
+.lib-type-card.is-active {
+  border-color: var(--blue-deep);
+  background-color: var(--blue-pale);
+}
+
+.lib-type-card-name {
+  font-weight: 600;
+  font-size: 0.85rem;
+  color: var(--ink);
+  text-align: left;
+}
+
+.lib-type-card-count {
+  flex-shrink: 0;
+  font-size: 0.75rem;
   font-weight: 700;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: var(--ink-light);
+  color: var(--ink-soft);
+  background-color: var(--paper);
+  border: var(--border-thin);
+  border-radius: 999px;
+  padding: 0.1rem 0.45rem;
+}
+
+/* --- Filters box ------------------------------------------------------- */
+.lib-box-filters .lib-results-count {
+  margin-bottom: 0;
+}
+
+.lib-box-filters .lib-roulette-btn {
+  padding: 0.4rem 0.85rem;
+  font-size: 0.85rem;
+}
+
+.lib-box-filters .reset-btn {
+  margin-left: auto;
+}
+
+.lib-alpha {
+  flex: 1 0 100%;
+  align-items: center;
 }
 
 .lib-alpha-chips {
@@ -3078,20 +3142,30 @@ body.lib-overlay-open {
 
 .lib-alpha-chip {
   min-width: 1.9rem;
-  padding: 0.28rem 0.35rem;
+  padding: 0.3rem 0.4rem;
   text-align: center;
   font-variant-numeric: tabular-nums;
 }
 
-.lib-chip:disabled {
+.chip:disabled {
   opacity: 0.4;
   cursor: default;
 }
 
-.lib-chip:disabled:hover {
+.chip:disabled:hover {
   background-color: var(--cream);
   color: var(--ink-soft);
 }
+
+/* The results panel sits inside .lib-main now, so it no longer centres
+   itself or adds the page's outer margin. */
+.lib-main .lib-page-panel {
+  margin: 0;
+  max-width: none;
+}
+
+/* Alphabetical index — a row of the same chips used everywhere else on
+   these pages, plus the same round "×" the search box uses to clear. */
 
 .lib-results-count {
   font-size: 0.82rem;
@@ -3332,7 +3406,7 @@ body.lib-overlay-open {
 
 .lib-back-btn:focus-visible,
 .lib-close-btn:focus-visible,
-.lib-chip:focus-visible,
+.chip:focus-visible,
 .lib-entry-link:focus-visible,
 .lib-source-link:focus-visible,
 .resource-link:focus-visible {
@@ -3371,6 +3445,15 @@ body.lib-overlay-open {
     flex: 1 1 100%;
     order: 3;
   }
+
+  .lib-toc-cards,
+  .lib-type-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .lib-box-filters .reset-btn {
+    margin-left: 0;
+  }
 }
 
 @media (max-width: 480px) {
@@ -3387,5 +3470,13 @@ body.lib-overlay-open {
     min-width: 1.65rem;
     padding: 0.25rem 0.25rem;
     font-size: 0.78rem;
+  }
+
+  .lib-main {
+    padding: 1.25rem 0.65rem 2rem;
+  }
+
+  .lib-box {
+    padding: 0.85rem 0.75rem;
   }
 }

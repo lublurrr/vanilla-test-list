@@ -4,6 +4,10 @@
    Powers resources.html and archive.html as real, independent
    pages (their own URL, back button works normally, no JS
    overlay/backdrop). Each page calls initLibPage(config) once.
+
+   The page is built as a stack of folder-tab boxes, the same
+   ones the Case List uses: Contents, Resource Types, Filters,
+   and the results panel.
    ============================================================ */
 
 (function () {
@@ -51,18 +55,79 @@
     return OTHER_LETTER;
   }
 
-  function compareEntries(a, b) {
-    const byTitle = String(a.title || '').localeCompare(String(b.title || ''), 'en', { sensitivity: 'base' });
-    if (byTitle !== 0) return byTitle;
+  function byTitle(a, b) {
+    const cmp = String(a.title || '').localeCompare(String(b.title || ''), 'en', { sensitivity: 'base' });
+    if (cmp !== 0) return cmp;
     return String(a.id || '').localeCompare(String(b.id || ''), 'en');
+  }
+
+  /* ------------------------------------------------------------
+     Entry types. The source docs were written by hand, so the same
+     type shows up as "guide"/"Guide" and "Template"/"Templates".
+     Fold those together — case first, then a trailing "s" when the
+     singular is also in use — so one real type is one box.
+     ------------------------------------------------------------ */
+  function typeKey(type) {
+    return String(type || '').trim().toLowerCase();
+  }
+
+  function buildTypeIndex(entries) {
+    // Count each spelling so the label can keep the one the data uses most
+    // ("VOD" rather than a title-cased "Vod").
+    const spellings = new Map(); // key -> Map(originalSpelling -> count)
+    entries.forEach(e => {
+      const k = typeKey(e.type);
+      if (!k) return;
+      const seen = spellings.get(k) || new Map();
+      const original = String(e.type).trim();
+      seen.set(original, (seen.get(original) || 0) + 1);
+      spellings.set(k, seen);
+    });
+
+    // Fold plurals onto the singular that already exists ("templates" →
+    // "template"), but leave "files"/"themes" alone — they have no singular.
+    const merged = new Map();
+    spellings.forEach((seen, k) => {
+      const singular = k.endsWith('s') ? k.slice(0, -1) : null;
+      const target = singular && spellings.has(singular) ? singular : k;
+      const into = merged.get(target) || new Map();
+      seen.forEach((n, original) => into.set(original, (into.get(original) || 0) + n));
+      merged.set(target, into);
+    });
+
+    return Array.from(merged, ([key, seen]) => {
+      let count = 0;
+      let label = key;
+      let best = 0;
+      seen.forEach((n, original) => {
+        count += n;
+        if (n > best) { best = n; label = original; }
+      });
+      // The docs are inconsistent about capitalising types, so an all-lowercase
+      // winner gets title-cased ("case list" → "Case List") while a spelling
+      // that already carries capitals is left as written ("VOD").
+      if (label === label.toLowerCase()) label = label.replace(/\b[a-z]/g, ch => ch.toUpperCase());
+      return { key, label, count };
+    }).sort((a, b) => b.count - a.count || a.label.localeCompare(b.label, 'en'));
+  }
+
+  function entryTypeKey(e, index) {
+    const k = typeKey(e.type);
+    if (!k) return '';
+    if (index.some(t => t.key === k)) return k;
+    const singular = k.endsWith('s') ? k.slice(0, -1) : '';
+    return index.some(t => t.key === singular) ? singular : k;
   }
 
   window.initLibPage = function initLibPage(cfg) {
     const state = {
       search: '',
       category: cfg.defaultCategory || 'all',
+      type: 'all',
       letter: 'all',
+      sort: 'default',
       data: null,
+      types: [],
       error: null,
     };
 
@@ -73,13 +138,17 @@
     const params = new URLSearchParams(location.search);
     if (params.get('cat')) state.category = params.get('cat');
     if (params.get('q')) state.search = params.get('q');
+    if (params.get('type')) state.type = typeKey(params.get('type'));
     if (params.get('alpha')) state.letter = normalizeLetter(params.get('alpha'));
+    if (params.get('sort')) state.sort = params.get('sort');
 
     function syncUrl() {
       const p = new URLSearchParams();
       if (state.category && state.category !== 'all') p.set('cat', state.category);
       if (state.search) p.set('q', state.search);
+      if (state.type && state.type !== 'all') p.set('type', state.type);
       if (state.letter && state.letter !== 'all') p.set('alpha', state.letter);
+      if (state.sort && state.sort !== 'default') p.set('sort', state.sort);
       const qs = p.toString();
       history.replaceState(null, '', location.pathname + (qs ? '?' + qs : ''));
     }
@@ -98,15 +167,25 @@
       return cat;
     }
 
-    // Everything matching the search + category filters, before the letter
-    // filter — this is what decides which letters are worth offering.
+    function categoryDescription(cat) {
+      const map = state.data && state.data.categoryDescriptions;
+      return (map && map[cat]) || '';
+    }
+
+    /* ------------------------------------------------------------
+     * Filtering. searchedEntries() is everything matching search +
+     * category + type; the letter filter and the sort sit on top, so
+     * the A–Z row can grey out letters that lead nowhere.
+     * ------------------------------------------------------------ */
     function searchedEntries() {
       if (!state.data) return [];
       const q = state.search.trim().toLowerCase();
       const cat = state.category;
+      const type = state.type;
       const fields = cfg.searchFields || ['title', 'creator', 'category', 'description', 'language'];
       return state.data.entries.filter(e => {
         if (cat !== 'all' && e.category !== cat) return false;
+        if (type !== 'all' && entryTypeKey(e, state.types) !== type) return false;
         if (!q) return true;
         const haystack = fields.map(f => e[f]).filter(Boolean).join(' ').toLowerCase();
         return haystack.includes(q);
@@ -120,33 +199,175 @@
     }
 
     function filteredEntries() {
-      const list = searchedEntries();
-      if (state.letter === 'all') return list;
-      return list.filter(e => entryInitial(e) === state.letter).sort(compareEntries);
+      let list = searchedEntries();
+      if (state.letter !== 'all') list = list.filter(e => entryInitial(e) === state.letter);
+      if (state.sort === 'alpha') return list.slice().sort(byTitle);
+      if (state.sort === 'alpha-desc') return list.slice().sort((a, b) => byTitle(b, a));
+      // Listed order otherwise — except inside a single letter, where the
+      // source order is meaningless and A–Z is what a reader expects.
+      return state.letter === 'all' ? list : list.slice().sort(byTitle);
     }
 
-    function renderAlphaNav() {
+    function countsByCategory() {
+      const counts = new Map();
+      (state.data.entries || []).forEach(e => {
+        counts.set(e.category, (counts.get(e.category) || 0) + 1);
+      });
+      return counts;
+    }
+
+    /* ------------------------------------------------------------
+     * Box 1 — Contents. One compact card per category instead of the
+     * old long nested list: name, live count, and its blurb, each one
+     * a button that filters the results below.
+     * ------------------------------------------------------------ */
+    function renderContentsBox() {
+      if (!cfg.showToc || !state.data) return '';
+      const cats = Array.isArray(state.data.categories) ? state.data.categories : [];
+      if (!cats.length) return '';
+      const counts = countsByCategory();
+
+      const cards = cats.map((cat, i) => {
+        const desc = categoryDescription(cat);
+        const active = state.category === cat ? ' is-active' : '';
+        return `
+          <button type="button" class="lib-toc-card${active}" data-lib-cat="${escapeAttr(cat)}" aria-pressed="${state.category === cat}">
+            <span class="lib-toc-card-num">${i + 1}</span>
+            <span class="lib-toc-card-main">
+              <span class="lib-toc-card-name">${escapeHtml(categoryLabel(cat))}</span>
+              ${desc ? `<span class="lib-toc-card-desc">${escapeHtml(desc)}</span>` : ''}
+            </span>
+            <span class="lib-toc-card-count">${counts.get(cat) || 0}</span>
+          </button>`;
+      }).join('');
+
+      const legend = state.data.legend;
+      const legendEntries = legend ? Object.entries(legend) : [];
+      const legendHtml = legendEntries.length
+        ? `<div class="lib-toc-legend">
+             <span class="lib-toc-legend-title">Legend of Initials</span>
+             <div class="lib-toc-legend-items">
+               ${legendEntries.map(([k, v]) => `<span class="lib-toc-legend-item"><strong>${escapeHtml(k)}</strong> = ${escapeHtml(v)}</span>`).join('')}
+             </div>
+           </div>`
+        : '';
+
+      return `
+        <section class="lib-box lib-box-toc" data-tab-label="Contents">
+          <div class="lib-toc-cards">${cards}</div>
+          ${legendHtml}
+        </section>`;
+    }
+
+    /* ------------------------------------------------------------
+     * Box 2 — Resource Types. One box per kind of resource in the
+     * data, each a filter for that type. Skipped when the page only
+     * holds one kind of thing (the Archive is all cases).
+     * ------------------------------------------------------------ */
+    function renderTypesBox() {
+      if (!cfg.showTypes || state.types.length < 2) return '';
+      const cards = state.types.map(t => {
+        const active = state.type === t.key ? ' is-active' : '';
+        return `
+          <button type="button" class="lib-type-card${active}" data-lib-type="${escapeAttr(t.key)}" aria-pressed="${state.type === t.key}">
+            <span class="lib-type-card-name">${escapeHtml(t.label)}</span>
+            <span class="lib-type-card-count">${t.count}</span>
+          </button>`;
+      }).join('');
+      const allActive = state.type === 'all' ? ' is-active' : '';
+      return `
+        <section class="lib-box lib-box-types" data-tab-label="Resource Types">
+          <p class="lib-box-lead">Every kind of resource in the library. Pick one to see only those.</p>
+          <div class="lib-type-cards">
+            <button type="button" class="lib-type-card lib-type-card-all${allActive}" data-lib-type="all" aria-pressed="${state.type === 'all'}">
+              <span class="lib-type-card-name">All Types</span>
+              <span class="lib-type-card-count">${state.data.entries.length}</span>
+            </button>
+            ${cards}
+          </div>
+        </section>`;
+    }
+
+    /* ------------------------------------------------------------
+     * Box 3 — Filters. Same shape as the Case List's Filters panel:
+     * a search row, then labelled filter groups, a sort dropdown and
+     * a Reset, with the live count along the bottom.
+     * ------------------------------------------------------------ */
+    function renderCategoryChips() {
+      if (!state.data || !Array.isArray(state.data.categories) || !state.data.categories.length) return '';
+      const chips = ['all', ...state.data.categories].map(cat => {
+        const active = state.category === cat ? ' is-active' : '';
+        return `<button type="button" class="chip${active}" data-lib-cat="${escapeAttr(cat)}" aria-pressed="${state.category === cat}">${escapeHtml(categoryLabel(cat))}</button>`;
+      }).join('');
+      return `
+        <div class="filter-group">
+          <span class="filter-label">${escapeHtml(cfg.categoryLabel || 'Category')}</span>
+          <div class="chips" role="group" aria-label="Filter by ${escapeAttr(cfg.categoryLabel || 'category')}">${chips}</div>
+        </div>`;
+    }
+
+    function renderAlphaGroup() {
       const available = availableLetters();
       const chips = ['all', ...ALPHABET, OTHER_LETTER].map(letter => {
         const isAll = letter === 'all';
         const active = state.letter === letter ? ' is-active' : '';
         const empty = !isAll && !available.has(letter);
-        const label = isAll ? 'All' : letter;
         const aria = isAll
           ? 'Show entries starting with any letter'
           : letter === OTHER_LETTER
             ? 'Show entries starting with a number or symbol'
             : `Show entries starting with ${letter}`;
-        return `<button type="button" class="lib-chip lib-alpha-chip${active}" data-lib-alpha="${escapeAttr(letter)}" aria-label="${escapeAttr(aria)}" aria-pressed="${state.letter === letter}"${empty ? ' disabled title="No entries"' : ''}>${escapeHtml(label)}</button>`;
+        return `<button type="button" class="chip lib-alpha-chip${active}" data-lib-alpha="${escapeAttr(letter)}" aria-label="${escapeAttr(aria)}" aria-pressed="${state.letter === letter}"${empty ? ' disabled title="No entries"' : ''}>${escapeHtml(isAll ? 'All' : letter)}</button>`;
       }).join('');
       // Same round "×" control the search box uses, so clearing the letter
       // looks and behaves exactly like clearing the search.
       const clear = `<button type="button" class="lib-search-clear lib-alpha-clear" aria-label="Clear letter filter"${state.letter === 'all' ? ' hidden' : ''}>&times;</button>`;
-      return `<div class="lib-alpha" role="group" aria-label="Filter by first letter">
-                <span class="lib-alpha-label" aria-hidden="true">A&ndash;Z</span>
-                <div class="lib-chips lib-alpha-chips">${chips}</div>
-                ${clear}
-              </div>`;
+      return `
+        <div class="filter-group lib-alpha">
+          <span class="filter-label">A&ndash;Z</span>
+          <div class="chips lib-alpha-chips" role="group" aria-label="Filter by first letter">${chips}</div>
+          ${clear}
+        </div>`;
+    }
+
+    function renderSortGroup() {
+      const options = [
+        ['default', cfg.sortDefaultLabel || 'Listed Order'],
+        ['alpha', 'Alphabetical (A–Z)'],
+        ['alpha-desc', 'Alphabetical (Z–A)'],
+      ];
+      return `
+        <div class="filter-group filter-sort">
+          <span class="filter-label">Sort</span>
+          <select class="lib-sort-select" aria-label="Sort entries">
+            ${options.map(([v, label]) => `<option value="${escapeAttr(v)}"${state.sort === v ? ' selected' : ''}>${escapeHtml(label)}</option>`).join('')}
+          </select>
+        </div>`;
+    }
+
+    function renderFiltersBox(list) {
+      return `
+        <section class="lib-box lib-box-filters" data-tab-label="Filters">
+          <div class="toolbar-row toolbar-search">
+            <label class="search-wrap">
+              <svg class="search-icon" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true">
+                <path fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" d="M11 19a8 8 0 1 1 0-16 8 8 0 0 1 0 16zm5.5-2.5L21 21" />
+              </svg>
+              <input type="search" class="lib-search-input" placeholder="${escapeAttr(cfg.searchPlaceholder || ('Search ' + cfg.title + '…'))}" autocomplete="off" value="${escapeAttr(state.search)}" aria-label="Search ${escapeAttr(cfg.title)}" />
+              <button type="button" class="lib-search-clear" aria-label="Clear search"${state.search ? '' : ' hidden'}>&times;</button>
+            </label>
+          </div>
+          <div class="toolbar-row toolbar-filters">
+            ${renderCategoryChips()}
+            ${renderSortGroup()}
+            ${cfg.roulette === false ? '' : '<button type="button" class="btn-random lib-roulette-btn">🎲 Roulette</button>'}
+            <button type="button" class="reset-btn lib-reset-btn">Reset</button>
+          </div>
+          <div class="toolbar-row toolbar-filters">
+            ${renderAlphaGroup()}
+          </div>
+          <div class="results-count lib-results-count">Showing <strong>${list.length}</strong> of <strong>${state.data.entries.length}</strong> entries.</div>
+        </section>`;
     }
 
     // Cheap in-place refresh: which letters are still reachable, which one is
@@ -164,6 +385,9 @@
       if (clear) clear.hidden = state.letter === 'all';
     }
 
+    /* ------------------------------------------------------------
+     * Box 4 — the results themselves, in the original panel.
+     * ------------------------------------------------------------ */
     function renderEntryCard(e) {
       const meta = [];
       if (e.creator) meta.push(`<span class="lib-entry-creator">by ${escapeHtml(e.creator)}</span>`);
@@ -187,70 +411,27 @@
         </article>`;
     }
 
-    function renderCategoryNav() {
-      if (!state.data || !Array.isArray(state.data.categories) || !state.data.categories.length) return '';
-      const chips = ['all', ...state.data.categories].map(cat => {
-        const active = state.category === cat ? ' is-active' : '';
-        return `<button type="button" class="lib-chip${active}" data-lib-cat="${escapeAttr(cat)}">${escapeHtml(categoryLabel(cat))}</button>`;
-      }).join('');
-      return `<div class="lib-chips" role="group" aria-label="Filter by category">${chips}</div>`;
-    }
-
-    /* ------------------------------------------------------------
-     * Table of Contents — built entirely from the loaded JSON, so it
-     * always reflects the real categories, category blurbs, entry
-     * types, and initialism legend, with no hard-coded copy.
-     * ------------------------------------------------------------ */
-    function renderToc() {
-      if (!cfg.showToc || !state.data) return '';
-      const cats = Array.isArray(state.data.categories) ? state.data.categories : [];
-      if (!cats.length) return '';
-
-      const typesByCat = {};
-      (state.data.entries || []).forEach(e => {
-        if (!e || !e.category) return;
-        if (!typesByCat[e.category]) typesByCat[e.category] = new Set();
-        if (e.type) typesByCat[e.category].add(String(e.type).trim());
-      });
-
-      const items = cats.map(cat => {
-        const desc = (state.data.categoryDescriptions && state.data.categoryDescriptions[cat]) || '';
-        const types = typesByCat[cat] ? Array.from(typesByCat[cat]).sort((a, b) => a.localeCompare(b)) : [];
-        const typesHtml = types.length
-          ? `<ul class="lib-toc-types">${types.map(t => `<li>${escapeHtml(t)}</li>`).join('')}</ul>`
-          : '';
-        return `
-          <li class="lib-toc-item">
-            <button type="button" class="lib-toc-cat" data-lib-cat="${escapeAttr(cat)}">${escapeHtml(categoryLabel(cat))}</button>${desc ? `<span class="lib-toc-desc">: ${escapeHtml(desc)}</span>` : ''}
-            ${typesHtml}
-          </li>`;
-      }).join('');
-
-      const legend = state.data.legend;
-      const legendEntries = legend ? Object.entries(legend) : [];
-      const legendHtml = legendEntries.length
-        ? `<div class="lib-toc-legend">
-             <span class="lib-toc-legend-title">Legend of Initials</span>
-             <div class="lib-toc-legend-items">
-               ${legendEntries.map(([k, v]) => `<span class="lib-toc-legend-item"><strong>${escapeHtml(k)}</strong> = ${escapeHtml(v)}</span>`).join('')}
-             </div>
-           </div>`
-        : '';
-
-      return `
-        <div class="lib-toc">
-          <div class="lib-toc-header">Table of Contents</div>
-          <ol class="lib-toc-list">${items}</ol>
-          ${legendHtml}
-        </div>`;
-    }
-
     function emptyStateHtml() {
-      const byLetter = state.letter !== 'all';
+      const narrowed = state.letter !== 'all' || state.type !== 'all';
       return `<div class="lib-empty-state">
-             <p class="lib-empty-title">No entries match your ${byLetter ? 'filters' : 'search'}.</p>
-             <p class="lib-empty-sub">${byLetter ? 'Try another letter, or pick “All” to see every entry.' : 'Try a different term or clear the category filter.'}</p>
+             <p class="lib-empty-title">No entries match your ${narrowed ? 'filters' : 'search'}.</p>
+             <p class="lib-empty-sub">${narrowed ? 'Try another letter or type, or hit Reset to see everything.' : 'Try a different term or clear the category filter.'}</p>
            </div>`;
+    }
+
+    function resultsHtml(list) {
+      return list.length
+        ? `<div class="lib-entries-grid">${list.map(renderEntryCard).join('')}</div>`
+        : emptyStateHtml();
+    }
+
+    function noteBannerHtml() {
+      const desc = categoryDescription(state.category);
+      if (state.category !== 'all' && desc) return `<div class="lib-note-banner">${escapeHtml(desc)}</div>`;
+      if (state.category === 'Graveyard' && state.data.graveyardNote) {
+        return `<div class="lib-note-banner">${escapeHtml(state.data.graveyardNote)}</div>`;
+      }
+      return '';
     }
 
     function render() {
@@ -268,46 +449,58 @@
       }
 
       const list = filteredEntries();
-      const count = state.data.entries.length;
-
-      const catDescHtml = (state.category !== 'all' && state.data.categoryDescriptions && state.data.categoryDescriptions[state.category])
-        ? `<div class="lib-note-banner">${escapeHtml(state.data.categoryDescriptions[state.category])}</div>`
-        : (state.category === 'Graveyard' && state.data.graveyardNote)
-          ? `<div class="lib-note-banner">${escapeHtml(state.data.graveyardNote)}</div>`
-          : '';
-
-      const resultsHtml = list.length
-        ? `<div class="lib-entries-grid">${list.map(renderEntryCard).join('')}</div>`
-        : emptyStateHtml();
 
       body.innerHTML = `
         ${cfg.showToc ? '' : `<p class="lib-panel-desc">${escapeHtml(state.data.description || '')}</p>`}
-        ${renderToc()}
-        <div class="lib-toolbar">
-          <div class="lib-toolbar-row lib-toolbar-search-row">
-            <label class="lib-search-wrap">
-              <svg class="search-icon" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true">
-                <path fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" d="M11 19a8 8 0 1 1 0-16 8 8 0 0 1 0 16zm5.5-2.5L21 21" />
-              </svg>
-              <input type="search" class="lib-search-input" placeholder="${escapeAttr(cfg.searchPlaceholder || ('Search ' + cfg.title + '…'))}" autocomplete="off" value="${escapeAttr(state.search)}" aria-label="Search ${escapeAttr(cfg.title)}" />
-              <button type="button" class="lib-search-clear" aria-label="Clear search"${state.search ? '' : ' hidden'}>×</button>
-            </label>
-          </div>
-          <div class="lib-toolbar-row lib-toolbar-filters-row">
-            ${renderCategoryNav()}
-            ${cfg.roulette === false ? '' : '<div class="lib-roulette-wrap"><button type="button" class="btn-random lib-roulette-btn">🎲 Roulette</button></div>'}
-          </div>
-          <div class="lib-toolbar-row lib-toolbar-alpha-row">
-            ${renderAlphaNav()}
+        ${renderContentsBox()}
+        ${renderTypesBox()}
+        ${renderFiltersBox(list)}
+        <div class="lib-page-panel">
+          <div class="lib-panel-body">
+            ${noteBannerHtml()}
+            ${resultsHtml(list)}
           </div>
         </div>
-        ${catDescHtml}
-        <div class="lib-results-count">Showing <strong>${list.length}</strong> of <strong>${count}</strong> entries.</div>
-        ${resultsHtml}
       `;
 
+      bindControls();
+    }
+
+    // Only the parts that change while filtering: the results, the count, the
+    // note banner and the letter states. Everything else stays put.
+    function renderResultsOnly() {
+      syncAlphaNav();
+      const list = filteredEntries();
+
+      const countEl = body.querySelector('.lib-results-count');
+      if (countEl) {
+        countEl.innerHTML = `Showing <strong>${list.length}</strong> of <strong>${state.data.entries.length}</strong> entries.`;
+      }
+      const panelBody = body.querySelector('.lib-panel-body');
+      if (panelBody) panelBody.innerHTML = noteBannerHtml() + resultsHtml(list);
+    }
+
+    function syncChips() {
+      body.querySelectorAll('[data-lib-cat]').forEach(btn => {
+        const on = state.category === btn.dataset.libCat;
+        btn.classList.toggle('is-active', on);
+        btn.setAttribute('aria-pressed', String(on));
+      });
+      body.querySelectorAll('[data-lib-type]').forEach(btn => {
+        const on = state.type === btn.dataset.libType;
+        btn.classList.toggle('is-active', on);
+        btn.setAttribute('aria-pressed', String(on));
+      });
+    }
+
+    function scrollToResults() {
+      const panel = body.querySelector('.lib-box-filters');
+      if (panel) panel.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+
+    function bindControls() {
       const searchInput = body.querySelector('.lib-search-input');
-      const searchClear = body.querySelector('.lib-search-clear');
+      const searchClear = body.querySelector('.search-wrap .lib-search-clear');
       if (searchInput) {
         searchInput.addEventListener('input', () => {
           state.search = searchInput.value;
@@ -328,18 +521,28 @@
           renderResultsOnly();
         });
       }
+
       body.querySelectorAll('[data-lib-cat]').forEach(btn => {
         btn.addEventListener('click', () => {
-          const fromToc = btn.classList.contains('lib-toc-cat');
+          const fromToc = btn.classList.contains('lib-toc-card');
           state.category = btn.dataset.libCat;
           syncUrl();
-          render();
-          if (fromToc) {
-            const toolbar = body.querySelector('.lib-toolbar');
-            if (toolbar) toolbar.scrollIntoView({ behavior: 'smooth', block: 'start' });
-          }
+          syncChips();
+          renderResultsOnly();
+          if (fromToc) scrollToResults();
         });
       });
+
+      body.querySelectorAll('[data-lib-type]').forEach(btn => {
+        btn.addEventListener('click', () => {
+          state.type = btn.dataset.libType;
+          syncUrl();
+          syncChips();
+          renderResultsOnly();
+          scrollToResults();
+        });
+      });
+
       body.querySelectorAll('[data-lib-alpha]').forEach(btn => {
         btn.addEventListener('click', () => {
           const letter = btn.dataset.libAlpha;
@@ -349,6 +552,7 @@
           renderResultsOnly();
         });
       });
+
       const alphaClear = body.querySelector('.lib-alpha-clear');
       if (alphaClear) {
         alphaClear.addEventListener('click', () => {
@@ -357,26 +561,31 @@
           renderResultsOnly();
         });
       }
-      const rouletteBtn = body.querySelector('.lib-roulette-btn');
-      if (rouletteBtn) {
-        rouletteBtn.addEventListener('click', rollRoulette);
-      }
-    }
 
-    function renderResultsOnly() {
-      syncAlphaNav();
-      const list = filteredEntries();
-      const countEl = body.querySelector('.lib-results-count');
-      if (countEl) {
-        countEl.innerHTML = `Showing <strong>${list.length}</strong> of <strong>${state.data.entries.length}</strong> entries.`;
+      const sortSelect = body.querySelector('.lib-sort-select');
+      if (sortSelect) {
+        sortSelect.addEventListener('change', () => {
+          state.sort = sortSelect.value;
+          syncUrl();
+          renderResultsOnly();
+        });
       }
-      const grid = body.querySelector('.lib-entries-grid');
-      const emptyState = body.querySelector('.lib-empty-state');
-      const resultsHtml = list.length
-        ? `<div class="lib-entries-grid">${list.map(renderEntryCard).join('')}</div>`
-        : emptyStateHtml();
-      if (grid) grid.outerHTML = resultsHtml;
-      else if (emptyState) emptyState.outerHTML = resultsHtml;
+
+      const resetBtn = body.querySelector('.lib-reset-btn');
+      if (resetBtn) {
+        resetBtn.addEventListener('click', () => {
+          state.search = '';
+          state.category = 'all';
+          state.type = 'all';
+          state.letter = 'all';
+          state.sort = 'default';
+          syncUrl();
+          render();
+        });
+      }
+
+      const rouletteBtn = body.querySelector('.lib-roulette-btn');
+      if (rouletteBtn) rouletteBtn.addEventListener('click', rollRoulette);
     }
 
     /* ------------------------------------------------------------
@@ -440,6 +649,7 @@
       })
       .then(json => {
         state.data = json;
+        state.types = buildTypeIndex(json.entries || []);
         if (tagline) tagline.textContent = json.tagline || '';
         render();
       })
