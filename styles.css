@@ -297,6 +297,15 @@ body.page-archive .lib-chip.is-active {
   border-color: var(--celeste-text);
 }
 
+body.page-archive .lib-alpha-label {
+  color: var(--celeste-text);
+}
+
+body.page-archive .lib-chip:disabled:hover {
+  background-color: var(--celeste-light);
+  color: var(--ink-soft);
+}
+
 /* Resource Library: the panel + entry cards pick up the same warm
    brown/gold theme used by the header and nav strip. */
 body.page-resources .lib-page-panel {
@@ -351,6 +360,15 @@ body.page-resources .lib-search-clear {
 body.page-resources .lib-search-clear:hover {
   background-color: var(--red);
   color: #fff;
+}
+
+body.page-resources .lib-alpha-label {
+  color: var(--gold-light);
+}
+
+body.page-resources .lib-chip:disabled:hover {
+  background-color: #1c130b;
+  color: var(--cream-deep);
 }
 
 body.page-resources .lib-toc {
@@ -2450,6 +2468,17 @@ main {
   background-color: #3f6e30;
 }
 
+/* "Download PDFs (.zip)" — same button as the others, in the file-download
+   gold so it reads as a download rather than a link out. */
+.case-modal-pdf-btn {
+  background-color: var(--gold);
+  color: var(--ink);
+}
+
+.case-modal-pdf-btn:hover {
+  background-color: var(--gold-light);
+}
+
 /* Mobile / narrow: stack vertically (logo on top, details below) */
 @media (max-width: 780px) {
   .case-modal-card {
@@ -3023,6 +3052,47 @@ body.lib-overlay-open {
   border-color: var(--ink);
 }
 
+/* Alphabetical index — a row of the same chips used everywhere else on
+   these pages, plus the same round "×" the search box uses to clear. */
+.lib-alpha {
+  flex: 1 0 100%;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.lib-alpha-label {
+  flex-shrink: 0;
+  font-family: var(--font-ui);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ink-light);
+}
+
+.lib-alpha-chips {
+  flex: 1;
+  gap: 0.25rem;
+}
+
+.lib-alpha-chip {
+  min-width: 1.9rem;
+  padding: 0.28rem 0.35rem;
+  text-align: center;
+  font-variant-numeric: tabular-nums;
+}
+
+.lib-chip:disabled {
+  opacity: 0.4;
+  cursor: default;
+}
+
+.lib-chip:disabled:hover {
+  background-color: var(--cream);
+  color: var(--ink-soft);
+}
+
 .lib-results-count {
   font-size: 0.82rem;
   color: var(--ink-light);
@@ -3290,6 +3360,17 @@ body.lib-overlay-open {
   .lib-entries-grid {
     grid-template-columns: 1fr;
   }
+
+  /* Alphabet: label above the letters so the row never overflows. */
+  .lib-alpha {
+    flex-wrap: wrap;
+    gap: 0.35rem 0.5rem;
+  }
+
+  .lib-alpha-chips {
+    flex: 1 1 100%;
+    order: 3;
+  }
 }
 
 @media (max-width: 480px) {
@@ -3300,5 +3381,11 @@ body.lib-overlay-open {
 
   .lib-back-btn {
     padding: 0.5rem;
+  }
+
+  .lib-alpha-chip {
+    min-width: 1.65rem;
+    padding: 0.25rem 0.25rem;
+    font-size: 0.78rem;
   }
 }

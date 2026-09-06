@@ -23,10 +23,45 @@
   const externalLinkIcon =
     '<svg width="0.85em" height="0.85em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="vertical-align:-0.05em"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg>';
 
+  /* ------------------------------------------------------------
+     Alphabetical index helpers — pure, shared by every page that
+     calls initLibPage. The letters are derived from the entries the
+     page already loaded, so there is no second data source.
+     ------------------------------------------------------------ */
+  const ALPHABET = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('');
+  const OTHER_LETTER = '#'; // titles starting with a digit or symbol
+
+  function normalizeLetter(value) {
+    const v = String(value || '').trim().toUpperCase();
+    if (v === OTHER_LETTER) return OTHER_LETTER;
+    return ALPHABET.includes(v) ? v : 'all';
+  }
+
+  // First letter of the title as the reader sees it: accents folded onto their
+  // base letter, leading quotes/brackets skipped, and anything that isn't a
+  // letter bucketed under "#". Deterministic for any title.
+  function entryInitial(e) {
+    const title = String((e && e.title) || '')
+      .normalize('NFD')
+      .replace(/[\u0300-\u036f]/g, '');
+    for (const ch of title) {
+      if (/[A-Za-z]/.test(ch)) return ch.toUpperCase();
+      if (/[0-9]/.test(ch)) return OTHER_LETTER;
+    }
+    return OTHER_LETTER;
+  }
+
+  function compareEntries(a, b) {
+    const byTitle = String(a.title || '').localeCompare(String(b.title || ''), 'en', { sensitivity: 'base' });
+    if (byTitle !== 0) return byTitle;
+    return String(a.id || '').localeCompare(String(b.id || ''), 'en');
+  }
+
   window.initLibPage = function initLibPage(cfg) {
     const state = {
       search: '',
       category: cfg.defaultCategory || 'all',
+      letter: 'all',
       data: null,
       error: null,
     };
@@ -38,11 +73,13 @@
     const params = new URLSearchParams(location.search);
     if (params.get('cat')) state.category = params.get('cat');
     if (params.get('q')) state.search = params.get('q');
+    if (params.get('alpha')) state.letter = normalizeLetter(params.get('alpha'));
 
     function syncUrl() {
       const p = new URLSearchParams();
       if (state.category && state.category !== 'all') p.set('cat', state.category);
       if (state.search) p.set('q', state.search);
+      if (state.letter && state.letter !== 'all') p.set('alpha', state.letter);
       const qs = p.toString();
       history.replaceState(null, '', location.pathname + (qs ? '?' + qs : ''));
     }
@@ -61,7 +98,9 @@
       return cat;
     }
 
-    function filteredEntries() {
+    // Everything matching the search + category filters, before the letter
+    // filter — this is what decides which letters are worth offering.
+    function searchedEntries() {
       if (!state.data) return [];
       const q = state.search.trim().toLowerCase();
       const cat = state.category;
@@ -72,6 +111,57 @@
         const haystack = fields.map(f => e[f]).filter(Boolean).join(' ').toLowerCase();
         return haystack.includes(q);
       });
+    }
+
+    function availableLetters() {
+      const set = new Set();
+      searchedEntries().forEach(e => set.add(entryInitial(e)));
+      return set;
+    }
+
+    function filteredEntries() {
+      const list = searchedEntries();
+      if (state.letter === 'all') return list;
+      return list.filter(e => entryInitial(e) === state.letter).sort(compareEntries);
+    }
+
+    function renderAlphaNav() {
+      const available = availableLetters();
+      const chips = ['all', ...ALPHABET, OTHER_LETTER].map(letter => {
+        const isAll = letter === 'all';
+        const active = state.letter === letter ? ' is-active' : '';
+        const empty = !isAll && !available.has(letter);
+        const label = isAll ? 'All' : letter;
+        const aria = isAll
+          ? 'Show entries starting with any letter'
+          : letter === OTHER_LETTER
+            ? 'Show entries starting with a number or symbol'
+            : `Show entries starting with ${letter}`;
+        return `<button type="button" class="lib-chip lib-alpha-chip${active}" data-lib-alpha="${escapeAttr(letter)}" aria-label="${escapeAttr(aria)}" aria-pressed="${state.letter === letter}"${empty ? ' disabled title="No entries"' : ''}>${escapeHtml(label)}</button>`;
+      }).join('');
+      // Same round "×" control the search box uses, so clearing the letter
+      // looks and behaves exactly like clearing the search.
+      const clear = `<button type="button" class="lib-search-clear lib-alpha-clear" aria-label="Clear letter filter"${state.letter === 'all' ? ' hidden' : ''}>&times;</button>`;
+      return `<div class="lib-alpha" role="group" aria-label="Filter by first letter">
+                <span class="lib-alpha-label" aria-hidden="true">A&ndash;Z</span>
+                <div class="lib-chips lib-alpha-chips">${chips}</div>
+                ${clear}
+              </div>`;
+    }
+
+    // Cheap in-place refresh: which letters are still reachable, which one is
+    // active, and whether the "×" shows — no re-render, no re-binding.
+    function syncAlphaNav() {
+      const available = availableLetters();
+      body.querySelectorAll('[data-lib-alpha]').forEach(btn => {
+        const letter = btn.dataset.libAlpha;
+        const isActive = state.letter === letter;
+        btn.classList.toggle('is-active', isActive);
+        btn.setAttribute('aria-pressed', String(isActive));
+        if (letter !== 'all') btn.disabled = !available.has(letter);
+      });
+      const clear = body.querySelector('.lib-alpha-clear');
+      if (clear) clear.hidden = state.letter === 'all';
     }
 
     function renderEntryCard(e) {
@@ -155,6 +245,14 @@
         </div>`;
     }
 
+    function emptyStateHtml() {
+      const byLetter = state.letter !== 'all';
+      return `<div class="lib-empty-state">
+             <p class="lib-empty-title">No entries match your ${byLetter ? 'filters' : 'search'}.</p>
+             <p class="lib-empty-sub">${byLetter ? 'Try another letter, or pick “All” to see every entry.' : 'Try a different term or clear the category filter.'}</p>
+           </div>`;
+    }
+
     function render() {
       if (state.error) {
         body.innerHTML = `
@@ -180,10 +278,7 @@
 
       const resultsHtml = list.length
         ? `<div class="lib-entries-grid">${list.map(renderEntryCard).join('')}</div>`
-        : `<div class="lib-empty-state">
-             <p class="lib-empty-title">No entries match your search.</p>
-             <p class="lib-empty-sub">Try a different term or clear the category filter.</p>
-           </div>`;
+        : emptyStateHtml();
 
       body.innerHTML = `
         ${cfg.showToc ? '' : `<p class="lib-panel-desc">${escapeHtml(state.data.description || '')}</p>`}
@@ -201,6 +296,9 @@
           <div class="lib-toolbar-row lib-toolbar-filters-row">
             ${renderCategoryNav()}
             ${cfg.roulette === false ? '' : '<div class="lib-roulette-wrap"><button type="button" class="btn-random lib-roulette-btn">🎲 Roulette</button></div>'}
+          </div>
+          <div class="lib-toolbar-row lib-toolbar-alpha-row">
+            ${renderAlphaNav()}
           </div>
         </div>
         ${catDescHtml}
@@ -242,6 +340,23 @@
           }
         });
       });
+      body.querySelectorAll('[data-lib-alpha]').forEach(btn => {
+        btn.addEventListener('click', () => {
+          const letter = btn.dataset.libAlpha;
+          // Clicking the active letter again clears it, like a toggle.
+          state.letter = (state.letter === letter) ? 'all' : normalizeLetter(letter);
+          syncUrl();
+          renderResultsOnly();
+        });
+      });
+      const alphaClear = body.querySelector('.lib-alpha-clear');
+      if (alphaClear) {
+        alphaClear.addEventListener('click', () => {
+          state.letter = 'all';
+          syncUrl();
+          renderResultsOnly();
+        });
+      }
       const rouletteBtn = body.querySelector('.lib-roulette-btn');
       if (rouletteBtn) {
         rouletteBtn.addEventListener('click', rollRoulette);
@@ -249,6 +364,7 @@
     }
 
     function renderResultsOnly() {
+      syncAlphaNav();
       const list = filteredEntries();
       const countEl = body.querySelector('.lib-results-count');
       if (countEl) {
@@ -258,10 +374,7 @@
       const emptyState = body.querySelector('.lib-empty-state');
       const resultsHtml = list.length
         ? `<div class="lib-entries-grid">${list.map(renderEntryCard).join('')}</div>`
-        : `<div class="lib-empty-state">
-             <p class="lib-empty-title">No entries match your search.</p>
-             <p class="lib-empty-sub">Try a different term or clear the category filter.</p>
-           </div>`;
+        : emptyStateHtml();
       if (grid) grid.outerHTML = resultsHtml;
       else if (emptyState) emptyState.outerHTML = resultsHtml;
     }

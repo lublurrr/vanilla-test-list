@@ -44,6 +44,11 @@ matching buttons in the resource strip below it):
 - **Vanilla Ultimate Archive** (`data/ultimate-archive.json`) — the historical index of every
   case ever created.
 
+Both pages also have an **A–Z index** under their category chips: click a letter to show only
+the entries whose title starts with it, sorted alphabetically. Letters with nothing behind them
+(given the current search and category) are greyed out, the round × clears the letter again, and
+the choice rides along in the URL as `?alpha=T` so a filtered view can be linked or bookmarked.
+
 Each window is completely independent: its own search box, its own category filter, its own
 scroll position, and its own `#resources` / `#archive` URL hash. Opening one never shows the
 other, and closing either one returns you to exactly where you were on the Case List. Escape,
@@ -113,6 +118,7 @@ intentionally avoids. If you want the windows to show more of a Doc's contents:
 - **Sort** by Difficulty Order (default), Length Order, Alphabetical (A–Z or Z–A), or Most Recently Added (uses real approval dates from the update history).
 - **Random Case picker** with optional difficulty restriction. Roll Again button included.
 - **Custom Files = clickable downloads.** When a case has a `custom_files_url` set, a green "Custom Files" pill appears automatically and links straight to the Drive folder for that case's assets. No tag needed.
+- **PDF bundles = one ZIP per case.** When a case has a `pdf_zip_url` set, a gold "Download PDFs (.zip)" button appears in its pop-up, next to the other buttons, and downloads only that case's PDFs. Cases without one show no button (see `downloads/README.md`).
 - **Resources nav strip** — Vanilla Ultimate Archive, Resource Library, Casing Hub Discord, Tier List, Submit form, FAQ.
 - **Built-in FAQ section** (toggleable) — all Q&As from the original doc.
 - **Mobile-responsive** down to phones.
@@ -145,6 +151,7 @@ Open `cases.json` and append a new object to the **end** of the array. Example:
   "tags": [],
   "url": "https://docs.google.com/document/d/.../edit",
   "custom_files_url": "https://drive.google.com/drive/folders/.../",
+  "pdf_zip_url": "downloads/turnabout-awesome.zip",
   "approval_date": "2026-06-01",
   "image": "images/cases/case_119.jpg",
   "logo_credit": "Artist Name"
@@ -166,6 +173,7 @@ Open `cases.json` and append a new object to the **end** of the array. Example:
 | `tags`             | array    | Manual tags only: `"Tutorial Case"` and/or `"NSFW"`. **Do not add `"NEW"` or `"CUSTOM FILES"`** — those are automatic (see *Automatic tags*). Use `[]` for most cases. |
 | `url`              | string   | Link to the case document (use `null` if not yet available)        |
 | `custom_files_url` | string   | (Optional) Direct download URL for case-specific assets. **Setting this automatically shows the green "Custom Files" pill** — no tag required. Leave it out or `null` if there are none. |
+| `pdf_zip_url`      | string   | (Optional) The case's PDFs bundled as one ZIP — either a file in `downloads/` (e.g. `"downloads/turnabout-awesome.zip"`) or a full URL to one elsewhere. **Setting this automatically shows the gold "Download PDFs (.zip)" button** in the case pop-up. Leave it out or `null` and no button appears. See `downloads/README.md`. |
 | `approval_date`    | string   | ISO date when added to VCL (e.g. `"2026-05-01"`). Drives card ordering, the "Most Recently Added" sort, the Docket "What's new" list, and the automatic **NEW** badge (every case sharing the most recent date is marked NEW). |
 | `image`            | string   | Path to the logo image, e.g. `"images/cases/case_119.jpg"`         |
 | `logo_credit`      | string   | (Optional) Who made the case logo. Shown as "Logo by …" beneath the logo in the case popup. Omit it or use `null`/`""` if there's no credit to show. |
