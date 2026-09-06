@@ -284,6 +284,41 @@ body.page-archive .lib-box {
   border-color: var(--ink);
 }
 
+/* The folder tabs follow the page, not the Case List's navy. */
+body.page-archive .lib-box::before {
+  background-color: var(--celeste-text);
+  color: var(--celeste-light);
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.35);
+}
+
+body.page-archive .lib-about-text,
+body.page-archive .lib-box-lead,
+body.page-archive .lib-results-count {
+  color: var(--celeste-text);
+}
+
+body.page-archive .lib-note-banner {
+  background-color: var(--celeste-light);
+  border-color: var(--celeste-deep);
+  border-left-color: var(--celeste-text);
+  color: var(--celeste-text);
+}
+
+body.page-archive .lib-box .search-wrap:focus-within {
+  background-color: #fff;
+  box-shadow: 0 0 0 3px var(--celeste-deep);
+}
+
+body.page-archive .lib-search-clear {
+  background-color: var(--celeste-text);
+  color: var(--celeste-light);
+}
+
+body.page-archive .lib-search-clear:hover {
+  background-color: var(--red);
+  color: #fff;
+}
+
 body.page-archive .lib-box .search-wrap,
 body.page-archive .lib-box .chip,
 body.page-archive .lib-box .lib-toc-card,
@@ -303,11 +338,6 @@ body.page-archive .lib-box .chip.is-active {
   background-color: var(--celeste-text);
   border-color: var(--celeste-text);
   color: var(--cream-light);
-}
-
-body.page-archive .lib-box .chip:disabled:hover {
-  background-color: var(--celeste-light);
-  color: var(--ink-soft);
 }
 
 body.page-archive .lib-box .filter-label,
@@ -361,6 +391,28 @@ body.page-resources .lib-box {
   color: var(--cream-deep);
 }
 
+/* The folder tabs follow the page, not the Case List's navy. */
+body.page-resources .lib-box::before {
+  background-color: #150d05;
+  color: var(--gold-light);
+}
+
+body.page-resources .lib-about-text {
+  color: var(--cream-deep);
+}
+
+body.page-resources .lib-note-banner {
+  background-color: #1c130b;
+  border-color: var(--gold);
+  border-left-color: var(--gold-light);
+  color: var(--cream-deep);
+}
+
+body.page-resources .lib-box .search-wrap:focus-within {
+  background-color: #150d05;
+  box-shadow: 0 0 0 3px var(--gold);
+}
+
 body.page-resources .lib-box-lead {
   color: var(--cream-deep);
 }
@@ -407,11 +459,6 @@ body.page-resources .lib-box .lib-type-card.is-active {
   background-color: #150d05;
   color: var(--gold-light);
   border-color: var(--gold);
-}
-
-body.page-resources .lib-box .chip:disabled:hover {
-  background-color: #1c130b;
-  color: var(--cream-deep);
 }
 
 body.page-resources .lib-box .filter-label,
@@ -2493,16 +2540,16 @@ main {
   background-color: #3f6e30;
 }
 
-/* "Download PDFs (.zip)" — same button as the others, in the file-download
-   gold so it reads as a download rather than a link out. The greyed-out
-   state (no ZIP for this case yet) keeps the shared disabled look. */
+/* "Download PDFs (.zip)" — same button as the others, in PDF red with its own
+   document icon so it doesn't read as another link out. The greyed-out state
+   (no ZIP for this case yet) keeps the shared disabled look. */
 a.case-modal-pdf-btn {
-  background-color: var(--gold);
-  color: var(--ink);
+  background-color: var(--red);
+  color: var(--cream-light);
 }
 
 a.case-modal-pdf-btn:hover {
-  background-color: var(--gold-light);
+  background-color: var(--red-deep);
 }
 
 /* Mobile / narrow: stack vertically (logo on top, details below) */
@@ -2990,6 +3037,14 @@ body.lib-overlay-open {
   color: var(--ink-soft);
 }
 
+.lib-about-text {
+  margin: 0;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--ink-soft);
+  max-width: 78ch;
+}
+
 /* --- Contents box: one compact card per section ------------------------- */
 .lib-toc-cards {
   display: grid;
@@ -3128,33 +3183,6 @@ body.lib-overlay-open {
 
 .lib-box-filters .reset-btn {
   margin-left: auto;
-}
-
-.lib-alpha {
-  flex: 1 0 100%;
-  align-items: center;
-}
-
-.lib-alpha-chips {
-  flex: 1;
-  gap: 0.25rem;
-}
-
-.lib-alpha-chip {
-  min-width: 1.9rem;
-  padding: 0.3rem 0.4rem;
-  text-align: center;
-  font-variant-numeric: tabular-nums;
-}
-
-.chip:disabled {
-  opacity: 0.4;
-  cursor: default;
-}
-
-.chip:disabled:hover {
-  background-color: var(--cream);
-  color: var(--ink-soft);
 }
 
 /* The results panel sits inside .lib-main now, so it no longer centres
@@ -3435,17 +3463,6 @@ body.lib-overlay-open {
     grid-template-columns: 1fr;
   }
 
-  /* Alphabet: label above the letters so the row never overflows. */
-  .lib-alpha {
-    flex-wrap: wrap;
-    gap: 0.35rem 0.5rem;
-  }
-
-  .lib-alpha-chips {
-    flex: 1 1 100%;
-    order: 3;
-  }
-
   .lib-toc-cards,
   .lib-type-cards {
     grid-template-columns: 1fr;
@@ -3464,12 +3481,6 @@ body.lib-overlay-open {
 
   .lib-back-btn {
     padding: 0.5rem;
-  }
-
-  .lib-alpha-chip {
-    min-width: 1.65rem;
-    padding: 0.25rem 0.25rem;
-    font-size: 0.78rem;
   }
 
   .lib-main {

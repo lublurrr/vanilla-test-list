@@ -22,8 +22,8 @@ visitor actually clicks **Download PDFs (.zip)** in the case pop-up.
    "pdf_zip_url": "downloads/turnabout-squared.zip"
    ```
 
-That's it. The **Download PDFs (.zip)** button in that case's pop-up turns
-gold and starts working. Cases with `"pdf_zip_url": null` (the default) show
+That's it. The red **Download PDFs (.zip)** button in that case's pop-up
+starts working. Cases with `"pdf_zip_url": null` (the default) show
 the same button greyed out as *No PDFs available yet*, so there is never a
 broken download link.
 

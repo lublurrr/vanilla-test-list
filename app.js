@@ -369,6 +369,12 @@ function renderCard(c) {
 const downloadIcon =
   '<svg width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="vertical-align:-0.1em"><path d="M12 3v12"/><path d="m7 11 5 5 5-5"/><path d="M5 21h14"/></svg>';
 
+// A folded-corner document with a "PDF" wordmark — deliberately unlike the
+// download arrow on Custom Files or the arrow-out on Open Case Document, so
+// the PDF bundle reads as its own thing at a glance.
+const pdfIcon =
+  '<svg width="1.15em" height="1.15em" viewBox="0 0 24 24" fill="none" aria-hidden="true" style="vertical-align:-0.22em"><path d="M14 2.5H6.5a2 2 0 0 0-2 2v15a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2V8z" fill="currentColor" fill-opacity="0.16" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M14 2.5V8h5.5" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><text x="12" y="18.4" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="7.2" font-weight="700" fill="currentColor" letter-spacing="-0.3">PDF</text></svg>';
+
 /* ----------------------------------------------------------------
  * Case PDF bundle button
  * ----------------------------------------------------------------
@@ -379,7 +385,7 @@ const downloadIcon =
 function pdfZipBtn(c) {
   const url = c && c.pdf_zip_url;
   if (!url) {
-    return `<span class="card-open-btn card-open-btn-disabled case-modal-pdf-btn" aria-disabled="true" title="No PDF bundle for this case yet">No PDFs available yet ${downloadIcon}</span>`;
+    return `<span class="card-open-btn card-open-btn-disabled case-modal-pdf-btn" aria-disabled="true" title="No PDF bundle for this case yet">No PDFs available yet ${pdfIcon}</span>`;
   }
   // A ZIP hosted with the site downloads straight away; one on another host
   // (Drive, etc.) opens in a new tab, like every other external link here.
@@ -387,7 +393,7 @@ function pdfZipBtn(c) {
   const attrs = isExternal
     ? 'target="_blank" rel="noopener noreferrer"'
     : `download="${escapeAttr(zipFileName(c, url))}"`;
-  return `<a class="card-open-btn case-modal-pdf-btn" href="${escapeAttr(url)}" ${attrs} title="Download this case's PDFs as a ZIP file" aria-label="Download PDFs for ${escapeAttr(c.title)} as a ZIP file">Download PDFs (.zip) ${downloadIcon}</a>`;
+  return `<a class="card-open-btn case-modal-pdf-btn" href="${escapeAttr(url)}" ${attrs} title="Download this case's PDFs as a ZIP file" aria-label="Download PDFs for ${escapeAttr(c.title)} as a ZIP file">Download PDFs (.zip) ${pdfIcon}</a>`;
 }
 
 function zipFileName(c, url) {
