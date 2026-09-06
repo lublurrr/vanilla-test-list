@@ -22,9 +22,10 @@ visitor actually clicks **Download PDFs (.zip)** in the case pop-up.
    "pdf_zip_url": "downloads/turnabout-squared.zip"
    ```
 
-That's it. The gold **Download PDFs (.zip)** button appears in that case's
-pop-up automatically. Cases with `"pdf_zip_url": null` (the default) show no
-button at all, so there is never a broken download link.
+That's it. The **Download PDFs (.zip)** button in that case's pop-up turns
+gold and starts working. Cases with `"pdf_zip_url": null` (the default) show
+the same button greyed out as *No PDFs available yet*, so there is never a
+broken download link.
 
 A ZIP hosted somewhere else works too — give the full URL
 (`https://drive.google.com/...`) and the button opens it in a new tab instead

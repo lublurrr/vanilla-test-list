@@ -366,22 +366,28 @@ function renderCard(c) {
   `;
 }
 
+const downloadIcon =
+  '<svg width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="vertical-align:-0.1em"><path d="M12 3v12"/><path d="m7 11 5 5 5-5"/><path d="M5 21h14"/></svg>';
+
 /* ----------------------------------------------------------------
  * Case PDF bundle button
  * ----------------------------------------------------------------
  * A case can ship its PDFs as one ZIP of its own (`pdf_zip_url`).
- * Same rule as Custom Files: no URL, no button — never a dead link.
+ * With no ZIP the button shows as unavailable, the same way a case with
+ * no document does — never a dead link.
  * ---------------------------------------------------------------- */
 function pdfZipBtn(c) {
   const url = c && c.pdf_zip_url;
-  if (!url) return '';
+  if (!url) {
+    return `<span class="card-open-btn card-open-btn-disabled case-modal-pdf-btn" aria-disabled="true" title="No PDF bundle for this case yet">No PDFs available yet ${downloadIcon}</span>`;
+  }
   // A ZIP hosted with the site downloads straight away; one on another host
   // (Drive, etc.) opens in a new tab, like every other external link here.
   const isExternal = /^https?:\/\//i.test(url);
   const attrs = isExternal
     ? 'target="_blank" rel="noopener noreferrer"'
     : `download="${escapeAttr(zipFileName(c, url))}"`;
-  return `<a class="card-open-btn case-modal-pdf-btn" href="${escapeAttr(url)}" ${attrs} title="Download this case's PDFs as a ZIP file" aria-label="Download PDFs for ${escapeAttr(c.title)} as a ZIP file">Download PDFs (.zip) <svg width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="vertical-align:-0.1em"><path d="M12 3v12"/><path d="m7 11 5 5 5-5"/><path d="M5 21h14"/></svg></a>`;
+  return `<a class="card-open-btn case-modal-pdf-btn" href="${escapeAttr(url)}" ${attrs} title="Download this case's PDFs as a ZIP file" aria-label="Download PDFs for ${escapeAttr(c.title)} as a ZIP file">Download PDFs (.zip) ${downloadIcon}</a>`;
 }
 
 function zipFileName(c, url) {

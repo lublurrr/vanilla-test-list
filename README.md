@@ -44,10 +44,23 @@ matching buttons in the resource strip below it):
 - **Vanilla Ultimate Archive** (`data/ultimate-archive.json`) — the historical index of every
   case ever created.
 
-Both pages also have an **A–Z index** under their category chips: click a letter to show only
-the entries whose title starts with it, sorted alphabetically. Letters with nothing behind them
-(given the current search and category) are greyed out, the round × clears the letter again, and
-the choice rides along in the URL as `?alpha=T` so a filtered view can be linked or bookmarked.
+Both pages are built from the same folder-tab boxes the Case List uses, stacked down the page:
+
+- **Contents** (Library) — one compact card per section with its live entry count and blurb.
+  Click one to filter the results below.
+- **Resource Types** (Library) — a box per kind of resource in the data (Case List, Guide,
+  Template, VOD…), each one a filter. The boxes are derived from the entries themselves, and
+  spellings that differ only by case or a plural ("guide"/"Guide", "Template"/"Templates") are
+  folded into one box.
+- **Filters** — the same panel as the Case List's: search, section/year chips, a Sort dropdown
+  (Listed order, A–Z, Z–A — no difficulty, length or NSFW controls, which are case-list-only),
+  an **A–Z index**, and Reset, with the live count along the bottom.
+- The results grid itself, in its own panel.
+
+The A–Z index shows only entries whose title starts with that letter. Letters with nothing
+behind them (given the current search, section and type) are greyed out, the round × clears the
+letter, and every control rides along in the URL (`?cat=`, `?q=`, `?type=`, `?alpha=`, `?sort=`)
+so a filtered view can be linked or bookmarked.
 
 Each window is completely independent: its own search box, its own category filter, its own
 scroll position, and its own `#resources` / `#archive` URL hash. Opening one never shows the
@@ -118,7 +131,7 @@ intentionally avoids. If you want the windows to show more of a Doc's contents:
 - **Sort** by Difficulty Order (default), Length Order, Alphabetical (A–Z or Z–A), or Most Recently Added (uses real approval dates from the update history).
 - **Random Case picker** with optional difficulty restriction. Roll Again button included.
 - **Custom Files = clickable downloads.** When a case has a `custom_files_url` set, a green "Custom Files" pill appears automatically and links straight to the Drive folder for that case's assets. No tag needed.
-- **PDF bundles = one ZIP per case.** When a case has a `pdf_zip_url` set, a gold "Download PDFs (.zip)" button appears in its pop-up, next to the other buttons, and downloads only that case's PDFs. Cases without one show no button (see `downloads/README.md`).
+- **PDF bundles = one ZIP per case.** Every case pop-up has a "Download PDFs (.zip)" button next to the other buttons. With a `pdf_zip_url` set it turns gold and downloads only that case's PDFs; without one it shows greyed out as "No PDFs available yet", so there's never a dead link (see `downloads/README.md`).
 - **Resources nav strip** — Vanilla Ultimate Archive, Resource Library, Casing Hub Discord, Tier List, Submit form, FAQ.
 - **Built-in FAQ section** (toggleable) — all Q&As from the original doc.
 - **Mobile-responsive** down to phones.
@@ -173,7 +186,7 @@ Open `cases.json` and append a new object to the **end** of the array. Example:
 | `tags`             | array    | Manual tags only: `"Tutorial Case"` and/or `"NSFW"`. **Do not add `"NEW"` or `"CUSTOM FILES"`** — those are automatic (see *Automatic tags*). Use `[]` for most cases. |
 | `url`              | string   | Link to the case document (use `null` if not yet available)        |
 | `custom_files_url` | string   | (Optional) Direct download URL for case-specific assets. **Setting this automatically shows the green "Custom Files" pill** — no tag required. Leave it out or `null` if there are none. |
-| `pdf_zip_url`      | string   | (Optional) The case's PDFs bundled as one ZIP — either a file in `downloads/` (e.g. `"downloads/turnabout-awesome.zip"`) or a full URL to one elsewhere. **Setting this automatically shows the gold "Download PDFs (.zip)" button** in the case pop-up. Leave it out or `null` and no button appears. See `downloads/README.md`. |
+| `pdf_zip_url`      | string   | (Optional) The case's PDFs bundled as one ZIP — either a file in `downloads/` (e.g. `"downloads/turnabout-awesome.zip"`) or a full URL to one elsewhere. **Setting this turns on the gold "Download PDFs (.zip)" button** in the case pop-up. Leave it out or `null` and the button shows greyed out as "No PDFs available yet". See `downloads/README.md`. |
 | `approval_date`    | string   | ISO date when added to VCL (e.g. `"2026-05-01"`). Drives card ordering, the "Most Recently Added" sort, the Docket "What's new" list, and the automatic **NEW** badge (every case sharing the most recent date is marked NEW). |
 | `image`            | string   | Path to the logo image, e.g. `"images/cases/case_119.jpg"`         |
 | `logo_credit`      | string   | (Optional) Who made the case logo. Shown as "Logo by …" beneath the logo in the case popup. Omit it or use `null`/`""` if there's no credit to show. |
