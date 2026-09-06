@@ -292,7 +292,6 @@ body.page-archive .lib-box::before {
 }
 
 body.page-archive .lib-about-text,
-body.page-archive .lib-box-lead,
 body.page-archive .lib-results-count {
   color: var(--celeste-text);
 }
@@ -330,7 +329,6 @@ body.page-archive .lib-search-clear:hover {
 body.page-archive .lib-box .search-wrap,
 body.page-archive .lib-box .chip,
 body.page-archive .lib-box .lib-toc-card,
-body.page-archive .lib-box .lib-type-card,
 body.page-archive .lib-box .lib-sort-select,
 body.page-archive .lib-box .reset-btn {
   background-color: var(--celeste-light);
@@ -438,14 +436,9 @@ body.page-resources .lib-box .search-wrap:focus-within {
   box-shadow: 0 0 0 3px var(--gold);
 }
 
-body.page-resources .lib-box-lead {
-  color: var(--cream-deep);
-}
-
 body.page-resources .lib-box .search-wrap,
 body.page-resources .lib-box .chip,
 body.page-resources .lib-box .lib-toc-card,
-body.page-resources .lib-box .lib-type-card,
 body.page-resources .lib-box .lib-sort-select,
 body.page-resources .lib-box .reset-btn {
   background-color: #1c130b;
@@ -472,15 +465,13 @@ body.page-resources .lib-results-count strong {
 
 body.page-resources .lib-box .chip:hover,
 body.page-resources .lib-box .lib-toc-card:hover,
-body.page-resources .lib-box .lib-type-card:hover,
 body.page-resources .lib-box .reset-btn:hover {
   background-color: #3f2c14;
   color: var(--cream-light);
 }
 
 body.page-resources .lib-box .chip.is-active,
-body.page-resources .lib-box .lib-toc-card.is-active,
-body.page-resources .lib-box .lib-type-card.is-active {
+body.page-resources .lib-box .lib-toc-card.is-active {
   background-color: #150d05;
   color: var(--gold-light);
   border-color: var(--gold);
@@ -492,13 +483,11 @@ body.page-resources .lib-toc-card.is-active .lib-toc-card-name {
   color: var(--gold-light);
 }
 
-body.page-resources .lib-toc-card-desc,
-body.page-resources .lib-type-card-name {
+body.page-resources .lib-toc-card-desc {
   color: var(--cream-deep);
 }
 
-body.page-resources .lib-toc-card-count,
-body.page-resources .lib-type-card-count {
+body.page-resources .lib-toc-card-count {
   background-color: #2a1c10;
   color: var(--gold);
   border-color: var(--gold);
@@ -545,7 +534,6 @@ body.page-resources .lib-entry-link:hover {
 body.page-resources .lib-entry-footer {
   border-top-color: var(--ink-light);
 }
-
 
 /* Type badges ("tags") keep the same hue-coding used across the
    site (blue/green/gold) but in darkened, translucent tones that
@@ -3025,7 +3013,6 @@ body.lib-overlay-open {
   background-color: var(--red);
 }
 
-
 .lib-roulette-btn {
   flex-shrink: 0;
   white-space: nowrap;
@@ -3036,8 +3023,8 @@ body.lib-overlay-open {
    Standalone library pages — folder-tab boxes
    --------------------------------------------------------------------------
    The Resource Library and Ultimate Archive are stacks of the same
-   folder-tab panels the Case List uses: Contents, Resource Types,
-   Filters, then the results panel.
+   folder-tab panels the Case List uses: About/Contents, Filters,
+   then the results panel.
    ========================================================================== */
 
 .lib-main {
@@ -3087,13 +3074,6 @@ body.lib-overlay-open {
   padding: 0 1.1rem 0 0.55rem;
 }
 
-.lib-box-lead {
-  margin: 0 0 0.85rem;
-  font-size: 0.85rem;
-  font-style: italic;
-  color: var(--ink-soft);
-}
-
 .lib-nowrap {
   white-space: nowrap;
 }
@@ -3138,7 +3118,6 @@ body.lib-overlay-open {
   background-color: var(--blue-pale);
 }
 
-
 .lib-toc-card-main {
   flex: 1;
   min-width: 0;
@@ -3174,55 +3153,6 @@ body.lib-overlay-open {
   border: var(--border-thin);
   border-radius: 999px;
   padding: 0.1rem 0.5rem;
-}
-
-/* --- Resource Types box: one small box per kind of resource ------------- */
-.lib-type-cards {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-  gap: 0.5rem;
-}
-
-.lib-type-card {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 0.5rem;
-  font-family: var(--font-ui);
-  background-color: var(--cream);
-  border: var(--border-thin);
-  border-radius: 4px;
-  padding: 0.5rem 0.65rem;
-  cursor: pointer;
-  transition: background-color 0.12s, border-color 0.12s, transform 0.08s;
-}
-
-.lib-type-card:hover {
-  background-color: var(--cream-deep);
-  transform: translateY(-1px);
-}
-
-.lib-type-card.is-active {
-  border-color: var(--blue-deep);
-  background-color: var(--blue-pale);
-}
-
-.lib-type-card-name {
-  font-weight: 600;
-  font-size: 0.85rem;
-  color: var(--ink);
-  text-align: left;
-}
-
-.lib-type-card-count {
-  flex-shrink: 0;
-  font-size: 0.75rem;
-  font-weight: 700;
-  color: var(--ink-soft);
-  background-color: var(--paper);
-  border: var(--border-thin);
-  border-radius: 999px;
-  padding: 0.1rem 0.45rem;
 }
 
 /* --- Filters box ------------------------------------------------------- */
@@ -3518,8 +3448,7 @@ body.lib-overlay-open {
     grid-template-columns: 1fr;
   }
 
-  .lib-toc-cards,
-  .lib-type-cards {
+  .lib-toc-cards {
     grid-template-columns: 1fr;
   }
 
