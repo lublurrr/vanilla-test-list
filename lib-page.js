@@ -27,34 +27,6 @@
   const externalLinkIcon =
     '<svg width="0.85em" height="0.85em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="vertical-align:-0.05em"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg>';
 
-  /* ------------------------------------------------------------
-     Alphabetical index helpers — pure, shared by every page that
-     calls initLibPage. The letters are derived from the entries the
-     page already loaded, so there is no second data source.
-     ------------------------------------------------------------ */
-  const ALPHABET = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('');
-  const OTHER_LETTER = '#'; // titles starting with a digit or symbol
-
-  function normalizeLetter(value) {
-    const v = String(value || '').trim().toUpperCase();
-    if (v === OTHER_LETTER) return OTHER_LETTER;
-    return ALPHABET.includes(v) ? v : 'all';
-  }
-
-  // First letter of the title as the reader sees it: accents folded onto their
-  // base letter, leading quotes/brackets skipped, and anything that isn't a
-  // letter bucketed under "#". Deterministic for any title.
-  function entryInitial(e) {
-    const title = String((e && e.title) || '')
-      .normalize('NFD')
-      .replace(/[\u0300-\u036f]/g, '');
-    for (const ch of title) {
-      if (/[A-Za-z]/.test(ch)) return ch.toUpperCase();
-      if (/[0-9]/.test(ch)) return OTHER_LETTER;
-    }
-    return OTHER_LETTER;
-  }
-
   function byTitle(a, b) {
     const cmp = String(a.title || '').localeCompare(String(b.title || ''), 'en', { sensitivity: 'base' });
     if (cmp !== 0) return cmp;
@@ -124,7 +96,6 @@
       search: '',
       category: cfg.defaultCategory || 'all',
       type: 'all',
-      letter: 'all',
       sort: 'default',
       data: null,
       types: [],
@@ -139,7 +110,6 @@
     if (params.get('cat')) state.category = params.get('cat');
     if (params.get('q')) state.search = params.get('q');
     if (params.get('type')) state.type = typeKey(params.get('type'));
-    if (params.get('alpha')) state.letter = normalizeLetter(params.get('alpha'));
     if (params.get('sort')) state.sort = params.get('sort');
 
     function syncUrl() {
@@ -147,7 +117,6 @@
       if (state.category && state.category !== 'all') p.set('cat', state.category);
       if (state.search) p.set('q', state.search);
       if (state.type && state.type !== 'all') p.set('type', state.type);
-      if (state.letter && state.letter !== 'all') p.set('alpha', state.letter);
       if (state.sort && state.sort !== 'default') p.set('sort', state.sort);
       const qs = p.toString();
       history.replaceState(null, '', location.pathname + (qs ? '?' + qs : ''));
@@ -173,9 +142,7 @@
     }
 
     /* ------------------------------------------------------------
-     * Filtering. searchedEntries() is everything matching search +
-     * category + type; the letter filter and the sort sit on top, so
-     * the A–Z row can grey out letters that lead nowhere.
+     * Filtering: search + category + type, then the chosen sort.
      * ------------------------------------------------------------ */
     function searchedEntries() {
       if (!state.data) return [];
@@ -192,20 +159,11 @@
       });
     }
 
-    function availableLetters() {
-      const set = new Set();
-      searchedEntries().forEach(e => set.add(entryInitial(e)));
-      return set;
-    }
-
     function filteredEntries() {
-      let list = searchedEntries();
-      if (state.letter !== 'all') list = list.filter(e => entryInitial(e) === state.letter);
+      const list = searchedEntries();
       if (state.sort === 'alpha') return list.slice().sort(byTitle);
       if (state.sort === 'alpha-desc') return list.slice().sort((a, b) => byTitle(b, a));
-      // Listed order otherwise — except inside a single letter, where the
-      // source order is meaningless and A–Z is what a reader expects.
-      return state.letter === 'all' ? list : list.slice().sort(byTitle);
+      return list;
     }
 
     function countsByCategory() {
@@ -306,30 +264,6 @@
         </div>`;
     }
 
-    function renderAlphaGroup() {
-      const available = availableLetters();
-      const chips = ['all', ...ALPHABET, OTHER_LETTER].map(letter => {
-        const isAll = letter === 'all';
-        const active = state.letter === letter ? ' is-active' : '';
-        const empty = !isAll && !available.has(letter);
-        const aria = isAll
-          ? 'Show entries starting with any letter'
-          : letter === OTHER_LETTER
-            ? 'Show entries starting with a number or symbol'
-            : `Show entries starting with ${letter}`;
-        return `<button type="button" class="chip lib-alpha-chip${active}" data-lib-alpha="${escapeAttr(letter)}" aria-label="${escapeAttr(aria)}" aria-pressed="${state.letter === letter}"${empty ? ' disabled title="No entries"' : ''}>${escapeHtml(isAll ? 'All' : letter)}</button>`;
-      }).join('');
-      // Same round "×" control the search box uses, so clearing the letter
-      // looks and behaves exactly like clearing the search.
-      const clear = `<button type="button" class="lib-search-clear lib-alpha-clear" aria-label="Clear letter filter"${state.letter === 'all' ? ' hidden' : ''}>&times;</button>`;
-      return `
-        <div class="filter-group lib-alpha">
-          <span class="filter-label">A&ndash;Z</span>
-          <div class="chips lib-alpha-chips" role="group" aria-label="Filter by first letter">${chips}</div>
-          ${clear}
-        </div>`;
-    }
-
     function renderSortGroup() {
       const options = [
         ['default', cfg.sortDefaultLabel || 'Listed Order'],
@@ -343,6 +277,15 @@
             ${options.map(([v, label]) => `<option value="${escapeAttr(v)}"${state.sort === v ? ' selected' : ''}>${escapeHtml(label)}</option>`).join('')}
           </select>
         </div>`;
+    }
+
+    function renderAboutBox() {
+      const text = state.data.description || '';
+      if (!text || !cfg.aboutLabel) return '';
+      return `
+        <section class="lib-box lib-box-about" data-tab-label="${escapeAttr(cfg.aboutLabel)}">
+          <p class="lib-about-text">${escapeHtml(text)}</p>
+        </section>`;
     }
 
     function renderFiltersBox(list) {
@@ -363,26 +306,8 @@
             ${cfg.roulette === false ? '' : '<button type="button" class="btn-random lib-roulette-btn">🎲 Roulette</button>'}
             <button type="button" class="reset-btn lib-reset-btn">Reset</button>
           </div>
-          <div class="toolbar-row toolbar-filters">
-            ${renderAlphaGroup()}
-          </div>
           <div class="results-count lib-results-count">Showing <strong>${list.length}</strong> of <strong>${state.data.entries.length}</strong> entries.</div>
         </section>`;
-    }
-
-    // Cheap in-place refresh: which letters are still reachable, which one is
-    // active, and whether the "×" shows — no re-render, no re-binding.
-    function syncAlphaNav() {
-      const available = availableLetters();
-      body.querySelectorAll('[data-lib-alpha]').forEach(btn => {
-        const letter = btn.dataset.libAlpha;
-        const isActive = state.letter === letter;
-        btn.classList.toggle('is-active', isActive);
-        btn.setAttribute('aria-pressed', String(isActive));
-        if (letter !== 'all') btn.disabled = !available.has(letter);
-      });
-      const clear = body.querySelector('.lib-alpha-clear');
-      if (clear) clear.hidden = state.letter === 'all';
     }
 
     /* ------------------------------------------------------------
@@ -412,10 +337,10 @@
     }
 
     function emptyStateHtml() {
-      const narrowed = state.letter !== 'all' || state.type !== 'all';
+      const narrowed = state.type !== 'all' || state.category !== 'all';
       return `<div class="lib-empty-state">
              <p class="lib-empty-title">No entries match your ${narrowed ? 'filters' : 'search'}.</p>
-             <p class="lib-empty-sub">${narrowed ? 'Try another letter or type, or hit Reset to see everything.' : 'Try a different term or clear the category filter.'}</p>
+             <p class="lib-empty-sub">${narrowed ? 'Try a different section or type, or hit Reset to see everything.' : 'Try a different search term.'}</p>
            </div>`;
     }
 
@@ -451,7 +376,7 @@
       const list = filteredEntries();
 
       body.innerHTML = `
-        ${cfg.showToc ? '' : `<p class="lib-panel-desc">${escapeHtml(state.data.description || '')}</p>`}
+        ${renderAboutBox()}
         ${renderContentsBox()}
         ${renderTypesBox()}
         ${renderFiltersBox(list)}
@@ -466,10 +391,9 @@
       bindControls();
     }
 
-    // Only the parts that change while filtering: the results, the count, the
-    // note banner and the letter states. Everything else stays put.
+    // Only the parts that change while filtering: the results, the count and
+    // the note banner. Everything else stays put.
     function renderResultsOnly() {
-      syncAlphaNav();
       const list = filteredEntries();
 
       const countEl = body.querySelector('.lib-results-count');
@@ -543,25 +467,6 @@
         });
       });
 
-      body.querySelectorAll('[data-lib-alpha]').forEach(btn => {
-        btn.addEventListener('click', () => {
-          const letter = btn.dataset.libAlpha;
-          // Clicking the active letter again clears it, like a toggle.
-          state.letter = (state.letter === letter) ? 'all' : normalizeLetter(letter);
-          syncUrl();
-          renderResultsOnly();
-        });
-      });
-
-      const alphaClear = body.querySelector('.lib-alpha-clear');
-      if (alphaClear) {
-        alphaClear.addEventListener('click', () => {
-          state.letter = 'all';
-          syncUrl();
-          renderResultsOnly();
-        });
-      }
-
       const sortSelect = body.querySelector('.lib-sort-select');
       if (sortSelect) {
         sortSelect.addEventListener('change', () => {
@@ -577,7 +482,6 @@
           state.search = '';
           state.category = 'all';
           state.type = 'all';
-          state.letter = 'all';
           state.sort = 'default';
           syncUrl();
           render();
