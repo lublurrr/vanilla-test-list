@@ -205,6 +205,10 @@ body {
   font-weight: 700;
   text-decoration: underline;
   text-underline-offset: 2px;
+  /* Keep the site's name in one piece — split over a line break it read as
+     "…use the Vanilla Case / List instead." Held whole it drops to the last
+     line intact. */
+  white-space: nowrap;
 }
 
 .page-hero-archive .site-credits a:hover {
@@ -3027,7 +3031,11 @@ body.lib-overlay-open {
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 1.5rem 1rem 3rem;
+  /* This sits inside <main>, which already supplies the page's 2rem/1.25rem
+     inset, so it adds none of its own — a second top inset here was what
+     pushed the box stack lower than the Case List's panels. Only the extra
+     breathing room under the last box is ours. */
+  padding: 0 0 1rem;
 }
 
 .lib-box {
@@ -3042,6 +3050,13 @@ body.lib-overlay-open {
   margin-bottom: 1.5rem;
   box-shadow: var(--shadow-card);
   position: relative;
+}
+
+/* The top box has nothing stacked above it, so it only needs the 22px the tab
+   hangs into — not the 1.5rem of separation between boxes. That puts it 54px
+   under the resource strip, the same as the Case List's first panel. */
+.lib-main>.lib-box:first-child {
+  margin-top: 22px;
 }
 
 .lib-box::before {
@@ -3190,6 +3205,12 @@ body.lib-overlay-open {
 }
 
 .lib-entry-card {
+  /* A grid item's automatic minimum is its min-content width, and a card
+     holding a long unbreakable title or a kept-whole site name can push that
+     past the column — which scrolled the whole page sideways on small phones.
+     Let the card shrink to its track and wrap the long word instead. */
+  min-width: 0;
+  overflow-wrap: anywhere;
   background-color: var(--paper);
   border: var(--border-medium);
   border-radius: 4px;
@@ -3500,7 +3521,7 @@ body.lib-overlay-open {
   }
 
   .lib-main {
-    padding: 1.25rem 0.65rem 2rem;
+    padding: 0 0 0.5rem;
   }
 
   .lib-box {
