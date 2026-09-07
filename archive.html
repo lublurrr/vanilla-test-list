@@ -56,6 +56,9 @@
             onerror="this.replaceWith(Object.assign(document.createElement('span'),{className:'page-hero-logo-fallback',textContent:'Vanilla Ultimate Archive'}))" />
         </a>
       </h1>
+      <p class="site-credits">An archive of every case findable on Attorney Online, organized by year. Most of these
+        are dated or unplayable, kept here as history. If you're looking for a case to actually play, use the
+        <a href="index.html">Vanilla Case List</a> instead.</p>
     </div>
   </header>
 
@@ -120,11 +123,11 @@
       dataUrl: 'data/ultimate-archive.json',
       linkLabel: 'Open Case Document',
       bodyId: 'archive-body',
-      taglineId: 'archive-tagline',
       rouletteNoun: 'Case',
       searchPlaceholder: 'Search by title, creator, or year...',
       searchFields: ['title', 'creator', 'category'],
-      aboutLabel: 'About',
+      // No About box: the blurb it held now sits under the logo as the page's
+      // subtitle, the same as the Case List and the Resource Library.
       countNoun: 'case',
       categoryLabel: 'Year',
       sortDefaultLabel: 'Year Order',
