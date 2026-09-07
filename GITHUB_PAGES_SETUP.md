@@ -126,9 +126,14 @@ Those cards need the **full** image URL, and you only know it after Step 5. If y
 
 Each currently starts with `https://lublurrr.github.io/vanilla-test-list/`. Swap that prefix for your live URL from Step 5, keeping the rest of the path (`images/vcl-logo.png`, `images/vua-logo.png`, `images/vrl-logo.png`) as it is.
 
-To test, paste a site link into a Discord channel. (If Discord shows an old preview, it is caching — add `?v=2` to the end of the link once to force a refresh.)
+To test, paste a site link into a Discord channel.
 
-**The Ultimate Archive logo is a placeholder.** `images/vua-logo.png` is a plain title card generated to stand in until real artwork exists. Replace that file with the real logo at the same size (1440×720) and every preview picks it up — no code change needed.
+**Two different caches can go stale, and they need two different fixes:**
+
+- **The page itself looks cached** (old title/description) → add `?v=2` (any real `key=value`, not just a bare `?something`) to the end of the **page** link once, to force Discord to re-fetch the HTML.
+- **The title/description update but the picture doesn't** → Discord caches the **image** separately from the page, keyed by the image's own URL. Bumping the page URL doesn't touch it. Instead, add a version number to the image URL itself in that page's `og:image` and `twitter:image` tags — e.g. change `images/vua-logo.png` to `images/vua-logo.png?v=2` — and bump that number by one again next time you swap the file. This is exactly what happened when the real Ultimate Archive logo replaced its placeholder: the page's text updated instantly, but Discord kept showing the old picture until the image URL itself changed.
+
+**Replacing a logo later** (e.g. real Resource Library or Case List artwork): overwrite the file in `images/` at the same size — 1440×720 — then bump the `?v=` number on that page's `og:image`/`twitter:image` tags so Discord actually picks up the new picture. The on-page header logo updates immediately either way; it's only the Discord/social preview that needs the version bump.
 
 ---
 
