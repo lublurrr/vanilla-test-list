@@ -131,6 +131,7 @@ intentionally avoids. If you want the windows to show more of a Doc's contents:
 - **PDF bundles = one ZIP per case.** Every case pop-up has a "Download PDFs (.zip)" button next to the other buttons, in PDF red with its own document icon. With a `pdf_zip_url` set it downloads only that case's PDFs; without one it shows greyed out as "No PDFs available yet", so there's never a dead link (see `downloads/README.md`).
 - **Resources nav strip** — Vanilla Ultimate Archive, Resource Library, Casing Hub Discord, Tier List, Submit form, FAQ.
 - **Built-in FAQ section** (toggleable) — all Q&As from the original doc.
+- **Per-page link previews.** Each page carries its own Open Graph card, so a pasted link shows that page's own logo, title and accent bar: navy + VCL logo for the Case List, cyan + the Ultimate Archive logo, brown + the VRL logo. See *Step 6* in `GITHUB_PAGES_SETUP.md` for the one prefix to change if the site moves.
 - **Mobile-responsive** down to phones.
 - **No build step, no dependencies.** Pure HTML/CSS/JS.
 
