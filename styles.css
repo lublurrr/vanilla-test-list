@@ -1295,6 +1295,7 @@ main {
 
 .search-wrap {
   flex: 1;
+  min-width: 0;
   display: flex;
   align-items: center;
   gap: 0.6rem;
@@ -1325,6 +1326,13 @@ main {
   color: var(--ink);
   outline: none;
   min-width: 0;
+  /* width: 0 rather than just min-width: 0. A text input carries a
+     browser-default intrinsic width (~204px from the implied size=20), and
+     that width feeds the search label's min-content — which on a 320px phone
+     made the label wider than the toolbar holding it and scrolled the whole
+     page sideways. Zeroing it lets flex: 1 hand the input whatever room the
+     row actually has. */
+  width: 0;
 }
 
 #search::-webkit-search-decoration,
@@ -2978,6 +2986,9 @@ body.lib-overlay-open {
   color: var(--ink);
   outline: none;
   min-width: 0;
+  /* Same browser-default intrinsic width as #search above — see the note
+     there for why this is width: 0 and not just min-width: 0. */
+  width: 0;
 }
 
 .lib-search-input::-webkit-search-decoration,
