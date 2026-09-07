@@ -193,6 +193,22 @@ body {
 
 .page-hero-archive .site-credits {
   color: var(--celeste-text);
+  max-width: 760px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* The subtitle points back at the Case List, so the link has to read as one
+   against the celeste header rather than borrowing the site-wide link blue. */
+.page-hero-archive .site-credits a {
+  color: var(--celeste-text);
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.page-hero-archive .site-credits a:hover {
+  color: var(--ink);
 }
 
 /* ==========================================================================
@@ -535,38 +551,14 @@ body.page-resources .lib-entry-footer {
   border-top-color: var(--ink-light);
 }
 
-/* Type badges ("tags") keep the same hue-coding used across the
-   site (blue/green/gold) but in darkened, translucent tones that
-   sit naturally on the dark brown cards. */
+/* Type badges ("tags") on the Library keep the per-tag hues set above and
+   only restate them as darkened, translucent tones that sit naturally on the
+   dark brown cards. Nothing here names a tag, so adding a tag is still a
+   single line up in the hue table. */
 body.page-resources .lib-type-badge {
-  background-color: rgba(255, 255, 255, 0.08);
-  color: var(--cream-deep);
-  border-color: var(--ink-light);
-}
-
-body.page-resources .lib-type-guide {
-  background-color: rgba(29, 67, 145, 0.35);
-  color: var(--blue-light);
-  border-color: var(--blue);
-}
-
-body.page-resources .lib-type-tool,
-body.page-resources .lib-type-download {
-  background-color: rgba(79, 138, 61, 0.35);
-  color: var(--green-light);
-  border-color: var(--green);
-}
-
-body.page-resources .lib-type-link {
-  background-color: rgba(255, 255, 255, 0.1);
-  color: var(--cream-deep);
-  border-color: var(--ink-light);
-}
-
-body.page-resources .lib-type-reference {
-  background-color: rgba(201, 150, 43, 0.35);
-  color: var(--gold-light);
-  border-color: var(--gold);
+  background-color: hsl(var(--tag-h) var(--tag-s) 30% / 0.45);
+  color: hsl(var(--tag-h) var(--tag-s) 78%);
+  border-color: hsl(var(--tag-h) var(--tag-s) 50%);
 }
 
 /* Icons need a lighter tone to stay visible against the dark theme. */
@@ -2302,7 +2294,11 @@ main {
   position: absolute;
   top: 0;
   width: 160px;
-  left: -2px;
+  /* The card itself has no border of its own — its 2px edge is drawn by the
+     panels inside it — so the tab starts at 0, not -2px. At -2px its left
+     border sat two pixels outside the card's, so the top-left corner looked
+     stepped instead of one continuous line. */
+  left: 0;
   height: 28px;
   background-color: var(--ink-light);
   border-top: 2px solid var(--ink);
@@ -3227,7 +3223,16 @@ body.lib-overlay-open {
   color: var(--blue-deep);
 }
 
+/* Tag badges.
+   Every tag gets its own hue so "Case List", "Templates", "Channel" and the
+   rest are told apart at a glance. Each tag class only names a hue and a
+   saturation; the badge rule below turns those into the background, text and
+   border, so the whole set stays in one family and a new tag is one line.
+   Tags with no hue of their own fall back to the parchment default declared
+   here. */
 .lib-type-badge {
+  --tag-h: 35;
+  --tag-s: 14%;
   font-size: 0.65rem;
   text-transform: uppercase;
   letter-spacing: 0.05em;
@@ -3235,16 +3240,43 @@ body.lib-overlay-open {
   padding: 0.12rem 0.5rem;
   border-radius: 3px;
   white-space: nowrap;
-  background-color: var(--cream-deep);
-  color: var(--ink-soft);
-  border: 1px solid var(--ink-light);
+  background-color: hsl(var(--tag-h) var(--tag-s) 89%);
+  color: hsl(var(--tag-h) var(--tag-s) 27%);
+  border: 1px solid hsl(var(--tag-h) var(--tag-s) 52%);
 }
 
-.lib-type-guide { background-color: var(--blue-pale); color: var(--blue-deep); border-color: var(--blue); }
-.lib-type-tool { background-color: var(--green-pale); color: var(--green); border-color: var(--green); }
-.lib-type-link { background-color: var(--cream-deep); color: var(--ink-soft); border-color: var(--ink-light); }
-.lib-type-reference { background-color: #f0c14b33; color: var(--gold); border-color: var(--gold); }
-.lib-type-download { background-color: var(--green-pale); color: var(--green); border-color: var(--green); }
+/* Reference / documentation */
+.lib-type-guide { --tag-h: 220; --tag-s: 62%; }
+.lib-type-tutorial { --tag-h: 190; --tag-s: 60%; }
+.lib-type-reference { --tag-h: 205; --tag-s: 45%; }
+
+/* Things you use or download */
+.lib-type-tool { --tag-h: 162; --tag-s: 52%; }
+.lib-type-database { --tag-h: 138; --tag-s: 42%; }
+.lib-type-files,
+.lib-type-download,
+.lib-type-sprites { --tag-h: 96; --tag-s: 42%; }
+
+/* Lists and archives */
+.lib-type-case-list { --tag-h: 44; --tag-s: 74%; }
+.lib-type-archive,
+.lib-type-case-archive { --tag-h: 26; --tag-s: 72%; }
+
+/* Video */
+.lib-type-channel { --tag-h: 6; --tag-s: 68%; }
+.lib-type-playlist { --tag-h: 338; --tag-s: 56%; }
+.lib-type-vod { --tag-h: 290; --tag-s: 62%; }
+.lib-type-meme { --tag-h: 308; --tag-s: 70%; }
+
+/* Starting points you build a case from */
+.lib-type-template,
+.lib-type-templates,
+.lib-type-themes,
+.lib-type-templates-themes { --tag-h: 254; --tag-s: 50%; }
+
+/* Plain destinations */
+.lib-type-website { --tag-h: 212; --tag-s: 20%; }
+.lib-type-link { --tag-h: 35; --tag-s: 14%; }
 
 .lib-entry-title {
   font-family: var(--font-display);

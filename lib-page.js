@@ -37,8 +37,9 @@
     'videos': '<rect x="2.5" y="4.5" width="19" height="15" rx="2.5"/><path d="m10 8.8 5.5 3.2-5.5 3.2z"/>',
     'translations': '<circle cx="12" cy="12" r="9"/><path d="M3.4 9.2h17.2"/><path d="M3.4 14.8h17.2"/><path d="M12 3a15 15 0 0 1 0 18"/><path d="M12 3a15 15 0 0 0 0 18"/>',
     'miscellaneous': '<rect x="2.5" y="4" width="19" height="4.6" rx="1.2"/><path d="M4.6 8.6v10a1.6 1.6 0 0 0 1.6 1.6h11.6a1.6 1.6 0 0 0 1.6-1.6v-10"/><path d="M9.8 12.6h4.4"/>',
-    // Ultimate Archive
-    'graveyard': '<path d="M6 2.5h12"/><path d="M6 21.5h12"/><path d="M8 2.5V7l4 5 4-5V2.5"/><path d="M8 21.5V17l4-5 4 5v4.5"/>',
+    // Ultimate Archive — a headstone in its plot, not an hourglass: this
+    // section is where retired cases are buried, not where they're timed.
+    'graveyard': '<path d="M3.2 20.4h17.6"/><path d="M6.8 20.4V9.4a5.2 5.2 0 0 1 10.4 0v11"/><path d="M12 7.5v6.5"/><path d="M9.2 10.2h5.6"/>',
   };
 
   function sectionIcon(category) {
@@ -94,10 +95,18 @@
       history.replaceState(null, '', location.pathname + (qs ? '?' + qs : ''));
     }
 
+    // Tag badges. The data spells types freely ("case list", "Case List",
+    // "Templates + Themes"), so fold each one down to a single slug for the
+    // colour class — a raw type with a space in it would otherwise land in the
+    // class attribute as two useless classes and the tag would go uncoloured.
+    function typeSlug(type) {
+      return String(type).toLowerCase().trim().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
+    }
+
     function typeBadge(type) {
       if (!type) return '';
-      const label = type.charAt(0).toUpperCase() + type.slice(1);
-      return `<span class="lib-type-badge lib-type-${escapeAttr(type.toLowerCase())}">${escapeHtml(label)}</span>`;
+      const label = String(type).replace(/\S+/g, w => w.charAt(0).toUpperCase() + w.slice(1));
+      return `<span class="lib-type-badge lib-type-${escapeAttr(typeSlug(type))}">${escapeHtml(label)}</span>`;
     }
 
     function categoryLabel(cat) {
