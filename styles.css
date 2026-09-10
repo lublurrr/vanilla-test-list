@@ -2555,18 +2555,6 @@ main {
   background-color: #3f6e30;
 }
 
-/* "Download PDFs (.zip)" — same button as the others, in PDF red with its own
-   document icon so it doesn't read as another link out. The greyed-out state
-   (no ZIP for this case yet) keeps the shared disabled look. */
-a.case-modal-pdf-btn {
-  background-color: var(--red);
-  color: var(--cream-light);
-}
-
-a.case-modal-pdf-btn:hover {
-  background-color: var(--red-deep);
-}
-
 /* Mobile / narrow: stack vertically (logo on top, details below) */
 @media (max-width: 780px) {
   .case-modal-card {

@@ -128,7 +128,6 @@ intentionally avoids. If you want the windows to show more of a Doc's contents:
 - **Sort** by Difficulty Order (default), Length Order, Alphabetical (A–Z or Z–A), or Most Recently Added (uses real approval dates from the update history).
 - **Random Case picker** with optional difficulty restriction. Roll Again button included.
 - **Custom Files = clickable downloads.** When a case has a `custom_files_url` set, a green "Custom Files" pill appears automatically and links straight to the Drive folder for that case's assets. No tag needed.
-- **PDF bundles = one ZIP per case.** Every case pop-up has a "Download PDFs (.zip)" button next to the other buttons, in PDF red with its own document icon. With a `pdf_zip_url` set it downloads only that case's PDFs; without one it shows greyed out as "No PDFs available yet", so there's never a dead link (see `downloads/README.md`).
 - **Resources nav strip** — Vanilla Ultimate Archive, Resource Library, Casing Hub Discord, Tier List, Submit form, FAQ.
 - **Built-in FAQ section** (toggleable) — all Q&As from the original doc.
 - **Per-page link previews.** Each page carries its own Open Graph card, so a pasted link shows that page's own logo, title and accent bar: navy + VCL logo for the Case List, cyan + the Ultimate Archive logo, brown + the VRL logo. See *Step 6* in `GITHUB_PAGES_SETUP.md` for the one prefix to change if the site moves.
@@ -162,7 +161,6 @@ Open `cases.json` and append a new object to the **end** of the array. Example:
   "tags": [],
   "url": "https://docs.google.com/document/d/.../edit",
   "custom_files_url": "https://drive.google.com/drive/folders/.../",
-  "pdf_zip_url": "downloads/turnabout-awesome.zip",
   "approval_date": "2026-06-01",
   "image": "images/cases/case_119.jpg",
   "logo_credit": "Artist Name"
@@ -184,7 +182,6 @@ Open `cases.json` and append a new object to the **end** of the array. Example:
 | `tags`             | array    | Manual tags only: `"Tutorial Case"` and/or `"NSFW"`. **Do not add `"NEW"` or `"CUSTOM FILES"`** — those are automatic (see *Automatic tags*). Use `[]` for most cases. |
 | `url`              | string   | Link to the case document (use `null` if not yet available)        |
 | `custom_files_url` | string   | (Optional) Direct download URL for case-specific assets. **Setting this automatically shows the green "Custom Files" pill** — no tag required. Leave it out or `null` if there are none. |
-| `pdf_zip_url`      | string   | (Optional) The case's PDFs bundled as one ZIP — either a file in `downloads/` (e.g. `"downloads/turnabout-awesome.zip"`) or a full URL to one elsewhere. **Setting this turns on the red "Download PDFs (.zip)" button** in the case pop-up. Leave it out or `null` and the button shows greyed out as "No PDFs available yet". See `downloads/README.md`. |
 | `approval_date`    | string   | ISO date when added to VCL (e.g. `"2026-05-01"`). Drives card ordering, the "Most Recently Added" sort, the Docket "What's new" list, and the automatic **NEW** badge (every case sharing the most recent date is marked NEW). |
 | `image`            | string   | Path to the logo image, e.g. `"images/cases/case_119.jpg"`         |
 | `logo_credit`      | string   | (Optional) Who made the case logo. Shown as "Logo by …" beneath the logo in the case popup. Omit it or use `null`/`""` if there's no credit to show. |
