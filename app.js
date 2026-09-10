@@ -366,40 +366,6 @@ function renderCard(c) {
   `;
 }
 
-const downloadIcon =
-  '<svg width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="vertical-align:-0.1em"><path d="M12 3v12"/><path d="m7 11 5 5 5-5"/><path d="M5 21h14"/></svg>';
-
-// A folded-corner document with a "PDF" wordmark — deliberately unlike the
-// download arrow on Custom Files or the arrow-out on Open Case Document, so
-// the PDF bundle reads as its own thing at a glance.
-const pdfIcon =
-  '<svg width="1.15em" height="1.15em" viewBox="0 0 24 24" fill="none" aria-hidden="true" style="vertical-align:-0.22em"><path d="M14 2.5H6.5a2 2 0 0 0-2 2v15a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2V8z" fill="currentColor" fill-opacity="0.16" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M14 2.5V8h5.5" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><text x="12" y="18.4" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="7.2" font-weight="700" fill="currentColor" letter-spacing="-0.3">PDF</text></svg>';
-
-/* ----------------------------------------------------------------
- * Case PDF bundle button
- * ----------------------------------------------------------------
- * A case can ship its PDFs as one ZIP of its own (`pdf_zip_url`).
- * With no ZIP the button shows as unavailable, the same way a case with
- * no document does — never a dead link.
- * ---------------------------------------------------------------- */
-function pdfZipBtn(c) {
-  const url = c && c.pdf_zip_url;
-  if (!url) {
-    return `<span class="card-open-btn card-open-btn-disabled case-modal-pdf-btn" aria-disabled="true" title="No PDF bundle for this case yet">No PDFs available yet ${pdfIcon}</span>`;
-  }
-  // A ZIP hosted with the site downloads straight away; one on another host
-  // (Drive, etc.) opens in a new tab, like every other external link here.
-  const isExternal = /^https?:\/\//i.test(url);
-  const attrs = isExternal
-    ? 'target="_blank" rel="noopener noreferrer"'
-    : `download="${escapeAttr(zipFileName(c, url))}"`;
-  return `<a class="card-open-btn case-modal-pdf-btn" href="${escapeAttr(url)}" ${attrs} title="Download this case's PDFs as a ZIP file" aria-label="Download PDFs for ${escapeAttr(c.title)} as a ZIP file">Download PDFs (.zip) ${pdfIcon}</a>`;
-}
-
-function zipFileName(c, url) {
-  return String(url).split('/').pop() || `${c.title}.zip`;
-}
-
 /* ----------------------------------------------------------------
  * Case detail modal
  * ---------------------------------------------------------------- */
@@ -438,7 +404,7 @@ function openCaseModal(caseId) {
         <h2 id="case-modal-title" class="case-modal-title">${escapeHtml(c.title)}</h2>
         <p class="case-modal-creator">${escapeHtml(c.creator || 'Unknown')}</p>
 
-        <div class="case-modal-buttons">${openBtn}${customBtn}${pdfZipBtn(c)}</div>
+        <div class="case-modal-buttons">${openBtn}${customBtn}</div>
 
         <div class="case-modal-meta">
           <span class="case-modal-meta-item">
@@ -784,7 +750,7 @@ function showRandom(c, difficulty) {
         <div class="case-modal-info">
           <h2 class="case-modal-title">${escapeHtml(c.title)}</h2>
           <p class="case-modal-creator">${escapeHtml(c.creator || 'Unknown')}</p>
-          <div class="case-modal-buttons">${openBtn}${customBtn}${pdfZipBtn(c)}</div>
+          <div class="case-modal-buttons">${openBtn}${customBtn}</div>
           <div class="case-modal-meta">
             <span class="case-modal-meta-item">
               <span class="case-modal-meta-label">Difficulty</span>
